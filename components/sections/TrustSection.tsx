@@ -90,7 +90,7 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
     },
   },
 };
@@ -99,7 +99,7 @@ export function TrustSection() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <{/* Section Header */}>
+        /* Section Header */
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export function TrustSection() {
           </p>
         </motion.div>
 
-        <{/* Institution Logos */}>
+        /* Institution Logos */
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -136,7 +136,7 @@ export function TrustSection() {
           ))}
         </motion.div>
 
-        <{/* Trust Cards */}>
+        /* Trust Cards */
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -164,7 +164,7 @@ export function TrustSection() {
           })}
         </motion.div>
 
-        <{/* Medical Reviewer Card */}>
+        /* Medical Reviewer Card */
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +173,7 @@ export function TrustSection() {
           className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 mb-16"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <{/* Reviewer Info */}>
+            /* Reviewer Info */
             <div className="text-white">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-sm font-medium mb-6">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -200,7 +200,7 @@ export function TrustSection() {
               </div>
             </div>
 
-            <{/* Stats */}>
+            /* Stats */
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, i) => {
                 const Icon = stat.icon;
@@ -223,7 +223,7 @@ export function TrustSection() {
           </div>
         </motion.div>
 
-        <{/* Editorial Process */}>
+        /* Editorial Process */
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

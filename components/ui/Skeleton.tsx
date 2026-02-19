@@ -31,6 +31,8 @@ export interface SkeletonProps {
   animation?: "pulse" | "shimmer" | "none";
   /** Rounded corners */
   rounded?: "none" | "sm" | "md" | "lg" | "xl" | "full";
+  /** Inline styles */
+  style?: React.CSSProperties;
 }
 
 const animationClasses = {
@@ -53,9 +55,11 @@ export function Skeleton({
   className,
   animation = "pulse",
   rounded = "md",
+  style,
 }: SkeletonProps) {
   return (
     <div
+      style={style}
       className={cn(
         "bg-slate-200 dark:bg-slate-700",
         animationClasses[animation],

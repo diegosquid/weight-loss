@@ -88,7 +88,7 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
     },
   },
 };
@@ -100,7 +100,7 @@ export function ToolsSection() {
   return (
     <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <{/* Section Header */}>
+      {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ export function ToolsSection() {
           </p>
         </motion.div>
 
-        <{/* Tools Grid */}>
+        {/* Tools Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -128,12 +128,12 @@ export function ToolsSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid lg:grid-cols-2 gap-8"
         >
-          <{/* Featured Tool - BMI Calculator */}>
+          {/* Featured Tool - BMI Calculator */}
           {featuredTool && (
             <motion.div variants={cardVariants} className="lg:row-span-3">
               <Link href={featuredTool.href}>
                 <div className="group relative h-full bg-white rounded-3xl border border-slate-200 overflow-hidden hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300">
-                  <{/* Header */}>
+                  {/* Header */}
                   <div className={`bg-gradient-to-br ${colorClasses[featuredTool.color].gradient} p-8 text-white`}>
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-3">
@@ -150,7 +150,7 @@ export function ToolsSection() {
                       </div>
                     </div>
 
-                    <{/* Animated Preview */}>
+                    {/* Animated Preview */}
                     <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-sm font-medium text-white/80">Your BMI</span>
@@ -163,9 +163,9 @@ export function ToolsSection() {
                         </motion.span>
                       </div>
 
-                      <{/* BMI Scale */}>
+                      {/* BMI Scale */}
                       <div className="relative h-4 bg-white/20 rounded-full overflow-hidden">
-                        <{/* Zones */}>
+                        {/* Zones */}
                         <div className="absolute inset-0 flex">
                           <div className="w-[25%] h-full bg-blue-400/50" />
                           <div className="w-[25%] h-full bg-green-400/50" />
@@ -173,7 +173,7 @@ export function ToolsSection() {
                           <div className="w-[25%] h-full bg-red-400/50" />
                         </div>
 
-                        <{/* Indicator */}>
+                        {/* Indicator */}
                         <motion.div
                           initial={{ left: "0%" }}
                           animate={{ left: "48%" }}
@@ -184,7 +184,7 @@ export function ToolsSection() {
                         </motion.div>
                       </div>
 
-                      <{/* Labels */}>
+                      {/* Labels */}
                       <div className="flex justify-between mt-2 text-xs text-white/70">
                         <span>Underweight</span>
                         <span>Normal</span>
@@ -194,11 +194,11 @@ export function ToolsSection() {
                     </div>
                   </div>
 
-                  <{/* Content */}>
+                  {/* Content */}
                   <div className="p-8">
                     <p className="text-slate-600 mb-6">{featuredTool.description}</p>
 
-                    <{/* Quick Inputs Preview */}>
+                    {/* Quick Inputs Preview */}
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="p-4 bg-slate-50 rounded-xl">
                         <label className="text-xs text-slate-500 block mb-1">Height</label>
@@ -226,7 +226,7 @@ export function ToolsSection() {
             </motion.div>
           )}
 
-          <{/* Other Tools */}>
+          {/* Other Tools */}
           <div className="flex flex-col gap-4">
             {otherTools.map((tool) => {
               const Icon = tool.icon;
@@ -253,7 +253,7 @@ export function ToolsSection() {
               );
             })}
 
-            <{/* View All Link */}>
+            {/* View All Link */}
             <motion.div variants={cardVariants}>
               <Link href="/tools">
                 <div className="flex items-center justify-center gap-2 p-5 rounded-2xl border-2 border-dashed border-slate-300 text-slate-500 hover:border-blue-400 hover:text-blue-600 transition-colors">

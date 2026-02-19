@@ -9,36 +9,36 @@ import { Variants, Spring } from "framer-motion";
 // ============================================================================
 
 /** Default spring - balanced feel */
-export const springDefault: Spring = {
-  type: "spring",
+export const springDefault = {
+  type: "spring" as const,
   stiffness: 300,
   damping: 30,
 };
 
 /** Bouncy spring - playful interactions */
-export const springBouncy: Spring = {
-  type: "spring",
+export const springBouncy = {
+  type: "spring" as const,
   stiffness: 400,
   damping: 15,
 };
 
 /** Gentle spring - subtle movements */
-export const springGentle: Spring = {
-  type: "spring",
+export const springGentle = {
+  type: "spring" as const,
   stiffness: 200,
   damping: 25,
 };
 
 /** Snappy spring - quick responses */
-export const springSnappy: Spring = {
-  type: "spring",
+export const springSnappy = {
+  type: "spring" as const,
   stiffness: 500,
   damping: 35,
 };
 
 /** Slow spring - dramatic reveals */
-export const springSlow: Spring = {
-  type: "spring",
+export const springSlow = {
+  type: "spring" as const,
   stiffness: 100,
   damping: 20,
   mass: 1.2,
@@ -344,9 +344,9 @@ export function createSpring(
   stiffness: number = 300,
   damping: number = 30,
   mass: number = 1
-): Spring {
+) {
   return {
-    type: "spring",
+    type: "spring" as const,
     stiffness,
     damping,
     mass,
