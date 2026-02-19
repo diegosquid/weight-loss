@@ -11,26 +11,6 @@ const navLinks = [
 export function Header() {
   return (
     <>
-      {/* Trust bar */}
-      <div className="w-full bg-[#0D1B2A] text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-4 sm:gap-8 py-2 text-xs font-medium tracking-wide text-gray-300">
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              Medically Reviewed
-            </span>
-            <span className="hidden sm:flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              Evidence-Based
-            </span>
-            <span className="hidden md:flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              Updated 2025
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Main header */}
       <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/98 backdrop-blur-sm shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
