@@ -1,35 +1,35 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { getArticlesByCategory } from "@/lib/content";
-import { ArrowRight, Clock, CheckCircle, Beaker } from "lucide-react";
+import { ArrowRight, Clock, CheckCircle, Pill } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Supplements",
+  title: "GLP-1 Medications",
   description:
-    "Science-backed information on supplements for weight loss, metabolic health, and overall wellness.",
-  alternates: { canonical: "https://metabolicscience.org/supplements" },
+    "Evidence-based guides on semaglutide, tirzepatide, liraglutide, and other GLP-1 receptor agonists for weight loss and diabetes management.",
+  alternates: { canonical: "https://metabolicscience.org/glp-1" },
 };
 
-export default function SupplementsPage() {
-  const articles = getArticlesByCategory("supplements");
+export default function GLP1Page() {
+  const articles = getArticlesByCategory("glp-1");
 
   return (
     <div className="flex-1">
       {/* Hero */}
-      <section className="bg-gradient-to-b from-emerald-50 to-white py-14 lg:py-20 border-b border-gray-200">
+      <section className="bg-gradient-to-b from-blue-50 to-white py-14 lg:py-20 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-11 h-11 bg-emerald-100 rounded-xl flex items-center justify-center">
-                <Beaker className="w-5 h-5 text-emerald-600" />
+              <div className="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center">
+                <Pill className="w-5 h-5 text-blue-700" />
               </div>
-              <span className="text-sm font-bold text-emerald-600 uppercase tracking-wide">Supplements</span>
+              <span className="text-sm font-bold text-blue-700 uppercase tracking-wide">GLP-1 Medications</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Evidence-Based Supplements
+              Understanding GLP-1 Drugs
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Science-backed information on supplements for weight loss, metabolic health, and overall wellness.
+              Evidence-based guides on semaglutide, tirzepatide, and other GLP-1 receptor agonists for weight loss and diabetes management.
             </p>
           </div>
         </div>
@@ -49,10 +49,10 @@ export default function SupplementsPage() {
                 href={`/${article.categorySlug}/${article.slug}`}
                 className="group flex flex-col bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
               >
-                <div className="h-1.5 w-full bg-gradient-to-r from-emerald-500 to-teal-400" />
+                <div className="h-1.5 w-full bg-gradient-to-r from-blue-600 to-emerald-500" />
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="px-2.5 py-1 rounded-full bg-emerald-50 text-xs font-semibold text-emerald-700 border border-emerald-100">
+                    <span className="px-2.5 py-1 rounded-full bg-blue-50 text-xs font-semibold text-blue-700 border border-blue-100">
                       {article.category}
                     </span>
                     <span className="flex items-center gap-1 text-xs text-gray-400">
@@ -60,7 +60,7 @@ export default function SupplementsPage() {
                       {article.readingTime} min
                     </span>
                   </div>
-                  <h2 className="text-base font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors leading-snug line-clamp-2">
+                  <h2 className="text-base font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors leading-snug line-clamp-2">
                     {article.title}
                   </h2>
                   <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 flex-1">
@@ -75,7 +75,7 @@ export default function SupplementsPage() {
                           MD Reviewed
                         </span>
                       )}
-                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all" />
                     </div>
                   </div>
                 </div>

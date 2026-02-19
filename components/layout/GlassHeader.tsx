@@ -25,11 +25,26 @@ const searchVariants: Variants = {
   animate: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.2, ease: "easeOut" } },
 };
 
-interface GlassHeaderProps {
-  showSearch?: boolean;
+interface NavChild {
+  label: string;
+  href: string;
+  description: string;
 }
 
-export function GlassHeader({ showSearch = true }: GlassHeaderProps) {
+interface NavItem {
+  label: string;
+  href: string;
+  key: string;
+  children: NavChild[];
+  totalArticles?: number;
+}
+
+interface GlassHeaderProps {
+  showSearch?: boolean;
+  navItems?: NavItem[];
+}
+
+export function GlassHeader({ showSearch = true, navItems }: GlassHeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -89,7 +104,7 @@ export function GlassHeader({ showSearch = true }: GlassHeaderProps) {
               animate="animate"
               className="hidden lg:flex items-center gap-1"
             >
-              <Navigation />
+              <Navigation navItems={navItems} />
             </motion.nav>
 
             {/* Search & Actions */}
@@ -186,7 +201,7 @@ export function GlassHeader({ showSearch = true }: GlassHeaderProps) {
 
                 {/* Mobile Navigation */}
                 <nav className="flex-1">
-                  <Navigation isMobile />
+                  <Navigation isMobile navItems={navItems} />
                 </nav>
 
                 {/* Mobile Footer */}

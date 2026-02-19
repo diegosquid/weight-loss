@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { Ruler } from "lucide-react";
 
 interface BodyFatResult {
@@ -66,7 +65,7 @@ export function BodyFatCalculator() {
         450;
     }
 
-    bodyFat = Math.max(2, Math.min(60, bodyFat)); // Clamp values
+    bodyFat = Math.max(2, Math.min(60, bodyFat));
     bodyFat = Math.round(bodyFat * 10) / 10;
 
     const weightKg = unit === "metric" ? w : w * 0.453592;
@@ -85,82 +84,89 @@ export function BodyFatCalculator() {
     });
   };
 
+  const inputClass =
+    "w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 outline-none transition-all";
+  const selectClass =
+    "w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-gray-50 text-gray-900 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 outline-none transition-all";
+
   return (
-    <div className="bg-white rounded-xl border border-[var(--gray-300)] p-6">
-      <div className="flex items-center gap-2 mb-6">
-        <Ruler className="w-6 h-6 text-[var(--lavender)]" />
-        <h2 className="text-xl font-bold text-[var(--gray-900)]">Body Fat Calculator</h2>
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8">
+      <div className="flex items-center gap-2.5 mb-8">
+        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-purple-50 border border-purple-100">
+          <Ruler className="w-5 h-5 text-purple-600" />
+        </div>
+        <h2 className="text-xl font-bold text-gray-900">Body Fat Calculator</h2>
       </div>
 
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div>
-          <label className="block text-sm font-medium text-[var(--gray-700)] mb-2">Gender</label>
-          <select
-            value={gender}
-            onChange={(e) => setGender(e.target.value as "male" | "female")}
-            className="w-full px-4 py-2 rounded-lg border border-[var(--gray-300)] focus:border-[var(--primary)] outline-none"
-          >
+          <label className="block text-sm font-semibold text-gray-700 mb-1.5">Gender</label>
+          <select value={gender} onChange={(e) => setGender(e.target.value as "male" | "female")} className={selectClass}>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium text-[var(--gray-700)] mb-2">Unit</label>
-          <select
-            value={unit}
-            onChange={(e) => setUnit(e.target.value as "metric" | "imperial")}
-            className="w-full px-4 py-2 rounded-lg border border-[var(--gray-300)] focus:border-[var(--primary)] outline-none"
-          >
+          <label className="block text-sm font-semibold text-gray-700 mb-1.5">Unit</label>
+          <select value={unit} onChange={(e) => setUnit(e.target.value as "metric" | "imperial")} className={selectClass}>
             <option value="metric">Metric (cm, kg)</option>
-            <option value="imperial">Imperial (inches, lbs)</option>
+            <option value="imperial">Imperial (in, lbs)</option>
           </select>
         </div>
       </div>
 
-      <div className="space-y-4 mb-6">
+      <div className="space-y-4 mb-8">
         <div>
-          <label className="block text-sm font-medium text-[var(--gray-700)] mb-2">Weight ({unit === "metric" ? "kg" : "lbs"})</label>
+          <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+            Weight ({unit === "metric" ? "kg" : "lbs"})
+          </label>
           <input
             type="number"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
             placeholder={unit === "metric" ? "70" : "154"}
-            className="w-full px-4 py-2 rounded-lg border border-[var(--gray-300)] focus:border-[var(--primary)] outline-none"
+            className={inputClass}
           />
         </div>
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-[var(--gray-700)] mb-2">Waist ({unit === "metric" ? "cm" : "in"})</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              Waist ({unit === "metric" ? "cm" : "in"})
+            </label>
             <input
               type="number"
               value={waist}
               onChange={(e) => setWaist(e.target.value)}
               placeholder={unit === "metric" ? "80" : "31"}
-              className="w-full px-4 py-2 rounded-lg border border-[var(--gray-300)] focus:border-[var(--primary)] outline-none"
+              className={inputClass}
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-[var(--gray-700)] mb-2">Neck ({unit === "metric" ? "cm" : "in"})</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              Neck ({unit === "metric" ? "cm" : "in"})
+            </label>
             <input
               type="number"
               value={neck}
               onChange={(e) => setNeck(e.target.value)}
               placeholder={unit === "metric" ? "38" : "15"}
-              className="w-full px-4 py-2 rounded-lg border border-[var(--gray-300)] focus:border-[var(--primary)] outline-none"
+              className={inputClass}
             />
           </div>
         </div>
 
         {gender === "female" && (
           <div>
-            <label className="block text-sm font-medium text-[var(--gray-700)] mb-2">Hip ({unit === "metric" ? "cm" : "in"})</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              Hip ({unit === "metric" ? "cm" : "in"})
+            </label>
             <input
               type="number"
               value={hip}
               onChange={(e) => setHip(e.target.value)}
               placeholder={unit === "metric" ? "100" : "39"}
-              className="w-full px-4 py-2 rounded-lg border border-[var(--gray-300)] focus:border-[var(--primary)] outline-none"
+              className={inputClass}
             />
           </div>
         )}
@@ -168,34 +174,32 @@ export function BodyFatCalculator() {
 
       <button
         onClick={calculateBodyFat}
-        className="w-full py-3 rounded-lg bg-[var(--primary)] text-white font-semibold hover:bg-[var(--primary-dark)] transition-colors"
+        className="w-full py-3.5 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors shadow-sm text-sm"
       >
         Calculate Body Fat
       </button>
 
       {result && (
-        <div className="mt-6 space-y-4">
-          <div className="text-center p-6 rounded-lg bg-[var(--gray-100)] border border-[var(--gray-300)]">
-            <div className="text-sm text-[var(--gray-700)] mb-1">Body Fat Percentage</div>
-            <div className="text-5xl font-bold text-[var(--gray-900)]">{result.bodyFat}%</div>
-            <div className={cn("text-lg font-semibold mt-2", result.color)}>
-              {result.category}
+        <div className="mt-8 space-y-4">
+          <div className="text-center py-6 rounded-xl bg-gray-50 border border-gray-200">
+            <div className="text-sm text-gray-500 font-medium">Body Fat Percentage</div>
+            <div className="text-5xl font-bold text-gray-900 mt-1">{result.bodyFat}%</div>
+            <div className={`text-lg font-semibold mt-2 ${result.color}`}>{result.category}</div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            <div className="p-5 rounded-xl bg-blue-50 text-center border border-blue-100">
+              <div className="text-sm text-blue-600 font-medium">Lean Mass</div>
+              <div className="text-2xl font-bold text-blue-700 mt-1">{result.leanMass} kg</div>
+            </div>
+            <div className="p-5 rounded-xl bg-red-50 text-center border border-red-100">
+              <div className="text-sm text-red-500 font-medium">Fat Mass</div>
+              <div className="text-2xl font-bold text-red-600 mt-1">{result.fatMass} kg</div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 rounded-lg bg-[var(--primary-light)] text-center">
-              <div className="text-sm text-[var(--gray-700)]">Lean Mass</div>
-              <div className="text-2xl font-bold text-[var(--primary)]">{result.leanMass} kg</div>
-            </div>
-            <div className="p-4 rounded-lg bg-[var(--coral)]/10 text-center">
-              <div className="text-sm text-[var(--gray-700)]">Fat Mass</div>
-              <div className="text-2xl font-bold text-[var(--coral)]">{result.fatMass} kg</div>
-            </div>
-          </div>
-
-          <div className="text-xs text-[var(--gray-500)] p-3 bg-amber-50 rounded-lg border border-amber-200">
-            <strong>Note:</strong> This calculator uses the US Navy method, which provides an estimate. 
+          <div className="text-xs text-gray-500 p-3 bg-amber-50 rounded-xl border border-amber-200">
+            <strong className="text-amber-700">Note:</strong> This calculator uses the US Navy method, which provides an estimate.
             For accurate measurements, consider DEXA scans, hydrostatic weighing, or professional caliper testing.
           </div>
         </div>

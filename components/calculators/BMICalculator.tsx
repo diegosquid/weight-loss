@@ -41,7 +41,7 @@ export function BMICalculator() {
       description = "You may need to gain weight. Consult a healthcare provider.";
     } else if (bmi < 25) {
       category = "Normal weight";
-      color = "text-green-600";
+      color = "text-emerald-600";
       description = "Your BMI is in the healthy range.";
     } else if (bmi < 30) {
       category = "Overweight";
@@ -56,44 +56,47 @@ export function BMICalculator() {
     setResult({ bmi, category, color, description });
   };
 
+  const inputClass =
+    "w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 outline-none transition-all";
+
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <div className="flex items-center gap-2 mb-6">
-        <Calculator className="w-6 h-6 text-blue-600" />
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8">
+      <div className="flex items-center gap-2.5 mb-8">
+        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 border border-blue-100">
+          <Calculator className="w-5 h-5 text-blue-700" />
+        </div>
         <h2 className="text-xl font-bold text-gray-900">BMI Calculator</h2>
       </div>
 
       <div className="mb-6">
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          Unit System
-        </label>
+        <label className="block text-sm font-semibold text-gray-700 mb-2">Unit System</label>
         <div className="flex gap-2">
           <button
             onClick={() => setUnit("metric")}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
+            className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-all border ${
               unit === "metric"
-                ? "bg-blue-600 text-white"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                ? "bg-blue-700 text-white border-blue-700 shadow-sm"
+                : "bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100 hover:border-gray-300"
             }`}
           >
             Metric (kg, cm)
           </button>
           <button
             onClick={() => setUnit("imperial")}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
+            className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-all border ${
               unit === "imperial"
-                ? "bg-blue-600 text-white"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                ? "bg-blue-700 text-white border-blue-700 shadow-sm"
+                : "bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100 hover:border-gray-300"
             }`}
           >
-            Imperial (lbs, inches)
+            Imperial (lbs, in)
           </button>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-2 gap-4 mb-8">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-semibold text-gray-700 mb-1.5">
             Height ({unit === "metric" ? "cm" : "inches"})
           </label>
           <input
@@ -101,11 +104,11 @@ export function BMICalculator() {
             value={height}
             onChange={(e) => setHeight(e.target.value)}
             placeholder={unit === "metric" ? "175" : "69"}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className={inputClass}
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-semibold text-gray-700 mb-1.5">
             Weight ({unit === "metric" ? "kg" : "lbs"})
           </label>
           <input
@@ -113,27 +116,23 @@ export function BMICalculator() {
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
             placeholder={unit === "metric" ? "70" : "154"}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className={inputClass}
           />
         </div>
       </div>
 
       <button
         onClick={calculateBMI}
-        className="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
+        className="w-full py-3.5 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors shadow-sm text-sm"
       >
         Calculate BMI
       </button>
 
       {result && (
-        <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900 mb-2">{result.bmi}</div>
-            <div className={`text-lg font-semibold ${result.color} mb-2`}>
-              {result.category}
-            </div>
-            <p className="text-gray-600 text-sm">{result.description}</p>
-          </div>
+        <div className="mt-8 py-6 px-4 rounded-xl bg-gray-50 border border-gray-200 text-center">
+          <div className="text-5xl font-bold text-gray-900">{result.bmi}</div>
+          <div className={`text-lg font-semibold mt-2 ${result.color}`}>{result.category}</div>
+          <p className="text-gray-500 text-sm mt-2">{result.description}</p>
         </div>
       )}
     </div>

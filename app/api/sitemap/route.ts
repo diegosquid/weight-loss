@@ -7,7 +7,7 @@ const STATIC_PAGES = [
   { path: "about",             priority: "0.5", changefreq: "monthly" },
   { path: "editorial-policy",  priority: "0.3", changefreq: "monthly" },
   { path: "articles",          priority: "0.8", changefreq: "weekly" },
-  { path: "glp1",              priority: "0.8", changefreq: "weekly" },
+  { path: "glp-1",             priority: "0.8", changefreq: "weekly" },
   { path: "metabolism",        priority: "0.8", changefreq: "weekly" },
   { path: "supplements",       priority: "0.8", changefreq: "weekly" },
   { path: "tools",             priority: "0.7", changefreq: "monthly" },

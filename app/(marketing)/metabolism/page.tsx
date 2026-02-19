@@ -1,102 +1,96 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowLeft, Flame, BookOpen } from "lucide-react";
+import { Metadata } from "next";
+import { getArticlesByCategory } from "@/lib/content";
+import { ArrowRight, Clock, CheckCircle, Flame } from "lucide-react";
 
-const topics = [
-  {
-    title: "How Metabolism Works",
-    description: "The science behind energy expenditure and metabolic rate.",
-    href: "#",
-    readTime: "12 min",
-  },
-  {
-    title: "Metabolic Adaptation",
-    description: "Why weight loss plateaus and how to overcome them.",
-    href: "#",
-    readTime: "8 min",
-  },
-  {
-    title: "Boosting Metabolism",
-    description: "Evidence-based strategies to increase metabolic rate.",
-    href: "#",
-    readTime: "10 min",
-  },
-  {
-    title: "Muscle and Metabolism",
-    description: "How lean mass affects your resting metabolic rate.",
-    href: "#",
-    readTime: "7 min",
-  },
-];
+export const metadata: Metadata = {
+  title: "Metabolism Science",
+  description:
+    "Learn how your body burns energy, adapts to calorie changes, and what you can do to optimize your metabolic health.",
+  alternates: { canonical: "https://metabolicscience.org/metabolism" },
+};
 
 export default function MetabolismPage() {
+  const articles = getArticlesByCategory("metabolism");
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="bg-gradient-to-b from-orange-50 to-white py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <Link 
-            href="/"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 mb-6"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
-          </Link>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+    <div className="flex-1">
+      {/* Hero */}
+      <section className="bg-gradient-to-b from-orange-50 to-white py-14 lg:py-20 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                <Flame className="w-6 h-6 text-orange-600" />
+              <div className="w-11 h-11 bg-orange-100 rounded-xl flex items-center justify-center">
+                <Flame className="w-5 h-5 text-orange-600" />
               </div>
-              <span className="text-orange-600 font-medium">Metabolism Science</span>
+              <span className="text-sm font-bold text-orange-600 uppercase tracking-wide">Metabolism Science</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Understanding Metabolism
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl">
-              Learn how your body burns energy, adapts to calorie changes, 
-              and what you can do to optimize your metabolic health.
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Learn how your body burns energy, adapts to calorie changes, and what you can do to optimize your metabolic health.
             </p>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Topics Grid */}
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold mb-8">Topics</h2>
-        
-        <div className="grid md:grid-cols-2 gap-6">
-          {topics.map((topic, index) => (
-            <motion.div
-              key={topic.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Link href={topic.href}>
-                <div className="group p-6 border border-gray-200 rounded-xl hover:border-orange-300 hover:shadow-lg transition-all">
-                  <div className="flex items-center justify-between mb-3">
-                    <BookOpen className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-400 text-sm">{topic.readTime}</span>
+      {/* Articles */}
+      <section className="py-12 lg:py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-6">
+            {articles.length} Article{articles.length !== 1 && "s"}
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {articles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/${article.categorySlug}/${article.slug}`}
+                className="group flex flex-col bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+              >
+                <div className="h-1.5 w-full bg-gradient-to-r from-orange-500 to-amber-400" />
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-2.5 py-1 rounded-full bg-orange-50 text-xs font-semibold text-orange-700 border border-orange-100">
+                      {article.category}
+                    </span>
+                    <span className="flex items-center gap-1 text-xs text-gray-400">
+                      <Clock className="w-3 h-3" />
+                      {article.readingTime} min
+                    </span>
                   </div>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition">
-                    {topic.title}
-                  </h3>
-                  
-                  <p className="text-gray-600">{topic.description}</p>
+                  <h2 className="text-base font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors leading-snug line-clamp-2">
+                    {article.title}
+                  </h2>
+                  <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 flex-1">
+                    {article.description}
+                  </p>
+                  <div className="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <p className="text-xs font-semibold text-gray-900">{article.author.name}</p>
+                    <div className="flex items-center gap-2">
+                      {article.medicalReviewer && (
+                        <span className="flex items-center gap-1 text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                          <CheckCircle className="w-3 h-3" />
+                          MD Reviewed
+                        </span>
+                      )}
+                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-orange-600 group-hover:translate-x-0.5 transition-all" />
+                    </div>
+                  </div>
                 </div>
               </Link>
-            </motion.div>
-          ))}
+            ))}
+          </div>
+
+          {articles.length === 0 && (
+            <div className="text-center py-20 text-gray-500">
+              <p className="text-lg font-medium">No articles yet.</p>
+              <p className="text-sm mt-1">Check back soon — new content is published weekly.</p>
+            </div>
+          )}
         </div>
-      </div>
+      </section>
     </div>
   );
 }

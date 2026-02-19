@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { BookOpen, CheckCircle, RefreshCw, Shield, Users, XCircle } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -14,10 +12,7 @@ export const metadata: Metadata = {
 
 export default function EditorialPolicyPage() {
   return (
-    <>
-      <Header />
-      
-      <main className="flex-1">
+      <div className="flex-1">
         {/* Hero */}
         <section className="py-16 lg:py-24 bg-[var(--secondary-light)]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,9 +233,6 @@ export default function EditorialPolicyPage() {
             </div>
           </div>
         </section>
-      </main>
-
-      <Footer />
-    </>
+      </div>
   );
 }

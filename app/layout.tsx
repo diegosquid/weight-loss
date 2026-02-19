@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { GlassHeader } from "@/components/layout/GlassHeader";
 import { Footer } from "@/components/layout/Footer";
+import { getNavItems } from "@/lib/content";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -88,6 +89,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const navItems = getNavItems();
+
   return (
     <html
       lang="en"
@@ -118,7 +121,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <ThemeProvider>
-          <GlassHeader />
+          <GlassHeader navItems={navItems} />
           <main className="flex-1 pt-16 lg:pt-20">
             {children}
           </main>

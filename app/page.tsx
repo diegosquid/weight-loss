@@ -12,7 +12,7 @@ export default function Home() {
         <h2 className="text-3xl font-serif font-bold text-gray-900 text-center mb-12">Explore Topics</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { title: "GLP-1 Medications", desc: "Semaglutide, tirzepatide, and more", href: "/glp1" },
+            { title: "GLP-1 Medications", desc: "Semaglutide, tirzepatide, and more", href: "/glp-1" },
             { title: "Metabolism Science", desc: "How your body burns energy", href: "/metabolism" },
             { title: "Supplements", desc: "Evidence-based recommendations", href: "/supplements" },
             { title: "Health Tools", desc: "Calculators and assessments", href: "/tools" },

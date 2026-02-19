@@ -62,7 +62,7 @@ const trustPillars = [
 ];
 
 const categories = [
-  { label: "GLP-1 Medications", href: "/glp1",        color: "bg-blue-700" },
+  { label: "GLP-1 Medications", href: "/glp-1",        color: "bg-blue-700" },
   { label: "Metabolism Science", href: "/metabolism",   color: "bg-emerald-600" },
   { label: "Supplements",        href: "/supplements",  color: "bg-purple-600" },
   { label: "Tools & Calculators",href: "/calculators",  color: "bg-amber-500" },

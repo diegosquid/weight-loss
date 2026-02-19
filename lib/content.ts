@@ -122,6 +122,64 @@ export function getAllCategories(): string[] {
   });
 }
 
+export interface NavChild {
+  label: string;
+  href: string;
+  description: string;
+}
+
+export interface NavItem {
+  label: string;
+  href: string;
+  key: string; // used to map icons in the client component
+  children: NavChild[];
+  totalArticles: number; // total count (children may be truncated)
+}
+
+const NAV_MAX_CHILDREN = 4;
+
+/** Build navigation items dynamically from content + static pages */
+export function getNavItems(): NavItem[] {
+  const categoryMeta: Record<string, { label: string; key: string }> = {
+    "glp-1":       { label: "GLP-1",        key: "glp-1" },
+    "metabolism":   { label: "Metabolism",    key: "metabolism" },
+    "supplements":  { label: "Supplements",  key: "supplements" },
+  };
+
+  const categories = getAllCategories();
+  const items: NavItem[] = [];
+
+  for (const cat of categories) {
+    const meta = categoryMeta[cat];
+    if (!meta) continue;
+
+    const articles = getArticlesByCategory(cat);
+    const children: NavChild[] = articles.slice(0, NAV_MAX_CHILDREN).map((a) => ({
+      label: a.title,
+      href: `/${a.categorySlug}/${a.slug}`,
+      description: a.description.length > 60 ? a.description.slice(0, 57) + "..." : a.description,
+    }));
+
+    items.push({ label: meta.label, href: `/${cat}`, key: meta.key, children, totalArticles: articles.length });
+  }
+
+  // Static: Tools
+  items.push({
+    label: "Tools",
+    href: "/tools",
+    key: "tools",
+    totalArticles: 4,
+    children: [
+      { label: "BMI Calculator",     href: "/calculators/bmi",      description: "Body Mass Index" },
+      { label: "Calorie Calculator",  href: "/calculators/calorie",  description: "Daily calorie needs" },
+      { label: "Macro Calculator",    href: "/calculators/macro",    description: "Macronutrient targets" },
+      { label: "Body Fat %",          href: "/calculators/body-fat", description: "Estimate body composition" },
+    ],
+  });
+
+  return items;
+}
+
 /** @deprecated use getArticleBySlug(categorySlug, slug) */
 export function getAuthorBySlug(slug: string): Author | undefined {
   return authors[slug];

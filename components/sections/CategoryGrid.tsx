@@ -13,7 +13,7 @@ const categories = [
     articleCount: 18,
     gradient: "from-blue-500 to-indigo-600",
     bgGradient: "from-blue-50 to-indigo-50",
-    href: "/glp1",
+    href: "/glp-1",
   },
   {
     id: "metabolism",
