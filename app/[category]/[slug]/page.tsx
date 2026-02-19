@@ -9,23 +9,26 @@ import { Clock, Calendar, RefreshCw, ArrowLeft, CheckCircle } from "lucide-react
 import Link from "next/link";
 
 interface ArticlePageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ category: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return getAllArticles().map((a) => ({ slug: a.slug }));
+  return getAllArticles().map((a) => ({
+    category: a.categorySlug,
+    slug: a.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const { category, slug } = await params;
+  const article = getArticleBySlug(category, slug);
   if (!article) return { title: "Article Not Found" };
 
   return {
     title: `${article.title} | Metabolic Health Authority`,
     description: article.description,
     alternates: {
-      canonical: `https://metabolichealthauthority.com/articles/${article.slug}`,
+      canonical: `https://metabolichealthauthority.com/${category}/${slug}`,
     },
     openGraph: {
       title: article.title,
@@ -40,14 +43,14 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
-  const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const { category, slug } = await params;
+  const article = getArticleBySlug(category, slug);
   if (!article) notFound();
 
   const articleSchema = generateArticleSchema({
     title: article.title,
     description: article.description,
-    url: `https://metabolichealthauthority.com/articles/${article.slug}`,
+    url: `https://metabolichealthauthority.com/${category}/${slug}`,
     publishedAt: article.publishedAt,
     updatedAt: article.updatedAt,
     author: { name: article.author.name },
@@ -57,23 +60,25 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home",     url: "https://metabolichealthauthority.com" },
-    { name: "Articles", url: "https://metabolichealthauthority.com/articles" },
-    { name: article.title, url: `https://metabolichealthauthority.com/articles/${article.slug}` },
+    { name: "Home", url: "https://metabolichealthauthority.com" },
+    { name: article.category, url: `https://metabolichealthauthority.com/${category}` },
+    { name: article.title, url: `https://metabolichealthauthority.com/${category}/${slug}` },
   ]);
 
   return (
     <>
       <JsonLd data={[articleSchema, breadcrumbSchema]} />
 
-      <main className="flex-1 bg-white">
+      <div className="flex-1 bg-white">
         {/* Breadcrumb */}
         <div className="border-b border-gray-200 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <nav className="flex items-center gap-2 text-sm text-gray-500">
               <Link href="/" className="hover:text-blue-700 transition-colors">Home</Link>
               <span>/</span>
-              <Link href="/articles" className="hover:text-blue-700 transition-colors">Articles</Link>
+              <span className="hover:text-blue-700 transition-colors capitalize">
+                {category.replace(/-/g, " ")}
+              </span>
               <span>/</span>
               <span className="text-gray-700 font-medium line-clamp-1">{article.title}</span>
             </nav>
@@ -85,16 +90,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
             {/* Back link */}
             <Link
-              href="/articles"
+              href="/"
               className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-blue-700 transition-colors mb-8 group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
-              Back to Articles
+              Back to Home
             </Link>
 
             {/* Article header */}
             <header className="mb-8 pb-8 border-b border-gray-200">
-              {/* Category + featured badges */}
               <div className="flex flex-wrap gap-2 mb-5">
                 <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-xs font-bold text-blue-700 uppercase tracking-wide">
                   {article.category}
@@ -114,7 +118,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 {article.description}
               </p>
 
-              {/* Meta row */}
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
                 <div className="flex items-center gap-1.5">
                   <Calendar className="w-4 h-4 text-gray-400" />
@@ -211,7 +214,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
           </div>
         </article>
-      </main>
+      </div>
     </>
   );
 }

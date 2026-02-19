@@ -42,7 +42,7 @@ export default function ArticlesPage() {
               {articles.map((article) => (
                 <Link
                   key={article.slug}
-                  href={`/articles/${article.slug}`}
+                  href={`/${article.categorySlug}/${article.slug}`}
                   className="group flex flex-col bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
                 >
                   <div className="h-1.5 w-full bg-gradient-to-r from-blue-600 to-emerald-500" />

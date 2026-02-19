@@ -1,5 +1,6 @@
 export interface Article {
   slug: string;
+  categorySlug: string;
   title: string;
   description: string;
   content: string;
