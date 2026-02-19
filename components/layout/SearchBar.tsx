@@ -206,9 +206,9 @@ export function SearchBar({ isMobile = false, autoFocus = false }: SearchBarProp
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.15 }}
                 onClick={clearSearch}
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 flex items-center justify-center transition-colors"
+                className="absolute right-2 inset-y-0 my-auto w-7 h-7 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 flex items-center justify-center transition-colors"
               >
-                <X className="w-3 h-3 text-gray-500 dark:text-gray-400" />
+                <X className="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" />
               </motion.button>
             ) : (
               <motion.button
@@ -217,9 +217,9 @@ export function SearchBar({ isMobile = false, autoFocus = false }: SearchBarProp
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.15 }}
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-primary/10 dark:bg-primary/20 hover:bg-primary/20 dark:hover:bg-primary/30 flex items-center justify-center transition-colors"
+                className="absolute right-1.5 inset-y-0 my-auto w-8 h-8 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center transition-all shadow-sm hover:shadow-md group"
               >
-                <ArrowRight className="w-3 h-3 text-primary" />
+                <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
               </motion.button>
             )}
           </AnimatePresence>

@@ -97,15 +97,15 @@ const cardVariants = {
 
 export function TrustSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        /* Section Header */
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mb-4">
             Why Trust Our Content?
@@ -115,13 +115,13 @@ export function TrustSection() {
           </p>
         </motion.div>
 
-        /* Institution Logos */
+        {/* Institution Logos */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 mb-16 opacity-60"
+          className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 mb-10 opacity-60"
         >
           {institutionLogos.map((inst) => (
             <div
@@ -136,13 +136,13 @@ export function TrustSection() {
           ))}
         </motion.div>
 
-        /* Trust Cards */
+        {/* Trust Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10"
         >
           {trustCards.map((card) => {
             const Icon = card.icon;
@@ -164,16 +164,16 @@ export function TrustSection() {
           })}
         </motion.div>
 
-        /* Medical Reviewer Card */
+        {/* Medical Reviewer Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 mb-16"
+          className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 mb-10"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            /* Reviewer Info */
+            {/* Reviewer Info */}
             <div className="text-white">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-sm font-medium mb-6">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -200,7 +200,7 @@ export function TrustSection() {
               </div>
             </div>
 
-            /* Stats */
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, i) => {
                 const Icon = stat.icon;
@@ -223,7 +223,7 @@ export function TrustSection() {
           </div>
         </motion.div>
 
-        /* Editorial Process */
+        {/* Editorial Process */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

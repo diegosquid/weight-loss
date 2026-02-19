@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { SearchBar } from "./SearchBar";
 import { Navigation } from "./Navigation";
+import { Logo } from "@/components/ui/Logo";
 
 const logoVariants: Variants = {
   initial: { opacity: 0, x: -20 },
@@ -76,29 +77,8 @@ export function GlassHeader({ showSearch = true }: GlassHeaderProps) {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <motion.div variants={logoVariants} initial="initial" animate="animate">
-              <Link
-                href="/"
-                className="flex items-center gap-2 group"
-              >
-                <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-shadow duration-300">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="w-5 h-5 lg:w-6 lg:h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                </div>
-                <div className="hidden sm:block">
-                  <span className="font-serif text-lg lg:text-xl font-bold text-gray-900 dark:text-white tracking-tight">
-                    Metabolic
-                  </span>
-                  <span className="font-serif text-lg lg:text-xl font-bold text-primary dark:text-primary-light tracking-tight">
-                    Science
-                  </span>
-                </div>
+              <Link href="/" className="flex items-center gap-2 group">
+                <Logo />
               </Link>
             </motion.div>
 

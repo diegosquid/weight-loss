@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Shield, CheckCircle } from "lucide-react";
+import { Logo } from "@/components/ui/Logo";
 
 const footerLinks = {
   resources: [
@@ -54,15 +55,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-white" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-              </div>
-              <div>
-                <span className="text-sm font-bold text-white block leading-none">Metabolic Health</span>
-                <span className="text-[10px] text-gray-500 font-medium tracking-widest uppercase leading-none mt-0.5 block">Authority</span>
-              </div>
+              <Logo />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-5">
               Evidence-based information on weight loss, metabolism, and GLP-1 medications — medically reviewed for accuracy and safety.
