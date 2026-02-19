@@ -1,7 +1,5 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { MedicalReviewBadge } from "@/components/eeat/MedicalReviewBadge";
 import { AuthorBio } from "@/components/eeat/AuthorBio";
 import { JsonLd, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -67,7 +65,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   return (
     <>
       <JsonLd data={[articleSchema, breadcrumbSchema]} />
-      <Header />
 
       <main className="flex-1 bg-white">
         {/* Breadcrumb */}
@@ -215,8 +212,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
         </article>
       </main>
-
-      <Footer />
     </>
   );
 }

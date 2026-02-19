@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { getAllArticles } from "@/lib/content";
 import { ArrowRight, Clock, CheckCircle } from "lucide-react";
 
@@ -18,10 +16,7 @@ export default function ArticlesPage() {
   const articles = getAllArticles();
 
   return (
-    <>
-      <Header />
-
-      <main className="flex-1">
+    <main className="flex-1">
 
         {/* Page header */}
         <section className="bg-white border-b border-gray-200 py-14 lg:py-20">
@@ -105,10 +100,6 @@ export default function ArticlesPage() {
             )}
           </div>
         </section>
-
-      </main>
-
-      <Footer />
-    </>
+    </main>
   );
 }
