@@ -17,9 +17,9 @@ const footerLinks = {
     { label: "Privacy Policy",         href: "/privacy" },
   ],
   popular: [
-    { label: "What is Semaglutide?", href: "/articles/what-is-semaglutide" },
-    { label: "Ozempic vs Wegovy",    href: "/articles/ozempic-vs-wegovy" },
-    { label: "GLP-1 Side Effects",   href: "/articles/glp1-side-effects" },
+    { label: "What is Semaglutide?", href: "/glp-1/what-is-semaglutide" },
+    { label: "Ozempic vs Wegovy",    href: "/glp-1/ozempic-vs-wegovy" },
+    { label: "GLP-1 Side Effects",   href: "/glp-1/glp1-side-effects" },
   ],
 };
 
