@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Learn about Metabolic Health Authority's mission, editorial standards, and the medical professionals behind our content.",
   alternates: {
-    canonical: "https://metabolichealthauthority.com/about",
+    canonical: "https://metabolicscience.org/about",
   },
 };
 

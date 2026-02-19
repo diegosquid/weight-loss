@@ -1,6 +1,6 @@
 import { getAllArticles, getAllCategories } from "@/lib/content";
 
-const BASE_URL = "https://metabolichealthauthority.com";
+const BASE_URL = "https://metabolicscience.org";
 
 const STATIC_PAGES = [
   { path: "",                  priority: "1.0", changefreq: "weekly" },

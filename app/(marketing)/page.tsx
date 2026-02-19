@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Expert-reviewed information on weight loss medications, metabolism, and GLP-1 therapies. Medically accurate, evidence-based health guidance.",
   alternates: {
-    canonical: "https://metabolichealthauthority.com",
+    canonical: "https://metabolicscience.org",
   },
 };
 

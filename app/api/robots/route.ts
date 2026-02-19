@@ -7,7 +7,7 @@ Allow: /
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://metabolichealthauthority.com/api/sitemap
+Sitemap: https://metabolicscience.org/api/sitemap
 `;
 
   return new Response(robots, {

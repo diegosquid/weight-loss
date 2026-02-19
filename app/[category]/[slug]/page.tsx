@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     title: `${article.title} | Metabolic Health Authority`,
     description: article.description,
     alternates: {
-      canonical: `https://metabolichealthauthority.com/${category}/${slug}`,
+      canonical: `https://metabolicscience.org/${category}/${slug}`,
     },
     openGraph: {
       title: article.title,
@@ -50,7 +50,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const articleSchema = generateArticleSchema({
     title: article.title,
     description: article.description,
-    url: `https://metabolichealthauthority.com/${category}/${slug}`,
+    url: `https://metabolicscience.org/${category}/${slug}`,
     publishedAt: article.publishedAt,
     updatedAt: article.updatedAt,
     author: { name: article.author.name },
@@ -60,9 +60,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://metabolichealthauthority.com" },
-    { name: article.category, url: `https://metabolichealthauthority.com/${category}` },
-    { name: article.title, url: `https://metabolichealthauthority.com/${category}/${slug}` },
+    { name: "Home", url: "https://metabolicscience.org" },
+    { name: article.category, url: `https://metabolicscience.org/${category}` },
+    { name: article.title, url: `https://metabolicscience.org/${category}/${slug}` },
   ]);
 
   return (

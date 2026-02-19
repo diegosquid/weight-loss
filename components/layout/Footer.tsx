@@ -55,7 +55,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <Logo />
+              <Logo dark />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-5">
               Evidence-based information on weight loss, metabolism, and GLP-1 medications — medically reviewed for accuracy and safety.

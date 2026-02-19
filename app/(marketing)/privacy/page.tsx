@@ -101,7 +101,7 @@ export default function PrivacyPage() {
           <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact Us</h2>
           <p>If you have any questions about this Privacy Policy, please contact us at:</p>
           <p className="mt-2">
-            <strong>Email:</strong> privacy@metabolichealthauthority.com
+            <strong>Email:</strong> privacy@metabolicscience.org
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Affiliate Disclosure</h2>

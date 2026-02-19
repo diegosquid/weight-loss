@@ -263,7 +263,7 @@ Then use `"new-author-slug"` in the `author` or `medicalReviewer` field of any M
 The sitemap is generated dynamically at runtime by `app/api/sitemap/route.ts`. It is served at:
 
 ```
-https://metabolichealthauthority.com/api/sitemap
+https://metabolicscience.org/api/sitemap
 ```
 
 The `robots.txt` (at `app/api/robots/route.ts`) already points search engines to this URL.

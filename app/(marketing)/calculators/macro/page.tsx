@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Calculate your optimal macronutrient intake for weight loss, maintenance, or muscle gain.",
   alternates: {
-    canonical: "https://metabolichealthauthority.com/calculators/macro",
+    canonical: "https://metabolicscience.org/calculators/macro",
   },
 };
 

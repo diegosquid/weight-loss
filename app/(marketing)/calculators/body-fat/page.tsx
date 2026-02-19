@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Estimate your body fat percentage using the US Navy method. Includes lean mass and fat mass calculations.",
   alternates: {
-    canonical: "https://metabolichealthauthority.com/calculators/body-fat",
+    canonical: "https://metabolicscience.org/calculators/body-fat",
   },
 };
 

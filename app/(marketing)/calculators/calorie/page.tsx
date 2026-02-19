@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Calculate your daily calorie needs using the Mifflin-St Jeor equation. Includes BMR and TDEE calculations.",
   alternates: {
-    canonical: "https://metabolichealthauthority.com/calculators/calorie",
+    canonical: "https://metabolicscience.org/calculators/calorie",
   },
 };
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Calculate your Body Mass Index (BMI) to understand your weight category and health risks.",
   alternates: {
-    canonical: "https://metabolichealthauthority.com/calculators/bmi",
+    canonical: "https://metabolicscience.org/calculators/bmi",
   },
 };
 

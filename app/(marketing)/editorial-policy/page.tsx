@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Our commitment to accuracy, transparency, and medical integrity. Learn about our editorial process and standards.",
   alternates: {
-    canonical: "https://metabolichealthauthority.com/editorial-policy",
+    canonical: "https://metabolicscience.org/editorial-policy",
   },
 };
 
@@ -230,8 +230,8 @@ export default function EditorialPolicyPage() {
                 <p className="text-[var(--gray-700)]">
                   Questions about our editorial policy? Concerns about content accuracy? 
                   Please contact us at{" "}
-                  <a href="mailto:editorial@metabolichealthauthority.com" className="text-[var(--primary)] underline">
-                    editorial@metabolichealthauthority.com
+                  <a href="mailto:editorial@metabolicscience.org" className="text-[var(--primary)] underline">
+                    editorial@metabolicscience.org
                   </a>
                 </p>
               </div>

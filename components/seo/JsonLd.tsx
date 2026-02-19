@@ -22,13 +22,13 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Metabolic Health Authority",
-    url: "https://metabolichealthauthority.com",
-    logo: "https://metabolichealthauthority.com/logo.png",
+    url: "https://metabolicscience.org",
+    logo: "https://metabolicscience.org/logo.png",
     description:
       "Evidence-based medical information on weight loss, metabolism, and GLP-1 medications.",
     sameAs: [
       "https://twitter.com/metabolichealth",
-      "https://facebook.com/metabolichealthauthority",
+      "https://facebook.com/metabolicscience",
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -102,7 +102,7 @@ export function generateArticleSchema({
     headline: title,
     description,
     url,
-    image: image || "https://metabolichealthauthority.com/og-image.jpg",
+    image: image || "https://metabolicscience.org/og-image.jpg",
     datePublished: publishedAt,
     author: {
       "@type": "Person",
@@ -114,7 +114,7 @@ export function generateArticleSchema({
       name: "Metabolic Health Authority",
       logo: {
         "@type": "ImageObject",
-        url: "https://metabolichealthauthority.com/logo.png",
+        url: "https://metabolicscience.org/logo.png",
       },
     },
   };

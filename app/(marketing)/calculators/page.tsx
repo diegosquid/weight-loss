@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Free health calculators including BMI, calorie needs, macronutrients, and body fat percentage.",
   alternates: {
-    canonical: "https://metabolichealthauthority.com/calculators",
+    canonical: "https://metabolicscience.org/calculators",
   },
 };
 
