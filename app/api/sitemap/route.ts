@@ -1,45 +1,51 @@
-import { getAllArticles } from "@/lib/content";
+import { getAllArticles, getAllCategories } from "@/lib/content";
+
+const BASE_URL = "https://metabolichealthauthority.com";
+
+const STATIC_PAGES = [
+  { path: "",                  priority: "1.0", changefreq: "weekly" },
+  { path: "about",             priority: "0.5", changefreq: "monthly" },
+  { path: "editorial-policy",  priority: "0.3", changefreq: "monthly" },
+  { path: "articles",          priority: "0.8", changefreq: "weekly" },
+  { path: "glp1",              priority: "0.8", changefreq: "weekly" },
+  { path: "metabolism",        priority: "0.8", changefreq: "weekly" },
+  { path: "supplements",       priority: "0.8", changefreq: "weekly" },
+  { path: "tools",             priority: "0.7", changefreq: "monthly" },
+  { path: "calculators",       priority: "0.7", changefreq: "monthly" },
+  { path: "calculators/bmi",   priority: "0.6", changefreq: "monthly" },
+  { path: "calculators/calorie", priority: "0.6", changefreq: "monthly" },
+  { path: "calculators/macro",   priority: "0.6", changefreq: "monthly" },
+  { path: "calculators/body-fat", priority: "0.6", changefreq: "monthly" },
+];
 
 export async function GET() {
   const articles = getAllArticles();
-  const baseUrl = "https://metabolichealthauthority.com";
+  const today = new Date().toISOString().split("T")[0];
 
-  const staticPages = [
-    "",
-    "about",
-    "editorial-policy",
-    "articles",
-    "calculators",
-    "calculators/bmi",
-    "calculators/calorie",
-    "calculators/macro",
-    "calculators/body-fat",
-  ];
+  const staticEntries = STATIC_PAGES.map(
+    (page) => `
+  <url>
+    <loc>${BASE_URL}/${page.path}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`
+  ).join("");
+
+  const articleEntries = articles.map(
+    (article) => `
+  <url>
+    <loc>${BASE_URL}/${article.categorySlug}/${article.slug}</loc>
+    <lastmod>${article.updatedAt || article.publishedAt}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`
+  ).join("");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${staticPages
-    .map(
-      (page) => `
-  <url>
-    <loc>${baseUrl}/${page}</loc>
-    <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
-    <priority>${page === "" ? "1.0" : "0.8"}</priority>
-  </url>
-  `
-    )
-    .join("")}
-  ${articles
-    .map(
-      (article) => `
-  <url>
-    <loc>${baseUrl}/articles/${article.slug}</loc>
-    <lastmod>${article.updatedAt || article.publishedAt}</lastmod>
-    <priority>0.7</priority>
-  </url>
-  `
-    )
-    .join("")}
+  ${staticEntries}
+  ${articleEntries}
 </urlset>`;
 
   return new Response(xml, {

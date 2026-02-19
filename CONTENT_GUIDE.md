@@ -12,8 +12,9 @@ This guide explains **exactly** how to add new articles, create new categories, 
 4. [How to Create a New Category](#4-how-to-create-a-new-category)
 5. [MDX Frontmatter Reference](#5-mdx-frontmatter-reference)
 6. [Authors Registry](#6-authors-registry)
-7. [All Broken & Missing Links](#7-all-broken--missing-links)
-8. [Existing Working Routes](#8-existing-working-routes)
+7. [Sitemap & SEO](#7-sitemap--seo)
+8. [All Broken & Missing Links](#8-all-broken--missing-links)
+9. [Existing Working Routes](#9-existing-working-routes)
 
 ---
 
@@ -255,11 +256,81 @@ Then use `"new-author-slug"` in the `author` or `medicalReviewer` field of any M
 
 ---
 
-## 7. All Broken & Missing Links
+## 7. Sitemap & SEO
+
+### How the Sitemap Works
+
+The sitemap is generated dynamically at runtime by `app/api/sitemap/route.ts`. It is served at:
+
+```
+https://metabolichealthauthority.com/api/sitemap
+```
+
+The `robots.txt` (at `app/api/robots/route.ts`) already points search engines to this URL.
+
+### What's Included Automatically
+
+- **All static pages** — hardcoded in the `STATIC_PAGES` array inside the sitemap route
+- **All articles** — dynamically pulled from `getAllArticles()` which scans every `.mdx` file in `content/`
+
+This means: **when you create a new MDX article, it is automatically added to the sitemap.** No manual update needed for articles.
+
+### When You MUST Manually Update the Sitemap
+
+You must edit `app/api/sitemap/route.ts` in these cases:
+
+| Scenario | What to Do |
+|----------|-----------|
+| **New static page created** (e.g., `/privacy`, `/contact`) | Add a new entry to the `STATIC_PAGES` array |
+| **Static page deleted** | Remove the entry from `STATIC_PAGES` |
+| **Static page URL changed** | Update the `path` in `STATIC_PAGES` |
+| **New article created** | Nothing — automatic |
+| **New category created** | Nothing — articles are automatic. But if you create a category landing page (e.g., `app/(marketing)/nutrition/page.tsx`), add it to `STATIC_PAGES` |
+| **Domain changed** | Update `BASE_URL` constant at the top of the file AND in `app/api/robots/route.ts` |
+
+### How to Add a New Static Page to the Sitemap
+
+Open `app/api/sitemap/route.ts` and add to the `STATIC_PAGES` array:
+
+```typescript
+const STATIC_PAGES = [
+  // ... existing pages ...
+  { path: "privacy", priority: "0.3", changefreq: "monthly" },  // ← add here
+];
+```
+
+### Priority Guidelines
+
+| Page Type | Priority | Changefreq |
+|-----------|----------|-----------|
+| Homepage | `1.0` | `weekly` |
+| Category landing pages (`/glp1`, `/metabolism`, etc.) | `0.8` | `weekly` |
+| Article listing (`/articles`) | `0.8` | `weekly` |
+| Individual articles | `0.7` | `monthly` |
+| Tools / calculators | `0.6` | `monthly` |
+| Institutional pages (`/about`, `/editorial-policy`) | `0.3`–`0.5` | `monthly` |
+
+### Verifying the Sitemap
+
+After changes, verify the sitemap by visiting:
+
+```
+http://localhost:3002/api/sitemap
+```
+
+Check that:
+- All article URLs use the format `/{category}/{slug}` (NOT `/articles/{slug}`)
+- All static pages are listed
+- No duplicate URLs exist
+- All `<lastmod>` dates are valid
+
+---
+
+## 8. All Broken & Missing Links
 
 Below is a complete list of every broken link in the site grouped by location.
 
-### 7.1. Header Navigation (`components/layout/Navigation.tsx`)
+### 8.1. Header Navigation (`components/layout/Navigation.tsx`)
 
 The header navigation defines dropdown menus with child links. Most child links point to articles that do NOT exist yet. Each one needs an MDX file created in the right folder.
 
@@ -303,7 +374,7 @@ The header navigation defines dropdown menus with child links. Most child links 
 | Macro Calculator | `/calculators/macro` | OK | Page exists |
 | Body Fat % | `/calculators/body-fat` | OK | Page exists |
 
-### 7.2. Footer (`components/layout/Footer.tsx`)
+### 8.2. Footer (`components/layout/Footer.tsx`)
 
 | Link | URL | Status | Fix |
 |------|-----|--------|-----|
@@ -321,7 +392,7 @@ The header navigation defines dropdown menus with child links. Most child links 
 | **GLP-1 Side Effects** | `/articles/glp1-side-effects` | **BROKEN** | Old URL. Change href to `/glp-1/glp1-side-effects` |
 | Privacy Policy (bottom bar) | `/privacy` | **BROKEN** | Same — needs `app/(marketing)/privacy/page.tsx` |
 
-### 7.3. Homepage (`app/page.tsx`)
+### 8.3. Homepage (`app/page.tsx`)
 
 | Link | URL | Status | Fix |
 |------|-----|--------|-----|
@@ -330,14 +401,14 @@ The header navigation defines dropdown menus with child links. Most child links 
 | Supplements | `/supplements` | OK | |
 | Health Tools | `/tools` | OK | |
 
-### 7.4. Hero Section (`components/sections/HeroSection.tsx`)
+### 8.4. Hero Section (`components/sections/HeroSection.tsx`)
 
 | Link | URL | Status | Fix |
 |------|-----|--------|-----|
 | Start Reading | `/articles` | OK | |
 | **Health Tools** | `/tools/bmi-calculator` | **BROKEN** | Change href to `/calculators/bmi` OR `/tools` |
 
-### 7.5. Trust Section (`components/sections/TrustSection.tsx`)
+### 8.5. Trust Section (`components/sections/TrustSection.tsx`)
 
 | Link | URL | Status | Fix |
 |------|-----|--------|-----|
@@ -345,7 +416,7 @@ The header navigation defines dropdown menus with child links. Most child links 
 
 ---
 
-## 7.6. Summary: All Content That Needs to Be Created
+## 8.6. Summary: All Content That Needs to Be Created
 
 ### MDX Articles to Create (13 articles)
 
@@ -382,7 +453,7 @@ These are articles linked in the navigation that do not have MDX files yet. Crea
 
 ---
 
-## 8. Existing Working Routes
+## 9. Existing Working Routes
 
 These routes currently work and have pages:
 
