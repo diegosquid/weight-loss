@@ -1,0 +1,176 @@
+# Regras de Geração de Conteúdo - Weight Loss (Metabolic Health Authority)
+
+## ⚠️ OBRIGATÓRIO: Buscar Papers Científicos
+
+**Toda geração de artigo DEVE incluir citações científicas de PubMed/PMC.**
+
+### Processo de Criação:
+1. **Buscar papers** sobre o tema antes de escrever
+2. **Mínimo 4 citações** por artigo (máximo 8)
+3. **Priorizar:** Meta-análises, RCTs, guidelines (2019-2024)
+4. **Formato:**
+   ```markdown
+   > **Evidence:** "Quote" — *Author, et al. Journal. Year.* [DOI](link)
+   ```
+5. **Incluir DOI** em todas as referências
+6. **Adicionar seção References** no final
+
+### Fontes Aceitáveis (Prioridade):
+1. **NEJM, Lancet, JAMA, Nature Medicine** — Top tier
+2. **Cell Metabolism, Diabetes Care, Obesity** — Especializadas
+3. **Cochrane Reviews** — Meta-análises gold standard
+4. **FDA/EMA guidelines** — Regulatórias
+
+### Fontes NÃO Aceitáveis:
+- Blogs, sites de notícias
+- Estudos sem peer-review
+- White papers de empresas
+- Anedotas, "estudos" sem metodologia
+
+---
+
+## 📝 Template de Artigo
+
+```markdown
+---
+title: "Título SEO-friendly"
+description: "Meta description 150-160 caracteres"
+publishedAt: "YYYY-MM-DD"
+updatedAt: "YYYY-MM-DD"
+author: "sarah-mitchell"
+medicalReviewer: "james-chen"
+category: "Category Name"
+tags: ["tag1", "tag2"]
+featured: false
+---
+
+## Introdução
+
+Contexto + hook. Citar estatística relevante com fonte.
+
+> **Evidence:** "Estatística ou claim importante" — *Autor. Journal. Ano.* [DOI](link)
+
+## Seção Principal
+
+### Subseção
+
+Conteúdo com citações inline:
+
+> **Evidence:** "Dado específico comprovando claim" — *Autor. Journal. Ano.* [DOI](link)
+
+### Tabelas de Dados
+
+| Parâmetro | Valor | P-value | Fonte |
+|-----------|-------|---------|-------|
+| Resultado A | X% | <0.001 | Autor, Journal |
+
+## Conclusão
+
+Resumo + takeaway. Citação de guideline ou revisão.
+
+---
+
+## References
+
+1. Autor AB, et al. Título do estudo. *Journal*. Ano;Vol(Issue):Pages. DOI: [link](https://doi.org/...)
+2. ...
+
+---
+
+*Last updated: YYYY-MM-DD*  
+*Medical review: Dr. James Chen, MD, PhD, FACE*
+```
+
+---
+
+## 🎯 Estratégia de Conteúdo (6 Meses)
+
+### Mês 1: Fundação (8 artigos)
+- [x] What is Semaglutide?
+- [x] Ozempic vs Wegovy
+- [x] GLP-1 Side Effects
+- [x] Tirzepatide Explained
+- [ ] How GLP-1 Medications Work
+- [ ] Mounjaro vs Ozempic
+- [ ] Starting GLP-1: What to Expect
+- [ ] Insurance Coverage
+
+### Mês 2: Deep Dive (10 artigos)
+- [ ] Semaglutide Dosage Guide
+- [ ] Wegovy Dosing Schedule
+- [ ] Ozempic Off-Label
+- [ ] Saxenda vs Wegovy
+- [ ] Rybelsus
+- [ ] Injection Techniques
+- [ ] Storage and Handling
+- [ ] Traveling with GLP-1
+- [ ] Missed Dose Protocol
+- [ ] Switching GLP-1 Drugs
+
+### Mês 3: Comparisons (10 artigos)
+- [ ] Trulicity vs Ozempic
+- [ ] Bydureon vs Victoza
+- [ ] Natural GLP-1 Boosters
+- [ ] Phentermine vs GLP-1
+- [ ] Contrave Review
+- [ ] Qsymia Comparison
+- [ ] Plenity
+- [ ] Diet vs Medication
+- [ ] Exercise with GLP-1
+- [ ] Supplements That Help
+
+---
+
+## 🤖 Cron Job: Geração Automática
+
+**Frequência:** Semanal (toda segunda-feira, 09:00)
+**Próximos artigos na fila:**
+1. How GLP-1 Medications Work
+2. Mounjaro vs Ozempic
+3. Starting GLP-1: What to Expect
+4. Insurance Coverage for Weight Loss Drugs
+5. Semaglutide Dosage Guide
+
+**Instruções para o cron:**
+- Buscar papers no PubMed antes de gerar
+- Usar template acima
+- Mínimo 4 citações por artigo
+- Salvar em `content/{category}/{slug}.mdx`
+- Fazer commit com mensagem descritiva
+
+---
+
+## ✅ Checklist de Qualidade
+
+Antes de publicar qualquer artigo:
+
+- [ ] Mínimo 4 citações científicas
+- [ ] Todas as citações têm DOI
+- [ ] Fontes são peer-reviewed
+- [ ] Relevância: cada citação comprova uma claim
+- [ ] Formato das citações está correto
+- [ ] Seção References adicionada
+- [ ] updatedAt atualizado
+- [ ] Medical reviewer atribuído
+- [ ] Build passa sem erros
+
+---
+
+## 📊 Métricas de Sucesso
+
+**SEO:**
+- E-E-A-T score alto
+- Rich snippets para citações médicas
+- Backlinks de sites acadêmicos
+
+**Engajamento:**
+- Tempo na página >5 minutos
+- Bounce rate <40%
+- Return visits
+
+---
+
+*Criado em: 21/02/2026*  
+*Última atualização: 21/02/2026*  
+*Total de artigos enriquecidos: 13*  
+*Total de citações adicionadas: 71*
