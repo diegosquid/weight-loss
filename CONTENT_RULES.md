@@ -15,6 +15,22 @@
 5. **Incluir DOI** em todas as referências
 6. **Adicionar seção References** no final
 
+### ⚠️ REGRA CRÍTICA - Links nas Referências:
+**TODAS as referências na seção ## References DEVEM ter links clicáveis:**
+
+| Tipo de Fonte | Formato Obrigatório | Exemplo |
+|---------------|---------------------|---------|
+| **DOI** | `[DOI: 10.xxxx](https://doi.org/10.xxxx)` | `[DOI: 10.1056/NEJMoa2032183](https://doi.org/10.1056/NEJMoa2032183)` |
+| **PubMed** | `[PubMed](https://pubmed.ncbi.nlm.nih.gov/XXXX/)` | `[PubMed](https://pubmed.ncbi.nlm.nih.gov/33567185/)` |
+| **FDA** | `[FDA](https://www.fda.gov/...)` | `[FDA](https://www.fda.gov/drugs/...)` |
+| **ArXiv/Preprint** | `[ArXiv](https://arxiv.org/abs/...)` | `[ArXiv](https://arxiv.org/abs/2401.xxxxx)` |
+
+**❌ NUNCA deixar referência sem link:**
+- Errado: `Wilding JPH, et al. N Engl J Med. 2021.`
+- Certo: `Wilding JPH, et al. N Engl J Med. 2021. DOI: [10.1056/NEJMoa2032183](https://doi.org/10.1056/NEJMoa2032183)`
+
+**Verificação obrigatória:** Antes de fazer commit, conferir se TODAS as referências têm links clicáveis.
+
 ### Fontes Aceitáveis (Prioridade):
 1. **NEJM, Lancet, JAMA, Nature Medicine** — Top tier
 2. **Cell Metabolism, Diabetes Care, Obesity** — Especializadas
