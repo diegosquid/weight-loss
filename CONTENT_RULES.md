@@ -155,11 +155,14 @@ Resumo + takeaway. Citação de guideline ou revisão.
 20. Qsymia Comparison
 
 **Instruções para o cron:**
-- Buscar papers no PubMed antes de gerar
-- Usar template acima
-- Mínimo 4 citações por artigo
-- Salvar em `content/{category}/{slug}.mdx`
-- Fazer commit com mensagem descritiva
+1. Buscar papers no PubMed antes de gerar
+2. Usar template acima
+3. Mínimo 4 citações por artigo
+4. Salvar em `content/{category}/{slug}.mdx`
+5. **FAZER BUILD:** `npm run build` (obrigatório!)
+6. **FAZER COMMIT:** `git add -A && git commit -m "feat: add article [título]"`
+7. **FAZER PUSH:** `git push`
+8. Notificar usuário no Telegram com link do artigo
 
 ---
 
