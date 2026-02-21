@@ -212,7 +212,62 @@ Antes de publicar qualquer artigo:
 
 ---
 
+## 💰 Estratégia de Monetização (Links de Afiliado)
+
+**Objetivo:** Inserir links de afiliado naturalmente nos artigos, sem prejudicar a autoridade médica.
+
+### Onde Encaixar Links de Afiliado:
+
+| Seção do Artigo | Tipo de Link | Exemplo |
+|-----------------|--------------|---------|
+| **Introdução** | Leve menção | "...suplementos como [termogênico X] podem auxiliar..." |
+| **Seção 'Top Supplements'** | Lista com links | "1. [Green Tea Extract](link) - Estudos mostram..." |
+| **Comparativos** | Links para produtos | "vs [produto concorrente](link)" |
+| **Call-to-Action final** | Link direto | "Quer experimentar? [Veja preço aqui](link)" |
+| **Sidebar/Related** | Produtos relacionados | "Leitores também buscam: [produto](link)" |
+
+### Regras para Links de Afiliado:
+
+1. **Relevância obrigatória:** Link deve fazer sentido no contexto
+2. **Não forçar:** Se não houver produto relevante, não colocar
+3. **Disclosure:** Incluir disclaimer de afiliado no footer
+4. **Máximo 2-3 links** por artigo (não saturar)
+5. **Priorizar:** Suplementos com evidência científica
+6. **Formato:** Link natural no texto, não botão chamativo
+
+### Categorias com Potencial de Afiliado:
+
+- **Suplementos:** Termogênicos, berberina, cromo, CLA
+- **Proteínas:** Whey protein, plant-based
+- **Fibra:** Psyllium, glucomannan
+- **Probiotícos:** L. gasseri, Akkermansia
+- **Equipamentos:** Balança bioimpedância, fitas métricas
+- **Livros:** Best-sellers de saúde/metabolismo
+
+### Exemplo de Implementação:
+
+```markdown
+## Best Supplements for Metabolism
+
+Based on current evidence, these supplements show promise:
+
+1. **Green Tea Extract** ([see options](aff-link))
+   - Meta-analysis shows 1.3kg weight loss over 12 weeks
+   - Safe, well-tolerated
+
+2. **Caffeine** ([pre-workout formulas](aff-link))
+   - Increases metabolic rate by 3-11%
+   - Best taken before exercise
+
+---
+
+*Disclosure: This article contains affiliate links. We may earn a commission 
+if you purchase through these links, at no extra cost to you. This helps 
+support our independent research and content creation.*
+```
+
+---
+
 *Criado em: 21/02/2026*  
-*Última atualização: 21/02/2026*  
-*Total de artigos enriquecidos: 13*  
-*Total de citações adicionadas: 71*
+*Última atualização: 22/02/2026*  
+*Total de artigos enriquecidos: 14*
