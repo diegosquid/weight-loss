@@ -123,13 +123,36 @@ Resumo + takeaway. Citação de guideline ou revisão.
 
 ## 🤖 Cron Job: Geração Automática
 
-**Frequência:** Semanal (toda segunda-feira, 09:00)
+**Frequência:** 5x por semana (Segunda a Sexta, 09:00 BRT)
+**Total:** ~20 artigos/mês = 240/ano
+
+**Estratégia SEO:**
+- Volume alto para topical authority rápida
+- Fresh content signal diário para Google
+- Long-tail keywords de baixa competição primeiro
+- Build de backlinks naturais acelerado
+
 **Próximos artigos na fila:**
 1. How GLP-1 Medications Work
 2. Mounjaro vs Ozempic
 3. Starting GLP-1: What to Expect
 4. Insurance Coverage for Weight Loss Drugs
 5. Semaglutide Dosage Guide
+6. Wegovy Dosing Schedule
+7. Ozempic Off-Label Use
+8. Saxenda vs Wegovy
+9. Rybelsus Guide
+10. Injection Techniques
+11. Storage and Handling
+12. Traveling with GLP-1
+13. Missed Dose Protocol
+14. Switching GLP-1 Drugs
+15. Trulicity vs Ozempic
+16. Bydureon vs Victoza
+17. Natural GLP-1 Boosters
+18. Phentermine vs GLP-1
+19. Contrave Review
+20. Qsymia Comparison
 
 **Instruções para o cron:**
 - Buscar papers no PubMed antes de gerar
