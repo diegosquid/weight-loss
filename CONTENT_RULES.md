@@ -106,7 +106,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 - [x] Ozempic vs Wegovy
 - [x] GLP-1 Side Effects
 - [x] Tirzepatide Explained
-- [ ] How GLP-1 Medications Work
+- [x] How GLP-1 Medications Work
 - [ ] Mounjaro vs Ozempic
 - [ ] Starting GLP-1: What to Expect
 - [ ] Insurance Coverage
@@ -149,7 +149,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 - Build de backlinks naturais acelerado
 
 **Próximos artigos na fila:**
-1. How GLP-1 Medications Work
+1. ~~How GLP-1 Medications Work~~ ✅ Publicado em 23/02/2026
 2. Mounjaro vs Ozempic
 3. Starting GLP-1: What to Expect
 4. Insurance Coverage for Weight Loss Drugs
@@ -269,5 +269,5 @@ support our independent research and content creation.*
 ---
 
 *Criado em: 21/02/2026*  
-*Última atualização: 22/02/2026*  
-*Total de artigos enriquecidos: 14*
+*Última atualização: 23/02/2026*  
+*Total de artigos enriquecidos: 15*
