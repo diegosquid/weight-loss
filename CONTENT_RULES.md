@@ -150,7 +150,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 
 **Próximos artigos na fila:**
 1. ~~How GLP-1 Medications Work~~ ✅ Publicado em 23/02/2026
-2. Mounjaro vs Ozempic
+2. ~~Mounjaro vs Ozempic~~ ✅ Publicado em 27/02/2026
 3. Starting GLP-1: What to Expect
 4. Insurance Coverage for Weight Loss Drugs
 5. Semaglutide Dosage Guide
