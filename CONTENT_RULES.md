@@ -107,9 +107,9 @@ Resumo + takeaway. Citação de guideline ou revisão.
 - [x] GLP-1 Side Effects
 - [x] Tirzepatide Explained
 - [x] How GLP-1 Medications Work
-- [ ] Mounjaro vs Ozempic
-- [ ] Starting GLP-1: What to Expect
-- [ ] Insurance Coverage
+- [x] Mounjaro vs Ozempic
+- [x] Starting GLP-1: What to Expect
+- [x] Insurance Coverage
 
 ### Mês 2: Deep Dive (10 artigos)
 - [ ] Semaglutide Dosage Guide
@@ -151,8 +151,8 @@ Resumo + takeaway. Citação de guideline ou revisão.
 **Próximos artigos na fila:**
 1. ~~How GLP-1 Medications Work~~ ✅ Publicado em 23/02/2026
 2. ~~Mounjaro vs Ozempic~~ ✅ Publicado em 27/02/2026
-3. Starting GLP-1: What to Expect
-4. Insurance Coverage for Weight Loss Drugs
+3. ~~Starting GLP-1: What to Expect~~ ✅ Publicado em 26/02/2026
+4. ~~Insurance Coverage for Weight Loss Drugs~~ ✅ Publicado em 05/03/2026
 5. Semaglutide Dosage Guide
 6. Wegovy Dosing Schedule
 7. Ozempic Off-Label Use
