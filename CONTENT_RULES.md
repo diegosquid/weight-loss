@@ -112,7 +112,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 - [x] Insurance Coverage
 
 ### Mês 2: Deep Dive (10 artigos)
-- [ ] Semaglutide Dosage Guide
+- [x] Semaglutide Dosage Guide
 - [ ] Wegovy Dosing Schedule
 - [ ] Ozempic Off-Label
 - [ ] Saxenda vs Wegovy
@@ -153,7 +153,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 2. ~~Mounjaro vs Ozempic~~ ✅ Publicado em 27/02/2026
 3. ~~Starting GLP-1: What to Expect~~ ✅ Publicado em 26/02/2026
 4. ~~Insurance Coverage for Weight Loss Drugs~~ ✅ Publicado em 05/03/2026
-5. Semaglutide Dosage Guide
+5. ~~Semaglutide Dosage Guide~~ ✅ Publicado em 07/03/2026
 6. Wegovy Dosing Schedule
 7. Ozempic Off-Label Use
 8. Saxenda vs Wegovy
