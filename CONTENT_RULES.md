@@ -154,7 +154,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 3. ~~Starting GLP-1: What to Expect~~ ✅ Publicado em 26/02/2026
 4. ~~Insurance Coverage for Weight Loss Drugs~~ ✅ Publicado em 05/03/2026
 5. ~~Semaglutide Dosage Guide~~ ✅ Publicado em 07/03/2026
-6. Wegovy Dosing Schedule
+6. ~~Wegovy Dosing Schedule~~ ✅ Publicado em 08/03/2026
 7. Ozempic Off-Label Use
 8. Saxenda vs Wegovy
 9. Rybelsus Guide
