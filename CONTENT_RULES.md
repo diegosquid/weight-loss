@@ -155,7 +155,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 4. ~~Insurance Coverage for Weight Loss Drugs~~ ✅ Publicado em 05/03/2026
 5. ~~Semaglutide Dosage Guide~~ ✅ Publicado em 07/03/2026
 6. ~~Wegovy Dosing Schedule~~ ✅ Publicado em 08/03/2026
-7. Ozempic Off-Label Use
+7. ~~Ozempic Off-Label Use~~ ✅ Publicado em 09/03/2026
 8. Saxenda vs Wegovy
 9. Rybelsus Guide
 10. Injection Techniques
