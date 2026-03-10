@@ -156,7 +156,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 5. ~~Semaglutide Dosage Guide~~ ✅ Publicado em 07/03/2026
 6. ~~Wegovy Dosing Schedule~~ ✅ Publicado em 08/03/2026
 7. ~~Ozempic Off-Label Use~~ ✅ Publicado em 09/03/2026
-8. Saxenda vs Wegovy
+8. ~~Saxenda vs Wegovy~~ ✅ Publicado em 10/03/2026
 9. Rybelsus Guide
 10. Injection Techniques
 11. Storage and Handling
