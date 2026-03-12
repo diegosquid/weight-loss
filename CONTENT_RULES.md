@@ -158,7 +158,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 7. ~~Ozempic Off-Label Use~~ ✅ Publicado em 09/03/2026
 8. ~~Saxenda vs Wegovy~~ ✅ Publicado em 10/03/2026
 9. ~~Rybelsus Guide~~ ✅ Publicado em 11/03/2026
-10. Injection Techniques
+10. ~~Injection Techniques~~ ✅ Publicado em 12/03/2026
 11. Storage and Handling
 12. Traveling with GLP-1
 13. Missed Dose Protocol
