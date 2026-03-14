@@ -160,7 +160,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 9. ~~Rybelsus Guide~~ ✅ Publicado em 11/03/2026
 10. ~~Injection Techniques~~ ✅ Publicado em 12/03/2026
 11. ~~Storage and Handling~~ ✅ Publicado em 13/03/2026
-12. Traveling with GLP-1
+12. ~~Traveling with GLP-1~~ ✅ Publicado em 14/03/2026
 13. Missed Dose Protocol
 14. Switching GLP-1 Drugs
 15. Trulicity vs Ozempic
