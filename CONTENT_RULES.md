@@ -163,7 +163,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 12. ~~Traveling with GLP-1~~ ✅ Publicado em 14/03/2026
 13. ~~Missed Dose Protocol~~ ✅ Publicado em 15/03/2026
 14. ~~Switching GLP-1 Drugs~~ ✅ Publicado em 16/03/2026
-15. Trulicity vs Ozempic
+15. ~~Trulicity vs Ozempic~~ ✅ Publicado em 17/03/2026
 16. Bydureon vs Victoza
 17. Natural GLP-1 Boosters
 18. Phentermine vs GLP-1
