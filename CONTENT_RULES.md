@@ -165,7 +165,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 14. ~~Switching GLP-1 Drugs~~ ✅ Publicado em 16/03/2026
 15. ~~Trulicity vs Ozempic~~ ✅ Publicado em 17/03/2026
 16. ~~Bydureon vs Victoza~~ ✅ Publicado em 18/03/2026
-17. Natural GLP-1 Boosters
+17. ~~Natural GLP-1 Boosters~~ ✅ Publicado em 19/03/2026
 18. Phentermine vs GLP-1
 19. Contrave Review
 20. Qsymia Comparison
