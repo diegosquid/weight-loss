@@ -166,7 +166,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 15. ~~Trulicity vs Ozempic~~ ✅ Publicado em 17/03/2026
 16. ~~Bydureon vs Victoza~~ ✅ Publicado em 18/03/2026
 17. ~~Natural GLP-1 Boosters~~ ✅ Publicado em 19/03/2026
-18. Phentermine vs GLP-1
+18. ~~Phentermine vs GLP-1~~ ✅ Publicado em 20/03/2026
 19. Contrave Review
 20. Qsymia Comparison
 
