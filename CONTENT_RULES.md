@@ -168,7 +168,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 17. ~~Natural GLP-1 Boosters~~ ✅ Publicado em 19/03/2026
 18. ~~Phentermine vs GLP-1~~ ✅ Publicado em 20/03/2026
 19. ~~Contrave Review~~ ✅ Publicado em 21/03/2026
-20. Qsymia Comparison
+20. ~~Qsymia Comparison~~ ✅ Publicado em 23/03/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
