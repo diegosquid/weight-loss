@@ -170,6 +170,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 19. ~~Contrave Review~~ ✅ Publicado em 21/03/2026
 20. ~~Qsymia Comparison~~ ✅ Publicado em 23/03/2026
 21. ~~Plenity~~ ✅ Publicado em 24/03/2026
+22. ~~Exercise with GLP-1 Medications~~ ✅ Publicado em 25/03/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
