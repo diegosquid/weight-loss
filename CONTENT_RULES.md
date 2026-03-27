@@ -133,7 +133,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 - [ ] Plenity
 - [ ] Diet vs Medication
 - [ ] Exercise with GLP-1
-- [ ] Supplements That Help
+- [x] Supplements That Help
 
 ---
 
@@ -172,6 +172,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 21. ~~Plenity~~ ✅ Publicado em 24/03/2026
 22. ~~Exercise with GLP-1 Medications~~ ✅ Publicado em 25/03/2026
 23. ~~Diet vs Medication for Weight Loss~~ ✅ Publicado em 26/03/2026
+24. ~~Best Supplements for Weight Loss~~ ✅ Publicado em 27/03/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
