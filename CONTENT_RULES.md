@@ -173,6 +173,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 22. ~~Exercise with GLP-1 Medications~~ ✅ Publicado em 25/03/2026
 23. ~~Diet vs Medication for Weight Loss~~ ✅ Publicado em 26/03/2026
 24. ~~Best Supplements for Weight Loss~~ ✅ Publicado em 27/03/2026
+25. ~~Weight Regain After Stopping GLP-1 Medications~~ ✅ Publicado em 28/03/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
