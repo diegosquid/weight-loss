@@ -176,6 +176,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 25. ~~Weight Regain After Stopping GLP-1 Medications~~ ✅ Publicado em 28/03/2026
 26. ~~Tirzepatide vs Semaglutide: Which Is More Effective for Weight Loss?~~ ✅ Publicado em 29/03/2026
 27. ~~GLP-1 Medications and Heart Health: Cardiovascular Benefits Beyond Weight Loss~~ ✅ Publicado em 30/03/2026
+28. ~~GLP-1 Medications and Muscle Loss: How to Preserve Lean Mass~~ ✅ Publicado em 31/03/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
