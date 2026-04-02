@@ -178,6 +178,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 27. ~~GLP-1 Medications and Heart Health: Cardiovascular Benefits Beyond Weight Loss~~ ✅ Publicado em 30/03/2026
 28. ~~GLP-1 Medications and Muscle Loss: How to Preserve Lean Mass~~ ✅ Publicado em 31/03/2026
 29. ~~GLP-1 Medications and Alcohol: What the Research Shows~~ ✅ Publicado em 01/04/2026
+30. ~~GLP-1 Medications and Sleep Apnea: What the Research Shows~~ ✅ Publicado em 02/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
