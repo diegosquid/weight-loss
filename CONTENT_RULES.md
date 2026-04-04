@@ -180,6 +180,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 29. ~~GLP-1 Medications and Alcohol: What the Research Shows~~ ✅ Publicado em 01/04/2026
 30. ~~GLP-1 Medications and Sleep Apnea: What the Research Shows~~ ✅ Publicado em 02/04/2026
 31. ~~What Is Food Noise? How GLP-1 Medications Help Silence It~~ ✅ Publicado em 03/04/2026
+32. ~~GLP-1 Medications for PCOS: What the Research Shows~~ ✅ Publicado em 04/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
