@@ -183,6 +183,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 32. ~~GLP-1 Medications for PCOS: What the Research Shows~~ ✅ Publicado em 04/04/2026
 33. ~~GLP-1 Medications and Fatty Liver Disease: What the Research Shows~~ ✅ Publicado em 06/04/2026
 34. ~~GLP-1 Medications and Kidney Health: What the Research Shows~~ ✅ Publicado em 07/04/2026
+35. ~~GLP-1 Medications and Brain Health: What the Research Shows~~ ✅ Publicado em 08/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
