@@ -185,6 +185,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 34. ~~GLP-1 Medications and Kidney Health: What the Research Shows~~ ✅ Publicado em 07/04/2026
 35. ~~GLP-1 Medications and Brain Health: What the Research Shows~~ ✅ Publicado em 08/04/2026
 36. ~~GLP-1 Medications and Bone Health: What the Research Shows~~ ✅ Publicado em 09/04/2026
+37. ~~GLP-1 Medications and Hair Loss: What the Research Shows~~ ✅ Publicado em 10/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
