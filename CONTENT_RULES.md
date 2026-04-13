@@ -188,6 +188,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 37. ~~GLP-1 Medications and Hair Loss: What the Research Shows~~ ✅ Publicado em 10/04/2026
 38. ~~GLP-1 Medications and Mental Health: What the Research Shows~~ ✅ Publicado em 11/04/2026
 39. ~~GLP-1 Medications and Gut Health: What the Research Shows~~ ✅ Publicado em 12/04/2026
+40. ~~GLP-1 Medications and Inflammation: What the Research Shows~~ ✅ Publicado em 13/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
