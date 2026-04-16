@@ -191,6 +191,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 40. ~~GLP-1 Medications and Inflammation: What the Research Shows~~ ✅ Publicado em 13/04/2026
 41. ~~GLP-1 Medications and Skin Health: What the Research Shows~~ ✅ Publicado em 14/04/2026
 42. ~~GLP-1 Medications and Thyroid Health: What the Research Shows~~ ✅ Publicado em 15/04/2026
+43. ~~GLP-1 Medications and Blood Pressure: What the Research Shows~~ ✅ Publicado em 16/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
