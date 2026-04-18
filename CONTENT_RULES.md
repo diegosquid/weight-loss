@@ -193,6 +193,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 42. ~~GLP-1 Medications and Thyroid Health: What the Research Shows~~ ✅ Publicado em 15/04/2026
 43. ~~GLP-1 Medications and Blood Pressure: What the Research Shows~~ ✅ Publicado em 16/04/2026
 44. ~~GLP-1 Medications and Fertility: What the Research Shows~~ ✅ Publicado em 17/04/2026
+45. ~~GLP-1 Medications and Cholesterol: What the Research Shows~~ ✅ Publicado em 18/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
