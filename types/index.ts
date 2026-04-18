@@ -13,6 +13,12 @@ export interface Article {
   featured?: boolean;
   image?: string;
   readingTime: number;
+  faqs?: FAQ[];
+}
+
+export interface FAQ {
+  question: string;
+  answer: string;
 }
 
 export interface Author {

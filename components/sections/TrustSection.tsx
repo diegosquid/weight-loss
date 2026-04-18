@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Shield, BookOpen, RefreshCw, Ban, CheckCircle, Award, Users, FileText } from "lucide-react";
-import Image from "next/image";
+import { authors } from "@/lib/authors";
 
 const trustCards = [
   {
@@ -179,17 +179,17 @@ export function TrustSection() {
                 <Shield className="w-4 h-4 text-green-400" />
                 <span>Lead Medical Reviewer</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold mb-2">Dr. Sarah Johnson, MD</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+                {authors["james-chen"].name}, {authors["james-chen"].credentials}
+              </h3>
               <p className="text-slate-300 mb-4">
-                Board-Certified Endocrinologist & Obesity Medicine Specialist
+                {authors["james-chen"].title} — GLP-1 & Metabolic Disease Research
               </p>
               <p className="text-slate-400 text-sm mb-6">
-                Dr. Johnson brings over 15 years of clinical experience in metabolic health 
-                and weight management. She oversees all medical content to ensure accuracy 
-                and alignment with current clinical guidelines.
+                {authors["james-chen"].bio}
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Endocrinology", "Obesity Medicine", "Metabolic Health"].map((tag) => (
+                {(authors["james-chen"].specialties ?? []).map((tag) => (
                   <span
                     key={tag}
                     className="px-3 py-1 rounded-full bg-white/10 text-sm text-slate-300"

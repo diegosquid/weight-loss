@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MedicalReviewBadge } from "@/components/eeat/MedicalReviewBadge";
 import { AuthorBio } from "@/components/eeat/AuthorBio";
-import { JsonLd, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/JsonLd";
+import { JsonLd, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/components/seo/JsonLd";
 import { getArticleBySlug, getAllArticles } from "@/lib/content";
 import { formatDate } from "@/lib/utils";
 import { Clock, Calendar, RefreshCw, ArrowLeft, CheckCircle } from "lucide-react";
@@ -65,9 +65,14 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     { name: article.title, url: `https://metabolicscience.org/${category}/${slug}` },
   ]);
 
+  const schemas: Record<string, unknown>[] = [articleSchema, breadcrumbSchema];
+  if (article.faqs && article.faqs.length > 0) {
+    schemas.push(generateFAQSchema(article.faqs));
+  }
+
   return (
     <>
-      <JsonLd data={[articleSchema, breadcrumbSchema]} />
+      <JsonLd data={schemas} />
 
       <div className="flex-1 bg-white">
         {/* Breadcrumb */}
@@ -162,6 +167,36 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 prose-hr:border-gray-200"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
+
+            {/* FAQ */}
+            {article.faqs && article.faqs.length > 0 && (
+              <section className="mt-12 pt-10 border-t border-gray-200">
+                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mb-6">
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-4">
+                  {article.faqs.map((faq, i) => (
+                    <details
+                      key={i}
+                      className="group rounded-xl border border-gray-200 bg-white overflow-hidden"
+                    >
+                      <summary className="cursor-pointer list-none px-5 py-4 flex items-start justify-between gap-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                        <span>{faq.question}</span>
+                        <span
+                          aria-hidden
+                          className="flex-shrink-0 mt-1 text-gray-400 transition-transform group-open:rotate-45 text-xl leading-none"
+                        >
+                          +
+                        </span>
+                      </summary>
+                      <div className="px-5 pb-5 text-gray-700 leading-relaxed border-t border-gray-100 pt-4">
+                        {faq.answer}
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* Tags */}
             {article.tags && article.tags.length > 0 && (
