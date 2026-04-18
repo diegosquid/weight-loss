@@ -141,8 +141,9 @@ const NAV_MAX_CHILDREN = 4;
 /** Build navigation items dynamically from content + static pages */
 export function getNavItems(): NavItem[] {
   const categoryMeta: Record<string, { label: string; key: string }> = {
-    "glp-1":       { label: "GLP-1",        key: "glp-1" },
-    "metabolism":   { label: "Metabolism",    key: "metabolism" },
+    "glp-1":        { label: "GLP-1",        key: "glp-1" },
+    "medications":  { label: "Medications",  key: "medications" },
+    "metabolism":   { label: "Metabolism",   key: "metabolism" },
     "supplements":  { label: "Supplements",  key: "supplements" },
   };
 

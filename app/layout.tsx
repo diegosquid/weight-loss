@@ -20,6 +20,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://metabolicscience.org"),
   title: {
     default: "Metabolic Science | Evidence-Based Weight Loss & Health",
     template: "%s | Metabolic Science",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://metabolicscience.com",
+    url: "https://metabolicscience.org",
     siteName: "Metabolic Science",
     title: "Metabolic Science | Evidence-Based Weight Loss & Health",
     description:
@@ -76,11 +77,8 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
     creator: "@metabolicscience",
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
   alternates: {
-    canonical: "https://metabolicscience.com",
+    canonical: "https://metabolicscience.org",
   },
 };
 
