@@ -6,7 +6,7 @@ import { Menu, X, Search } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
-import { SearchBar } from "./SearchBar";
+import { SearchBar, type SearchArticle } from "./SearchBar";
 import { Navigation } from "./Navigation";
 import { Logo } from "@/components/ui/Logo";
 
@@ -42,9 +42,10 @@ interface NavItem {
 interface GlassHeaderProps {
   showSearch?: boolean;
   navItems?: NavItem[];
+  searchIndex?: SearchArticle[];
 }
 
-export function GlassHeader({ showSearch = true, navItems }: GlassHeaderProps) {
+export function GlassHeader({ showSearch = true, navItems, searchIndex = [] }: GlassHeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -118,7 +119,7 @@ export function GlassHeader({ showSearch = true, navItems }: GlassHeaderProps) {
                 <>
                   {/* Desktop Search */}
                   <div className="hidden md:block">
-                    <SearchBar />
+                    <SearchBar articles={searchIndex} />
                   </div>
 
                   {/* Mobile Search Button */}
@@ -196,7 +197,7 @@ export function GlassHeader({ showSearch = true, navItems }: GlassHeaderProps) {
               <div className="flex flex-col h-full pt-20 pb-6 px-6">
                 {/* Mobile Search */}
                 <div className="mb-6">
-                  <SearchBar isMobile />
+                  <SearchBar isMobile articles={searchIndex} />
                 </div>
 
                 {/* Mobile Navigation */}
@@ -240,7 +241,7 @@ export function GlassHeader({ showSearch = true, navItems }: GlassHeaderProps) {
                   </button>
                 </div>
                 <div className="flex-1">
-                  <SearchBar isMobile autoFocus />
+                  <SearchBar isMobile autoFocus articles={searchIndex} />
                 </div>
               </div>
             </motion.div>

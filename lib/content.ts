@@ -169,3 +169,30 @@ export function getNavItems(): NavItem[] {
 export function getAuthorBySlug(slug: string): Author | undefined {
   return authors[slug];
 }
+
+/** Compact, client-safe per-article record used to power the header search. */
+export interface SearchIndexEntry {
+  slug: string;
+  categorySlug: string;
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+}
+
+/**
+ * Build a search index for the client-side header search.
+ * Called from the root layout (server component) — the result is serialized
+ * into the SearchBar as a prop. No /search route is ever created; filtering
+ * is pure in-browser so we never expose query-string URLs to crawlers.
+ */
+export function getSearchIndex(): SearchIndexEntry[] {
+  return getAllArticles().map((a) => ({
+    slug: a.slug,
+    categorySlug: a.categorySlug,
+    title: a.title,
+    description: a.description,
+    category: a.category,
+    tags: a.tags,
+  }));
+}
