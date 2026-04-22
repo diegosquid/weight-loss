@@ -197,6 +197,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 46. ~~GLP-1 Medications and Insulin Resistance: What the Research Shows~~ ✅ Publicado em 19/04/2026
 47. ~~GLP-1 Medications and Addiction: What the Research Shows~~ ✅ Publicado em 20/04/2026
 48. ~~Oral Semaglutide for Weight Loss: The New Wegovy Pill~~ ✅ Publicado em 21/04/2026
+49. ~~Retatrutide: Triple-Agonist Drug with 24% Weight Loss~~ ✅ Publicado em 22/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
