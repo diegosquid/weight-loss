@@ -201,6 +201,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 50. ~~Orforglipron: The Oral GLP-1 Pill for Weight Loss~~ ✅ Publicado em 23/04/2026
 51. ~~GLP-1 Medications and Type 2 Diabetes Remission~~ ✅ Publicado em 24/04/2026
 52. ~~GLP-1 Medications and Joint Pain: What the Research Shows~~ ✅ Publicado em 25/04/2026
+53. ~~Compounded Semaglutide: Safety, Efficacy, and What the FDA Says~~ ✅ Publicado em 26/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
