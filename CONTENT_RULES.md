@@ -205,6 +205,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 54. ~~GLP-1 Medications and Cancer Risk: What the Research Shows~~ ✅ Publicado em 27/04/2026
 55. ~~CagriSema: The First GLP-1 + Amylin Combo for Obesity~~ ✅ Publicado em 28/04/2026
 56. ~~GLP-1 Weight Loss Plateau: Why It Happens and How to Break It~~ ✅ Publicado em 29/04/2026
+57. ~~GLP-1 Medications and Menopause: What the Research Shows~~ ✅ Publicado em 30/04/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
