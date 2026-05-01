@@ -206,6 +206,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 55. ~~CagriSema: The First GLP-1 + Amylin Combo for Obesity~~ ✅ Publicado em 28/04/2026
 56. ~~GLP-1 Weight Loss Plateau: Why It Happens and How to Break It~~ ✅ Publicado em 29/04/2026
 57. ~~GLP-1 Medications and Menopause: What the Research Shows~~ ✅ Publicado em 30/04/2026
+58. ~~Survodutide: The Glucagon/GLP-1 Dual Agonist with 16.6% Weight Loss~~ ✅ Publicado em 01/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
