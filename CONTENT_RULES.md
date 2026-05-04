@@ -208,6 +208,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 57. ~~GLP-1 Medications and Menopause: What the Research Shows~~ ✅ Publicado em 30/04/2026
 58. ~~Survodutide: The Glucagon/GLP-1 Dual Agonist with 16.6% Weight Loss~~ ✅ Publicado em 01/05/2026
 59. ~~GLP-1 Resistance: Why Ozempic Doesn't Work for 1 in 10 People~~ ✅ Publicado em 03/05/2026
+60. ~~MariTide (Maridebart Cafraglutide): Amgen's Once-Monthly Obesity Drug~~ ✅ Publicado em 04/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
