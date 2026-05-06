@@ -210,6 +210,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 59. ~~GLP-1 Resistance: Why Ozempic Doesn't Work for 1 in 10 People~~ ✅ Publicado em 03/05/2026
 60. ~~MariTide (Maridebart Cafraglutide): Amgen's Once-Monthly Obesity Drug~~ ✅ Publicado em 04/05/2026
 61. ~~GLP-1 Medications and Surgery: Perioperative Safety and Anesthesia Considerations~~ ✅ Publicado em 05/05/2026
+62. ~~GLP-1 Medications and Gallbladder Disease: What the Research Shows~~ ✅ Publicado em 06/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
