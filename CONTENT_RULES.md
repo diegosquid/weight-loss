@@ -211,6 +211,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 60. ~~MariTide (Maridebart Cafraglutide): Amgen's Once-Monthly Obesity Drug~~ ✅ Publicado em 04/05/2026
 61. ~~GLP-1 Medications and Surgery: Perioperative Safety and Anesthesia Considerations~~ ✅ Publicado em 05/05/2026
 62. ~~GLP-1 Medications and Gallbladder Disease: What the Research Shows~~ ✅ Publicado em 06/05/2026
+63. ~~GLP-1 Medications and Pancreatitis: What the Research Shows~~ ✅ Publicado em 07/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
