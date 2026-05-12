@@ -215,6 +215,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 64. ~~GLP-1 Medications and Eye Health: NAION, Retinopathy, and Vision Risks~~ ✅ Publicado em 08/05/2026
 65. ~~GLP-1 Medications for Heart Failure (HFpEF): What the Research Shows~~ ✅ Publicado em 09/05/2026
 66. ~~GLP-1 Medications for Adolescents: What the Research Shows~~ ✅ Publicado em 11/05/2026
+67. ~~GLP-1 Medications and Parkinson's Disease: What the Research Shows~~ ✅ Publicado em 12/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
