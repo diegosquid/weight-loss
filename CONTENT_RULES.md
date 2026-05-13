@@ -216,6 +216,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 65. ~~GLP-1 Medications for Heart Failure (HFpEF): What the Research Shows~~ ✅ Publicado em 09/05/2026
 66. ~~GLP-1 Medications for Adolescents: What the Research Shows~~ ✅ Publicado em 11/05/2026
 67. ~~GLP-1 Medications and Parkinson's Disease: What the Research Shows~~ ✅ Publicado em 12/05/2026
+68. ~~GLP-1 Medications and Migraine: What the Research Shows~~ ✅ Publicado em 13/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
