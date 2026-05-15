@@ -218,6 +218,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 67. ~~GLP-1 Medications and Parkinson's Disease: What the Research Shows~~ ✅ Publicado em 12/05/2026
 68. ~~GLP-1 Medications and Migraine: What the Research Shows~~ ✅ Publicado em 13/05/2026
 69. ~~GLP-1 Medications and Gastroparesis: What the Research Shows~~ ✅ Publicado em 14/05/2026
+70. ~~GLP-1 Medications and Alzheimer's Disease: What the Research Shows~~ ✅ Publicado em 15/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
