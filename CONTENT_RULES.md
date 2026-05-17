@@ -220,6 +220,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 69. ~~GLP-1 Medications and Gastroparesis: What the Research Shows~~ ✅ Publicado em 14/05/2026
 70. ~~GLP-1 Medications and Alzheimer's Disease: What the Research Shows~~ ✅ Publicado em 15/05/2026
 71. ~~GLP-1 Medications and Sexual Function: What the Research Shows~~ ✅ Publicado em 16/05/2026
+72. ~~Bariatric Surgery vs GLP-1 Medications: Which Works Better?~~ ✅ Publicado em 17/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
