@@ -222,6 +222,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 71. ~~GLP-1 Medications and Sexual Function: What the Research Shows~~ ✅ Publicado em 16/05/2026
 72. ~~Bariatric Surgery vs GLP-1 Medications: Which Works Better?~~ ✅ Publicado em 17/05/2026
 73. ~~GLP-1 Medications and Pregnancy: Safety and Discontinuation~~ ✅ Publicado em 18/05/2026
+74. ~~Mazdutide: China's GLP-1/Glucagon Dual Agonist for Obesity~~ ✅ Publicado em 19/05/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
