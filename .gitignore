@@ -15,6 +15,10 @@ out
 .env.development.local
 .env.test.local
 .env.production.local
+.env.cron
+
+# Claude Code (local-only settings — token/permissions)
+.claude/settings.local.json
 
 # Debug
 npm-debug.log*

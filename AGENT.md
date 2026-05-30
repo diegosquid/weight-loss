@@ -29,7 +29,8 @@ Execute na ordem. Se qualquer passo falhar, va para "Secao 10 — Erros".
 5. **Gerar artigo** — seguir Secoes 4, 5 e 6
 6. **Verificar build** — `npm run build` DEVE passar sem erros
 7. **Salvar, commitar e push** — seguir Secao 8
-8. **Registrar log** — seguir Secao 9
+8. **Notificar IndexNow** — `node scripts/indexnow.mjs --latest` (Bing/Yandex indexam mais rapido)
+9. **Registrar log** — seguir Secao 9
 
 ---
 
@@ -221,7 +222,14 @@ git push origin main
 
 # 6. Verificar
 git log --oneline -1
+
+# 7. Notificar IndexNow (Bing, Yandex, Seznam...) sobre o artigo novo + paginas-indice
+node scripts/indexnow.mjs --latest
 ```
+
+> O ping do IndexNow nao bloqueia a publicacao: se falhar (ex: deploy ainda nao
+> propagou o arquivo da chave), o sitemap.xml garante a indexacao normal. Detalhes
+> em `docs/INDEXNOW.md`.
 
 ### Apos publicar, atualizar CONTENT_RULES.md:
 
