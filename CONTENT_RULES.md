@@ -225,6 +225,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 74. ~~Mazdutide: China's GLP-1/Glucagon Dual Agonist for Obesity~~ ✅ Publicado em 19/05/2026
 75. ~~Tirzepatide vs Retatrutide: Which Weight Loss Drug Works Better?~~ ✅ Publicado em 20/05/2026
 76. ~~GLP-1 Medications for Binge Eating Disorder: What the Research Shows~~ ✅ Publicado em 21/05/2026
+77. ~~GLP-1 Medications and Longevity: Can They Slow Aging?~~ ✅ Publicado em 05/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
