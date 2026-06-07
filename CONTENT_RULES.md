@@ -227,6 +227,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 76. ~~GLP-1 Medications for Binge Eating Disorder: What the Research Shows~~ ✅ Publicado em 21/05/2026
 77. ~~GLP-1 Medications and Longevity: Can They Slow Aging?~~ ✅ Publicado em 05/06/2026
 78. ~~Amycretin: Novo Nordisk's GLP-1 + Amylin Drug With 22% Weight Loss~~ ✅ Publicado em 06/06/2026
+79. ~~VK2735: Viking Therapeutics' Dual GIP/GLP-1 Obesity Drug~~ ✅ Publicado em 07/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
