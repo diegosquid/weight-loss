@@ -230,6 +230,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 79. ~~VK2735: Viking Therapeutics' Dual GIP/GLP-1 Obesity Drug~~ ✅ Publicado em 07/06/2026
 80. ~~GLP-1 Medications and Metabolic Syndrome: What the Research Shows~~ ✅ Publicado em 08/06/2026
 81. ~~GLP-1 Medications and Peripheral Artery Disease: What the Research Shows~~ ✅ Publicado em 10/06/2026
+82. ~~Microdosing GLP-1 Medications: Does It Work for Weight Loss?~~ ✅ Publicado em 11/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
