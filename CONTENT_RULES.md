@@ -232,6 +232,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 81. ~~GLP-1 Medications and Peripheral Artery Disease: What the Research Shows~~ ✅ Publicado em 10/06/2026
 82. ~~Microdosing GLP-1 Medications: Does It Work for Weight Loss?~~ ✅ Publicado em 11/06/2026
 83. ~~Pemvidutide: The GLP-1/Glucagon Dual Agonist With 15.6% Weight Loss~~ ✅ Publicado em 12/06/2026
+84. ~~Bimagrumab and Semaglutide: Fat Loss That Spares Muscle (BELIEVE trial)~~ ✅ Publicado em 13/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
