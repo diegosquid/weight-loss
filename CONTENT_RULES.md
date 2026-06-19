@@ -236,6 +236,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 85. ~~GLP-1 Medications and Asthma: What the Research Shows~~ ✅ Publicado em 15/06/2026
 86. ~~GLP-1 Medications and Gout: What the Research Shows~~ ✅ Publicado em 16/06/2026
 87. ~~Petrelintide: Roche's Amylin Analog for Weight Loss~~ ✅ Publicado em 18/06/2026
+88. ~~Ozempic Face: Causes, Prevention, and What the Research Shows~~ ✅ Publicado em 19/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
