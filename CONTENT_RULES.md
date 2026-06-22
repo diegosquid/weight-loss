@@ -239,6 +239,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 88. ~~Ozempic Face: Causes, Prevention, and What the Research Shows~~ ✅ Publicado em 19/06/2026
 89. ~~Setmelanotide (Imcivree): The MC4R Drug for Genetic and Hypothalamic Obesity~~ ✅ Publicado em 20/06/2026
 90. ~~Ecnoglutide: The cAMP-Biased GLP-1 Driving 13% Weight Loss~~ ✅ Publicado em 21/06/2026
+91. ~~GLP-1 Medications and Smoking Cessation: What the Research Shows~~ ✅ Publicado em 22/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
