@@ -241,6 +241,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 90. ~~Ecnoglutide: The cAMP-Biased GLP-1 Driving 13% Weight Loss~~ ✅ Publicado em 21/06/2026
 91. ~~GLP-1 Medications and Smoking Cessation: What the Research Shows~~ ✅ Publicado em 22/06/2026
 92. ~~GLP-1 Medications and Atrial Fibrillation: What the Research Shows~~ ✅ Publicado em 23/06/2026
+93. ~~GLP-1 Medications and Stroke: What the Research Shows~~ ✅ Publicado em 25/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
