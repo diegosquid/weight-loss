@@ -244,6 +244,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 93. ~~GLP-1 Medications and Stroke: What the Research Shows~~ ✅ Publicado em 25/06/2026
 94. ~~GLP-1 Medications and Nausea: Why It Happens and How to Manage It~~ ✅ Publicado em 26/06/2026
 95. ~~GLP-1 Medications and Constipation: Why It Happens and How to Manage It~~ ✅ Publicado em 28/06/2026
+96. ~~GLP-1 Medications and Diarrhea: Why It Happens and How to Manage It~~ ✅ Publicado em 29/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
