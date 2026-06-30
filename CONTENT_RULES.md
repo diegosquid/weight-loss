@@ -245,6 +245,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 94. ~~GLP-1 Medications and Nausea: Why It Happens and How to Manage It~~ ✅ Publicado em 26/06/2026
 95. ~~GLP-1 Medications and Constipation: Why It Happens and How to Manage It~~ ✅ Publicado em 28/06/2026
 96. ~~GLP-1 Medications and Diarrhea: Why It Happens and How to Manage It~~ ✅ Publicado em 29/06/2026
+97. ~~Wegovy HD (Semaglutide 7.2 mg): What the STEP UP Trial Shows~~ ✅ Publicado em 30/06/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
