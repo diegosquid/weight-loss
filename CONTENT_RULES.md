@@ -248,6 +248,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 97. ~~Wegovy HD (Semaglutide 7.2 mg): What the STEP UP Trial Shows~~ ✅ Publicado em 30/06/2026
 98. ~~GLP-1 Medications for Prediabetes: Can They Prevent Type 2 Diabetes?~~ ✅ Publicado em 01/07/2026
 99. ~~GLP-1 Medications and Hypoglycemia: Real Risk and How to Manage It~~ ✅ Publicado em 02/07/2026
+100. ~~GLP-1 Medications and Nutrient Deficiencies: What to Monitor~~ ✅ Publicado em 03/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
