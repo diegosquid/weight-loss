@@ -250,6 +250,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 99. ~~GLP-1 Medications and Hypoglycemia: Real Risk and How to Manage It~~ ✅ Publicado em 02/07/2026
 100. ~~GLP-1 Medications and Nutrient Deficiencies: What to Monitor~~ ✅ Publicado em 03/07/2026
 101. ~~GLP-1 Medications and COPD: What the Research Shows~~ ✅ Publicado em 06/07/2026
+102. ~~GLP-1 Medications and Heart Rate: Why They Speed It Up~~ ✅ Publicado em 07/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
