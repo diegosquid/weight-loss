@@ -254,6 +254,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 103. ~~GLP-1 Medications and Acid Reflux: What the Research Shows~~ ✅ Publicado em 08/07/2026
 104. ~~GLP-1 Medications and Testosterone: What the Research Shows~~ ✅ Publicado em 09/07/2026
 105. ~~What to Eat on GLP-1 Medications: A Nutrition Guide~~ ✅ Publicado em 10/07/2026
+106. ~~GLP-1 Medications and Dehydration: Risks and Prevention~~ ✅ Publicado em 11/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
