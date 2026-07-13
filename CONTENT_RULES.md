@@ -256,6 +256,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 105. ~~What to Eat on GLP-1 Medications: A Nutrition Guide~~ ✅ Publicado em 10/07/2026
 106. ~~GLP-1 Medications and Dehydration: Risks and Prevention~~ ✅ Publicado em 11/07/2026
 107. ~~Efpeglenatide: The Weekly GLP-1 With Cardio-Renal Benefits~~ ✅ Publicado em 12/07/2026
+108. ~~GLP-1 Medications and Dizziness: Vertigo, Balance, and Blood Pressure~~ ✅ Publicado em 13/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
