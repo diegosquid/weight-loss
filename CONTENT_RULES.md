@@ -257,6 +257,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 106. ~~GLP-1 Medications and Dehydration: Risks and Prevention~~ ✅ Publicado em 11/07/2026
 107. ~~Efpeglenatide: The Weekly GLP-1 With Cardio-Renal Benefits~~ ✅ Publicado em 12/07/2026
 108. ~~GLP-1 Medications and Dizziness: Vertigo, Balance, and Blood Pressure~~ ✅ Publicado em 13/07/2026
+109. ~~GLP-1 Medications and Infection Risk: What the Research Shows~~ ✅ Publicado em 14/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
