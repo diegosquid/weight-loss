@@ -259,6 +259,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 108. ~~GLP-1 Medications and Dizziness: Vertigo, Balance, and Blood Pressure~~ ✅ Publicado em 13/07/2026
 109. ~~GLP-1 Medications and Infection Risk: What the Research Shows~~ ✅ Publicado em 14/07/2026
 110. ~~GLP-1 Medications in Older Adults: Sarcopenia and Frailty Risk~~ ✅ Publicado em 15/07/2026
+111. ~~GLP-1 Medications and Psoriasis: What the Research Shows~~ ✅ Publicado em 16/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
