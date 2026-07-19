@@ -262,6 +262,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 111. ~~GLP-1 Medications and Psoriasis: What the Research Shows~~ ✅ Publicado em 16/07/2026
 112. ~~CT-388: Roche's Dual GLP-1/GIP Agonist With 22.5% Weight Loss~~ ✅ Publicado em 17/07/2026
 113. ~~Eloralintide: Lilly's Selective Amylin Receptor Agonist With 20% Weight Loss~~ ✅ Publicado em 18/07/2026
+114. ~~GLP-1 Medications and Hidradenitis Suppurativa: The Evidence~~ ✅ Publicado em 19/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
