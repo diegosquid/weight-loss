@@ -264,6 +264,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 113. ~~Eloralintide: Lilly's Selective Amylin Receptor Agonist With 20% Weight Loss~~ ✅ Publicado em 18/07/2026
 114. ~~GLP-1 Medications and Hidradenitis Suppurativa: The Evidence~~ ✅ Publicado em 19/07/2026
 115. ~~GLP-1 Medications and Your Menstrual Cycle: What the Research Shows~~ ✅ Publicado em 20/07/2026
+116. ~~GLP-1 Medications and Inflammatory Bowel Disease: The Evidence~~ ✅ Publicado em 21/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
