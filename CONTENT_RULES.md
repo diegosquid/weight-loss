@@ -265,6 +265,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 114. ~~GLP-1 Medications and Hidradenitis Suppurativa: The Evidence~~ ✅ Publicado em 19/07/2026
 115. ~~GLP-1 Medications and Your Menstrual Cycle: What the Research Shows~~ ✅ Publicado em 20/07/2026
 116. ~~GLP-1 Medications and Inflammatory Bowel Disease: The Evidence~~ ✅ Publicado em 21/07/2026
+117. ~~GLP-1 Medications and Birth Control: What the Research Shows~~ ✅ Publicado em 22/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
