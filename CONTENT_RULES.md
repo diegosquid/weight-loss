@@ -269,6 +269,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 118. ~~Aleniglipron: The Oral GLP-1 Pill With 16% Weight Loss~~ ✅ Publicado em 23/07/2026
 119. ~~GLP-1 Medications and Intermittent Fasting: Can You Combine Them?~~ ✅ Publicado em 24/07/2026
 120. ~~Brown Fat and Weight Loss: What the Evidence Shows~~ ✅ Publicado em 25/07/2026
+121. ~~Creatine on GLP-1 Medications: Does It Preserve Muscle?~~ ✅ Publicado em 26/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
