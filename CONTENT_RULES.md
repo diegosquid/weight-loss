@@ -274,6 +274,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 123. ~~GLP-1 Medications and Taste Changes: Why Food Tastes Different~~ ✅ Publicado em 28/07/2026
 124. ~~CX11 (VCT220): The Oral GLP-1 Pill With 12% Weight Loss~~ ✅ Publicado em 29/07/2026
 125. ~~MET-097i (PF'3944): Pfizer's Monthly GLP-1 Shot Explained~~ ✅ Publicado em 30/07/2026
+126. ~~Leptin Resistance and Weight Loss: What the Evidence Shows~~ ✅ Publicado em 31/07/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
