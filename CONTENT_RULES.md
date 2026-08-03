@@ -277,6 +277,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 126. ~~Leptin Resistance and Weight Loss: What the Evidence Shows~~ ✅ Publicado em 31/07/2026
 127. ~~Ghrelin, the Hunger Hormone: What the Evidence Shows~~ ✅ Publicado em 01/08/2026
 128. ~~Sleep and Weight Loss: What the Evidence Shows~~ ✅ Publicado em 02/08/2026
+129. ~~Generic Semaglutide 2026: Where It's Available and What It Costs~~ ✅ Publicado em 03/08/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
