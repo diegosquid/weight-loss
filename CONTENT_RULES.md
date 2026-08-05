@@ -279,6 +279,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 128. ~~Sleep and Weight Loss: What the Evidence Shows~~ ✅ Publicado em 02/08/2026
 129. ~~Generic Semaglutide 2026: Where It's Available and What It Costs~~ ✅ Publicado em 03/08/2026
 130. ~~UBT251: Novo Nordisk's Triple Agonist With 19.7% Weight Loss~~ ✅ Publicado em 04/08/2026
+131. ~~GLP-1 Medications and Fatigue: Why You Feel Tired and What Helps~~ ✅ Publicado em 05/08/2026
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
