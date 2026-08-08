@@ -280,6 +280,10 @@ Resumo + takeaway. Citação de guideline ou revisão.
 129. ~~Generic Semaglutide 2026: Where It's Available and What It Costs~~ ✅ Publicado em 03/08/2026
 130. ~~UBT251: Novo Nordisk's Triple Agonist With 19.7% Weight Loss~~ ✅ Publicado em 04/08/2026
 131. ~~GLP-1 Medications and Fatigue: Why You Feel Tired and What Helps~~ ✅ Publicado em 05/08/2026
+132. ~~HRS-7535 (KAI-7535): The Oral GLP-1 Pill With 11% Weight Loss~~ ✅ Publicado em 08/08/2026
+
+> **Fila original esgotada** (itens 1–131). A partir do item 132 os temas passam a ser
+> escolhidos por trending topic, conforme AGENT.md Seção 10 ("Todos artigos da fila feitos").
 
 **Instruções para o cron:**
 1. Buscar papers no PubMed antes de gerar
