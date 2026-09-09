@@ -27,3 +27,17 @@ A medição real começa após o deploy do coletor. QA não representa visitante
 Atualizadas dependências compatíveis, incluindo Next 14.2.35. O npm ainda sinaliza advisories do Next que exigem migração de versão principal. O site é exportado como arquivos estáticos; não utiliza servidor Next, Server Actions ou otimizador de imagens em produção. Não se declara risco zero nem migração completa de framework. Reavaliar esses advisories antes de introduzir runtime Next ou código não confiável no build.
 
 Dados de indexação do Google/Bing têm atraso. Correção técnica e envio ao IndexNow não garantem indexação, ranking ou conversão. Títulos longos não foram truncados em massa; futuras revisões usam consultas e intenção observadas. As condições das ofertas continuam datadas e precisam de nova inspeção nas revisões comerciais.
+
+## Confirmação em produção
+
+O commit **2df5f41cc08c2d228cd6760c524152fd1583912e** foi publicado pelo Netlify e identificado em release.json. Às 18:38 UTC, as **166/166 páginas** responderam 200 com título/canonical correspondentes ao export. Os oito caminhos antigos (quatro com e sem barra) responderam 301 para os destinos corretos. Imagem social: 200; página inexistente: 404; relatório sem assinatura: 401. Evidência em reports/production-verification-2026-09-09.json.
+
+Percursos reais no navegador: home → cookbook → vendedor, e boosting-metabolism → FITin56 → vendedor. Os eventos de entrada, visualização e saída aparecem no relatório QA com as origens home/bm, posição summary e TIDs exclusivos de teste. A primeira consulta normal excluiu todos esses testes. O coletor aceitou evento válido com 204 e rejeitou campo extra com 400. Não houve compra. Evidência em reports/funnel-verification-2026-09-09.json.
+
+IndexNow aceitou **19 URLs canônicas prioritárias**, HTTP 200, com TLS verificado. Envio aceito não significa indexação confirmada.
+
+PageSpeed móvel da home após publicação: **93 Performance / 100 Accessibility / 100 Best Practices / 100 SEO**, FCP 1,2 s, LCP 2,9 s, TBT 0 ms, CLS 0. Antes: Performance 87. A nota geral subiu, mas o LCP arredondado permaneceu 2,9 s, acima da referência de 2,5 s. Medição de laboratório única; dados de campo seguem insuficientes. [Relatório da home no PageSpeed](https://pagespeed.web.dev/analysis/https-metabolicscience-org/bu6tu7bxw5?form_factor=mobile).
+
+A nova medição PageSpeed da review do cookbook ficou **indisponível**: duas tentativas retornaram erro interno de infraestrutura do Google (`UNABLE_TO_RETRY` / `RPC::UNREACHABLE`). Não se atribui esse erro ao site e não se reapresenta o resultado anterior de 94 como medição nova. A review passou na inspeção móvel de 390 px (tabela 352 px, sem extravasamento), nos testes de export e no percurso comercial em produção. Não há certificado de acessibilidade integral ou aprovação de Core Web Vitals.
+
+Os testes de navegador e PageSpeed feitos em 09/09 são uma fase de instalação, não a janela comercial do piloto, que começa em 14/09. Eventuais visitas de robôs de teste fora do modo QA podem aparecer nas contagens do dia de instalação; não usar esse dia para decidir qual oferta converte melhor.

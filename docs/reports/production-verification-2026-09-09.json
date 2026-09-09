@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-09-09T18:38:38.136Z",
+  "commit": "2df5f41cc08c2d228cd6760c524152fd1583912e",
+  "total": 166,
+  "pagesPassed": 166,
+  "socialImage": true,
+  "privateReportProtected": true,
+  "unknownPage404": true,
+  "redirects": [
+    {
+      "from": "/glp-1/glp1-storage-handling",
+      "to": "/medications/glp1-storage-handling/",
+      "status": 301,
+      "verified": true
+    },
+    {
+      "from": "/glp-1/glp1-storage-handling/",
+      "to": "/medications/glp1-storage-handling/",
+      "status": 301,
+      "verified": true
+    },
+    {
+      "from": "/glp-1/how-glp1-medications-work",
+      "to": "/medications/how-glp1-medications-work/",
+      "status": 301,
+      "verified": true
+    },
+    {
+      "from": "/glp-1/how-glp1-medications-work/",
+      "to": "/medications/how-glp1-medications-work/",
+      "status": 301,
+      "verified": true
+    },
+    {
+      "from": "/medications/what-is-semaglutide",
+      "to": "/glp-1/what-is-semaglutide/",
+      "status": 301,
+      "verified": true
+    },
+    {
+      "from": "/medications/what-is-semaglutide/",
+      "to": "/glp-1/what-is-semaglutide/",
+      "status": 301,
+      "verified": true
+    },
+    {
+      "from": "/glp-1/injection-techniques-glp1",
+      "to": "/medications/injection-techniques-glp1/",
+      "status": 301,
+      "verified": true
+    },
+    {
+      "from": "/glp-1/injection-techniques-glp1/",
+      "to": "/medications/injection-techniques-glp1/",
+      "status": 301,
+      "verified": true
+    }
+  ],
+  "failures": []
+}

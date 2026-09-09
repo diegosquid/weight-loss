@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-09-09",
+  "deployment": "2df5f41cc08c2d228cd6760c524152fd1583912e",
+  "syntheticOnly": true,
+  "qaRows": [
+    {
+      "day": "2026-09-09",
+      "event": "offer_click",
+      "page": "f56_review",
+      "offer": "fitin56",
+      "entry": "bm",
+      "placement": "summary",
+      "count": 1
+    },
+    {
+      "day": "2026-09-09",
+      "event": "offer_click",
+      "page": "pb_review",
+      "offer": "plantbc",
+      "entry": "home",
+      "placement": "summary",
+      "count": 1
+    },
+    {
+      "day": "2026-09-09",
+      "event": "review_click",
+      "page": "bm",
+      "offer": "fitin56",
+      "entry": "direct",
+      "placement": "context",
+      "count": 1
+    },
+    {
+      "day": "2026-09-09",
+      "event": "review_click",
+      "page": "home",
+      "offer": "plantbc",
+      "entry": "direct",
+      "placement": "home",
+      "count": 1
+    },
+    {
+      "day": "2026-09-09",
+      "event": "view",
+      "page": "bm",
+      "offer": "none",
+      "entry": "direct",
+      "placement": "context",
+      "count": 1
+    },
+    {
+      "day": "2026-09-09",
+      "event": "view",
+      "page": "f56_review",
+      "offer": "fitin56",
+      "entry": "bm",
+      "placement": "context",
+      "count": 1
+    },
+    {
+      "day": "2026-09-09",
+      "event": "view",
+      "page": "home",
+      "offer": "none",
+      "entry": "direct",
+      "placement": "context",
+      "count": 1
+    },
+    {
+      "day": "2026-09-09",
+      "event": "view",
+      "page": "pb_review",
+      "offer": "plantbc",
+      "entry": "home",
+      "placement": "context",
+      "count": 1
+    },
+    {
+      "day": "2026-09-09",
+      "event": "view",
+      "page": "resources",
+      "offer": "none",
+      "entry": "direct",
+      "placement": "context",
+      "count": 1
+    }
+  ],
+  "collectorValidRequest": 204,
+  "collectorRejectedExtraField": 400,
+  "unsignedReport": 401,
+  "initialNormalReportExcludedQA": true,
+  "clickbankDestinationsVerified": [
+    "plantbasedcookbook.com",
+    "get.fitin56.com"
+  ],
+  "indexNow": {
+    "status": 200,
+    "urlsAccepted": 19,
+    "indexingGuaranteed": false
+  }
+}
