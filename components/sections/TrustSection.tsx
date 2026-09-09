@@ -1,244 +1,33 @@
-"use client";
+import Link from "next/link";
+import { BookOpen, Info, Scale, Calendar } from "lucide-react";
 
-import { motion } from "framer-motion";
-import { Shield, BookOpen, RefreshCw, Ban, CheckCircle, Award, Users, FileText } from "lucide-react";
-import { authors } from "@/lib/authors";
-
-const trustCards = [
-  {
-    id: "md-reviewed",
-    icon: Shield,
-    title: "MD Reviewed",
-    description: "Every article reviewed by licensed physicians",
-    color: "blue",
-  },
-  {
-    id: "evidence-based",
-    icon: BookOpen,
-    title: "Evidence-Based",
-    description: "Citations from peer-reviewed studies",
-    color: "emerald",
-  },
-  {
-    id: "updated",
-    icon: RefreshCw,
-    title: "Regularly Updated",
-    description: "Content refreshed with latest research",
-    color: "orange",
-  },
-  {
-    id: "no-ads",
-    icon: Ban,
-    title: "No Ads",
-    description: "Unbiased information, no pharmaceutical influence",
-    color: "violet",
-  },
+const standards = [
+  { title: "Linked sources", text: "Follow the references to check the research behind an article.", icon: BookOpen },
+  { title: "Research in context", text: "Ingredient studies and product claims require different kinds of evidence.", icon: Scale },
+  { title: "Dates shown", text: "Check publication and update dates when reading about evolving research.", icon: Calendar },
+  { title: "Clear disclosures", text: "Commercial content identifies affiliate links and explains what was evaluated.", icon: Info },
 ];
-
-const stats = [
-  { value: "50+", label: "Articles Published", icon: FileText },
-  { value: "100%", label: "Medically Reviewed", icon: CheckCircle },
-  { value: "50K+", label: "Monthly Readers", icon: Users },
-  { value: "25+", label: "Research Citations", icon: Award },
-];
-
-const institutionLogos = [
-  { name: "American Diabetes Association", abbr: "ADA" },
-  { name: "Obesity Medicine Association", abbr: "OMA" },
-  { name: "Endocrine Society", abbr: "ES" },
-  { name: "American Heart Association", abbr: "AHA" },
-];
-
-const colorClasses: Record<string, { bg: string; icon: string; border: string }> = {
-  blue: {
-    bg: "bg-blue-50",
-    icon: "text-blue-600",
-    border: "border-blue-100",
-  },
-  emerald: {
-    bg: "bg-emerald-50",
-    icon: "text-emerald-600",
-    border: "border-emerald-100",
-  },
-  orange: {
-    bg: "bg-orange-50",
-    icon: "text-orange-600",
-    border: "border-orange-100",
-  },
-  violet: {
-    bg: "bg-violet-50",
-    icon: "text-violet-600",
-    border: "border-violet-100",
-  },
-};
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
-    },
-  },
-};
 
 export function TrustSection() {
   return (
-    <section className="py-14 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10"
-        >
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mb-4">
-            Why Trust Our Content?
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            We hold ourselves to the highest standards of medical accuracy and editorial integrity
-          </p>
-        </motion.div>
-
-        {/* Institution Logos */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 mb-10 opacity-60"
-        >
-          {institutionLogos.map((inst) => (
-            <div
-              key={inst.abbr}
-              className="flex items-center gap-2 text-slate-400 hover:text-slate-600 transition-colors"
-            >
-              <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center font-bold text-sm">
-                {inst.abbr}
-              </div>
-              <span className="text-sm font-medium hidden sm:block">{inst.name}</span>
+    <section className="bg-slate-50 py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center text-3xl font-serif font-bold text-slate-900">How we publish</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-slate-600">Understand the sources, limits and funding behind what you read.</p>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {standards.map(({ title, text, icon: Icon }) => (
+            <div key={title} className="rounded-2xl border border-slate-200 bg-white p-6">
+              <Icon className="mb-4 h-7 w-7 text-blue-700" />
+              <h3 className="font-semibold text-slate-900">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">{text}</p>
             </div>
           ))}
-        </motion.div>
-
-        {/* Trust Cards */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10"
-        >
-          {trustCards.map((card) => {
-            const Icon = card.icon;
-            const colors = colorClasses[card.color];
-            return (
-              <motion.div
-                key={card.id}
-                variants={cardVariants}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className={`p-6 rounded-2xl border ${colors.border} ${colors.bg} hover:shadow-lg transition-shadow duration-300`}
-              >
-                <div className={`w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-4 shadow-sm`}>
-                  <Icon className={`w-6 h-6 ${colors.icon}`} />
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{card.title}</h3>
-                <p className="text-sm text-slate-600">{card.description}</p>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
-        {/* Medical Reviewer Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 mb-10"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Reviewer Info */}
-            <div className="text-white">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-sm font-medium mb-6">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span>Lead Medical Reviewer</span>
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                {authors["james-chen"].name}, {authors["james-chen"].credentials}
-              </h3>
-              <p className="text-slate-300 mb-4">
-                {authors["james-chen"].title} — GLP-1 & Metabolic Disease Research
-              </p>
-              <p className="text-slate-400 text-sm mb-6">
-                {authors["james-chen"].bio}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {(authors["james-chen"].specialties ?? []).map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 rounded-full bg-white/10 text-sm text-slate-300"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, i) => {
-                const Icon = stat.icon;
-                return (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 + i * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center"
-                  >
-                    <Icon className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-slate-400">{stat.label}</div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Editorial Process */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <p className="text-slate-500 text-sm">
-            Our content follows a rigorous{" "}
-            <a href="/editorial-policy" className="text-blue-600 hover:underline">
-              editorial process
-            </a>
-            {" "}including medical review, fact-checking, and regular updates.
-          </p>
-        </motion.div>
+        </div>
+        <div className="mt-8 rounded-2xl bg-slate-900 p-8 text-white">
+          <h3 className="text-xl font-semibold">Metabolic Science Editorial</h3>
+          <p className="mt-3 max-w-3xl leading-relaxed text-slate-300">We use AI tools to help research and prepare educational content. We do not claim that our articles have been independently reviewed by a physician. Medical decisions belong with your qualified healthcare professional.</p>
+          <Link href="/editorial-policy/" className="mt-5 inline-block font-medium text-blue-200 underline underline-offset-4">Read our editorial policy →</Link>
+        </div>
       </div>
     </section>
   );

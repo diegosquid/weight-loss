@@ -102,8 +102,7 @@ title: "Your Article Title Here"
 description: "A 1-2 sentence summary of the article for SEO and previews."
 publishedAt: "2024-03-15"
 updatedAt: "2024-03-15"
-author: "sarah-mitchell"
-medicalReviewer: "james-chen"
+author: "editorial-team"
 category: "GLP-1 Medications"
 tags: ["tag1", "tag2", "tag3"]
 featured: false
@@ -138,8 +137,7 @@ To create an article about tirzepatide in the GLP-1 category:
 title: "Tirzepatide (Mounjaro & Zepbound): Complete Guide"
 description: "Everything about tirzepatide — the dual GIP/GLP-1 receptor agonist for diabetes and weight loss."
 publishedAt: "2024-04-01"
-author: "sarah-mitchell"
-medicalReviewer: "james-chen"
+author: "editorial-team"
 category: "GLP-1 Medications"
 tags: ["tirzepatide", "mounjaro", "zepbound", "glp-1"]
 featured: false
@@ -184,8 +182,7 @@ Create `content/metabolism/how-it-works.mdx`:
 title: "How Metabolism Works: A Complete Guide"
 description: "Understand the science behind metabolism — BMR, TDEE, and how your body converts food to energy."
 publishedAt: "2024-04-01"
-author: "emily-rodriguez"
-medicalReviewer: "sarah-mitchell"
+author: "editorial-team"
 category: "Metabolism"
 tags: ["metabolism", "BMR", "TDEE", "energy"]
 featured: false
@@ -211,8 +208,8 @@ Every `.mdx` file MUST have frontmatter. Here is every field:
 | `description` | YES | string | 1-2 sentence summary. Used for SEO meta description and article cards. |
 | `publishedAt` | YES | string | Date in `"YYYY-MM-DD"` format. |
 | `updatedAt` | NO | string | Date in `"YYYY-MM-DD"` format. Shown as "Updated" date. |
-| `author` | YES | string | Author slug. Must match a key in the authors registry in `lib/content.ts`. See Section 6. |
-| `medicalReviewer` | NO | string | Reviewer slug. Must match a key in the authors registry. If set, a "MD Reviewed" badge is shown. |
+| `author` | YES | string | Author slug. Must match a key in the authors registry in `lib/authors.ts`. See Section 6. |
+| `medicalReviewer` | NO | string | Reviewer slug. Must match a key in the authors registry. If set, a review attribution is shown only with documented, verified review. Do not set this field for current content. |
 | `category` | YES | string | Display name (e.g., `"GLP-1 Medications"`). This is for display only — the URL category comes from the folder name. |
 | `tags` | NO | string[] | Array of tags for the article. |
 | `featured` | NO | boolean | If `true`, shows a "Featured" badge. Default: `false`. |
@@ -222,19 +219,19 @@ Every `.mdx` file MUST have frontmatter. Here is every field:
 
 ## 6. Authors Registry
 
-Authors are defined in `lib/content.ts` in the `authors` object. Each key is the slug you use in frontmatter.
+Authors are defined in `lib/authors.ts` in the `authors` object. Each key is the slug you use in frontmatter.
 
 ### Current Authors
 
 | Slug | Name | Credentials | Use as |
 |------|------|-------------|--------|
-| `sarah-mitchell` | Dr. Sarah Mitchell | MD, FACP | `author` or `medicalReviewer` |
-| `james-chen` | Dr. James Chen | MD, PhD, FACE | `author` or `medicalReviewer` |
-| `emily-rodriguez` | Emily Rodriguez | MPH, RD | `author` only (not MD) |
+| `editorial-team` | Metabolic Science Editorial | None claimed | `author` only |
+
+No independent medical reviewer is currently verified. AI assistance must not be represented as clinical review. Add a person only after identity, credentials and actual participation are documented.
 
 ### How to Add a New Author
 
-Open `lib/content.ts` and add a new entry to the `authors` object:
+Open `lib/authors.ts` and add a new entry to the `authors` object:
 
 ```typescript
 export const authors: Record<string, Author> = {

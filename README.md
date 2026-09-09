@@ -4,9 +4,9 @@ A comprehensive medical authority website focused on weight loss, metabolism, an
 
 ## Features
 
-- **Evidence-Based Content**: Medically reviewed articles on weight loss medications
+- **Evidence-Based Content**: Educational articles with linked sources on weight loss medications
 - **Interactive Calculators**: BMI, Calorie, Macro, and Body Fat calculators
-- **E-E-A-T Compliance**: Medical review badges, author bios, citations
+- **Editorial Transparency**: AI-assisted publisher attribution, sources and affiliate disclosures
 - **SEO Optimized**: Schema.org markup, sitemap, meta tags
 - **Performance**: Next.js 14 with static export
 

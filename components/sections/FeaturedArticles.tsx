@@ -13,7 +13,7 @@ const featuredArticle = {
   categoryColor: "blue",
   readTime: "12 min read",
   date: "Feb 15, 2026",
-  medicalReviewed: true,
+  medicalReviewed: false,
   slug: "complete-guide-glp1-medications",
 };
 
@@ -27,7 +27,7 @@ const sideArticles = [
     categoryColor: "orange",
     readTime: "8 min read",
     date: "Feb 12, 2026",
-    medicalReviewed: true,
+    medicalReviewed: false,
     slug: "metabolic-adaptation-plateaus",
   },
   {
@@ -39,7 +39,7 @@ const sideArticles = [
     categoryColor: "emerald",
     readTime: "6 min read",
     date: "Feb 10, 2026",
-    medicalReviewed: true,
+    medicalReviewed: false,
     slug: "supplements-metabolic-health",
   },
   {
@@ -51,7 +51,7 @@ const sideArticles = [
     categoryColor: "orange",
     readTime: "10 min read",
     date: "Feb 8, 2026",
-    medicalReviewed: true,
+    medicalReviewed: false,
     slug: "insulin-resistance-weight",
   },
 ];

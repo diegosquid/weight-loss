@@ -1,5 +1,16 @@
 # Regras de Geração de Conteúdo - Weight Loss (Metabolic Health Authority)
 
+## Piloto comercial — prioridade a partir de 09/09/2026
+
+Antes de retomar a fila clinica, usar os proximos tres espacos editoriais nestas pautas, com pesquisa atual e verificacao de duplicacao:
+
+- [ ] Plant-Based Meal Planning for Beginners: Build a Grocery List
+- [ ] Free Recipes vs Paid Meal Plans: What Is Worth Paying For?
+- [ ] Meal-Planning Programs vs Weight-Loss Supplements: What Are You Buying?
+
+Usar `author: "editorial-team"`, sem `medicalReviewer`. A revisao com IA nao equivale a revisao medica. Consultar `docs/MONETIZATION.md` para o piloto e a medicao. Nao adicionar ofertas em conteudo de seguranca ou dosagem de medicamentos.
+
+
 ## ⚠️ OBRIGATÓRIO: Buscar Papers Científicos
 
 **Toda geração de artigo DEVE incluir citações científicas de PubMed/PMC.**
@@ -10,7 +21,7 @@
 3. **Priorizar:** Meta-análises, RCTs, guidelines (2019-2024)
 4. **Formato:**
    ```markdown
-   > **Evidence:** "Quote" — *Author, et al. Journal. Year.* [DOI](link)
+   > **Evidence:** Resumo fiel, sem aspas para parafrases. — *Author, et al. Journal. Year.* [DOI](link)
    ```
 5. **Incluir DOI** em todas as referências
 6. **Adicionar seção References** no final
@@ -53,8 +64,7 @@ title: "Título SEO-friendly"
 description: "Meta description 150-160 caracteres"
 publishedAt: "YYYY-MM-DD"
 updatedAt: "YYYY-MM-DD"
-author: "sarah-mitchell"
-medicalReviewer: "james-chen"
+author: "editorial-team"
 category: "Category Name"
 tags: ["tag1", "tag2"]
 featured: false
@@ -94,7 +104,7 @@ Resumo + takeaway. Citação de guideline ou revisão.
 ---
 
 *Last updated: YYYY-MM-DD*  
-*Medical review: Dr. James Chen, MD, PhD, FACE*
+*Prepared with AI assistance by Metabolic Science Editorial.*
 ```
 
 ---
@@ -345,9 +355,9 @@ Antes de publicar qualquer artigo:
 
 1. **Relevância obrigatória:** Link deve fazer sentido no contexto
 2. **Não forçar:** Se não houver produto relevante, não colocar
-3. **Disclosure:** Incluir disclaimer de afiliado no footer
+3. **Disclosure:** Informar a comissao perto do link comercial e no inicio da analise
 4. **Máximo 2-3 links** por artigo (não saturar)
-5. **Priorizar:** Suplementos com evidência científica
+5. **Priorizar:** Ofertas avaliadas; estudos de ingredientes nao comprovam o produto final
 6. **Formato:** Link natural no texto, não botão chamativo
 
 ### Categorias com Potencial de Afiliado:

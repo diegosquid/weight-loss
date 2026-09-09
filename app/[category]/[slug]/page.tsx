@@ -7,6 +7,7 @@ import { getArticleBySlug, getAllArticles } from "@/lib/content";
 import { formatDate } from "@/lib/utils";
 import { Clock, Calendar, RefreshCw, ArrowLeft, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import { AffiliateOffer } from "@/components/affiliate/AffiliateOffer";
 
 interface ArticlePageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   if (!article) return { title: "Article Not Found" };
 
   return {
-    title: `${article.title} | Metabolic Health Authority`,
+    title: article.title,
     description: article.description,
     alternates: {
       canonical: `https://metabolicscience.org/${category}/${slug}`,
@@ -53,7 +54,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     url: `https://metabolicscience.org/${category}/${slug}`,
     publishedAt: article.publishedAt,
     updatedAt: article.updatedAt,
-    author: { name: article.author.name },
+    author: { name: article.author.name, type: article.author.schemaType, url: "https://metabolicscience.org/about/" },
     medicalReviewer: article.medicalReviewer
       ? { name: article.medicalReviewer.name, credentials: article.medicalReviewer.credentials || "" }
       : undefined,
@@ -153,6 +154,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             )}
 
             {/* Article body */}
+            {article.affiliateOffer && (
+              <p className="mb-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-relaxed text-gray-700">
+                <strong>Affiliate disclosure:</strong> This article includes a paid referral link.
+                We may earn a commission if you buy. This is a review of published information;
+                we have not purchased the cookbook or tested its recipes.
+              </p>
+            )}
             <div
               className="prose prose-lg max-w-none
                 prose-headings:font-serif prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight
@@ -199,6 +207,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             )}
 
             {/* Tags */}
+            {article.affiliateOffer === "plantbc" && <AffiliateOffer />}
             {article.tags && article.tags.length > 0 && (
               <div className="mt-10 pt-8 border-t border-gray-200">
                 <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-3">Tags</p>
@@ -240,7 +249,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     <Link href="/editorial-policy" className="text-blue-700 hover:underline font-medium">
                       strict editorial guidelines
                     </Link>
-                    . All content is based on peer-reviewed research and reviewed by medical professionals.
+                    . Content is prepared with AI assistance and includes source links. No independent medical review is claimed.
                     This information is for educational purposes only — always consult your healthcare provider before making medical decisions.
                   </p>
                 </div>

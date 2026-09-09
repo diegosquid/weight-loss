@@ -6,7 +6,7 @@ import { ArrowRight, Clock, CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Articles | Metabolic Health Authority",
   description:
-    "Expert-reviewed articles on weight loss medications, GLP-1 therapies, metabolism, and metabolic health.",
+    "Research articles on weight loss medications, GLP-1 therapies, metabolism, and metabolic health.",
   alternates: {
     canonical: "https://metabolicscience.org/articles",
   },
@@ -29,7 +29,7 @@ export default function ArticlesPage() {
                 Articles on Metabolic Health
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Expert-written and medically-reviewed guides on GLP-1 medications, metabolism, weight loss science, and more.
+                Educational guides with linked sources on GLP-1 medications, metabolism, weight loss science, and more.
               </p>
             </div>
           </div>

@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import { Article, Author, FAQ } from "@/types";
-import { authors } from "@/lib/authors";
+import { authors, editorialAuthor } from "@/lib/authors";
 
 export { authors };
 
@@ -28,7 +28,7 @@ function parseArticleFile(categorySlug: string, slug: string): Article | undefin
 
   const htmlContent = marked(content) as string;
 
-  const author = authors[data.author as string] ?? authors["sarah-mitchell"];
+  const author = authors[data.author as string] ?? editorialAuthor;
   const medicalReviewer = data.medicalReviewer
     ? authors[data.medicalReviewer as string]
     : undefined;
@@ -61,6 +61,7 @@ function parseArticleFile(categorySlug: string, slug: string): Article | undefin
     featured: (data.featured as boolean) ?? false,
     readingTime,
     faqs: faqs && faqs.length > 0 ? faqs : undefined,
+    affiliateOffer: data.affiliateOffer === "plantbc" ? "plantbc" : undefined,
   };
 }
 

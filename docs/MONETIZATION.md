@@ -1,186 +1,77 @@
-# Monetization Strategy
+# ClickBank pilot — MetabolicScience
 
-## Overview
+Decision and account verification: 2026-09-09. This replaces the earlier speculative monetization plan. No revenue forecast is implied.
 
-This document outlines the monetization approach for Metabolic Health Authority, focusing on providing value while maintaining medical integrity.
+## Selected offer
 
-## Primary Revenue: ClickBank Affiliate
+**The Complete Plant-Based Cookbook (PLANTBC)**, a digital cooking resource. The decision is based on a lower entry price and a public sales page focused on recipes and convenience. It is not a proven weight-loss treatment. We did not purchase the book or test the recipes, delivery or refunds.
 
-### Product Selection
-**Primary Product**: Custom Keto Diet
-- **Why**: Complements GLP-1 medication use
-- **Commission**: ~$40 per sale
-- **Cookie Duration**: 60 days
-- **Gravity**: High (indicates active affiliates)
+Live ClickBank Marketplace snapshot:
 
-### Alternative Products to Test
-1. **The Smoothie Diet** - Weight loss program
-2. **Resurge** - Sleep and weight loss supplement
-3. **BioFit** - Probiotic for weight loss
-4. **Lean Belly 3X** - Supplement for belly fat
+| Offer | Avg net commission/conversion | CVR | EPC | Gravity |
+|---|---:|---:|---:|---:|
+| Plant-Based Cookbook | $12.96 | 1.95% | $0.18 | 7.9 |
+| Mediterranean Diet (MEDITERR) | $29.65 | 2.45% | $0.60 | 1.0 |
+| Smoothie Diet | $20.76 | 0.14% | $0.03 | 12.7 |
+| CitrusBurn | $184.63 | 0.00% | $0.00 | 7.4 |
 
-### Funnel Strategy
-```
-SEO Traffic → Educational Article → Soft CTA → Email Capture → 
-Nurture Sequence → ClickBank Offer
-```
+Marketplace definitions: average net commission and gravity use a 90-day window; CVR and EPC use 30 days. Different traffic mixes and undisclosed sample sizes prevent a fair controlled comparison. Zero displayed by the Marketplace is not proof that an offer cannot sell. These are platform statistics, not this site's results.
 
-### Content Integration
-- Natural product mentions within educational content
-- "Related Resources" sections
-- Dedicated review/comparison pages
-- Email lead magnets (meal plans, guides)
+Mediterranean Diet had higher displayed EPC but a low gravity and a sales page with sweeping weight-loss and disease-related claims. Smoothie Diet was less aligned with a general cooking resource. CitrusBurn's large payout does not establish demand or product efficacy. PlantBC is a pilot choice, not a claim that it is ClickBank's best offer.
 
-## Secondary Revenue: Supplement Affiliates
+Primary offer sources: [sales page](https://plantbasedcookbook.com/), [affiliate tools](https://plantbasedcookbook.com/affiliate-tools), [Mediterranean sales page](https://mediterraneanplan.com/), [CitrusBurn sales page](https://citrusburn.com/). Affiliate promotional metrics and prices differ from the live Marketplace and consumer checkout; do not reuse promotional projections.
 
-### Programs to Join
-1. **Thorne** - Professional-grade supplements
-2. **Life Extension** - Science-based supplements
-3. **Amazon Associates** - General supplements
-4. **iHerb** - Wide selection, good commissions
+## Purchase path and identity
 
-### Recommended Products
-- Multivitamins
-- Omega-3 fatty acids
-- Vitamin D
-- Probiotics
-- Protein powder
-- Electrolyte supplements
+In the logged-in Marketplace, selected the available affiliate nickname **diegodiasm** and seller **plantbc**, default sales landing page. ClickBank generated the encrypted HopLink in `lib/affiliate.ts`.
 
-### Content Integration
-- "Supplements to Consider" sections
-- Product recommendation boxes
-- Comparison articles
+Verified without purchasing:
 
-## Tertiary Revenue: Display Advertising
+- HopLink redirected to `plantbasedcookbook.com` with `hop=diegodiasm`.
+- Basic cookbook checkout showed the same encrypted affiliate ID and `TID = ms_pb_qa_review`.
+- Seller page advertised $9 basic / $17 bundle; checkout localized currency to BRL and displayed an optional paid recipe add-on.
+- Seller advertised one-time digital delivery and 60-day guarantee; ClickBank checkout also displayed its 60-day return notice. Delivery and refund execution are untested.
 
-### Networks
-1. **Mediavine** - Target (50K+ sessions/month)
-2. **AdThrive** - Alternative to Mediavine
-3. **Ezoic** - Entry-level option
-4. **Google AdSense** - Starter option
+The `qa` TID is only for manual validation and must be excluded from performance reports. Never buy through your own link as a validation step.
 
-### Ad Placement Strategy
-- In-content ads (after first 3 paragraphs)
-- Sidebar ads (on desktop)
-- Sticky footer ad
-- Calculator result pages
+## Pilot routes
 
-### RPM Expectations
-- Health niche: $15-40 RPM
-- Medical content: Higher rates
-- Calculator pages: Premium rates
+1. `/supplements/supplements-for-weight-loss/` → contextual cooking alternative → `/metabolism/plant-based-cookbook-review/?source=sg`.
+2. `/supplements/natural-thermogenics/` → contextual cooking alternative → `/metabolism/plant-based-cookbook-review/?source=nt`.
+3. Product assessment → labeled affiliate link → seller → ClickBank checkout.
 
-## Email Marketing
+The commercial link appears only on the product assessment. Keep dosage, pregnancy and adverse-effect articles free of offer placements. Existing article URLs and publication dates remain intact. Editorial attribution was corrected across the archive; this does not mean the archive received a clinical review.
 
-### Lead Magnets
-1. **Keto Meal Plan PDF** - 7-day starter plan
-2. **GLP-1 Side Effects Guide** - Comprehensive PDF
-3. **Weight Loss Tracker** - Printable/spreadsheet
-4. **Macro Calculator Guide** - How to use results
+The assessment explains its lack of hands-on testing, compares the base and bundle, mentions optional checkout extras and includes a free NHS recipe alternative. No invented rating, testimonial, clinician, accreditation or promised weight change is allowed.
 
-### Email Sequence
-**Welcome Series (5 emails)**:
-1. Deliver lead magnet + introduce site
-2. Educational content (how GLP-1 works)
-3. Success stories/testimonials
-4. Product recommendation (soft)
-5. ClickBank offer (stronger CTA)
+## Tracking actually implemented
 
-**Nurture Sequence**:
-- Weekly newsletter with new articles
-- Monthly product recommendations
-- Seasonal content (New Year, Summer)
+| TID | Meaning |
+|---|---|
+| `ms_pb_sg_review` | Review reached through supplement guide's coded link |
+| `ms_pb_nt_review` | Review reached through thermogenics guide's coded link |
+| `ms_pb_direct_review` | Other entry to review, missing/unknown source, or JavaScript unavailable |
 
-### Email Platform
-- **ConvertKit** - Best for creators
-- **Mailchimp** - Free tier available
-- **ActiveCampaign** - Advanced automation
+Only the fixed `sg`, `nt` and `direct` codes are accepted. No query text, calculator input, health information or personal identifier is forwarded. The canonical URL omits query parameters. Paid links use `rel="sponsored nofollow noopener"` and omit the referrer.
 
-## Digital Products (Future)
+ClickBank records hops and attributed transactions. There is no first-party page-view/CTA analytics or email capture installed. A TID labels the immediately preceding guide, not the original search engine or an individual session. Search clicks are not review visits; do not use them as a precise CTA-conversion denominator.
 
-### Potential Products
-1. **GLP-1 Companion Guide** - $27-47
-   - Meal plans for medication users
-   - Side effect management
-   - Progress tracking tools
+Reference: [ClickBank HopLinks guide](https://support.clickbank.com/en/articles/10535278-hoplinks-guide). TIDs use lowercase letters, numbers and underscores, with no hyphens.
 
-2. **Weight Loss Masterclass** - $97-197
-   - Video course
-   - Community access
-   - Monthly Q&A calls
+## Baseline observed before launch
 
-3. **1-on-1 Coaching** - $200-500/month
-   - Partner with dietitians
-   - Revenue share model
+Bing, 30 days Aug 9–Sep 7: 985 clicks / 41.7K impressions, Web and Chat. USA 813 clicks, Canada 51, UK 23. Supplement guide 52 clicks / 4K impressions; natural thermogenics 9 clicks / 447 impressions. Mounjaro dosage chart led at 199 clicks and remains informational.
 
-## Sponsorships (Future)
+Google Search Console, 28 days Aug 10–Sep 6: 45 clicks / 19.9K impressions; CTR 0.2%, average position 42.8. Different windows and surfaces should not be combined into a single conversion denominator.
 
-### Types
-- **Sponsored Articles** - Clearly labeled
-- **Newsletter Sponsorships** - Dedicated email
-- **Calculator Sponsorships** - Branded calculators
+ClickBank dashboard last 7 days Sep 3–9 displayed $0 earnings and $0 refunds. This is not an all-time statement and does not establish site-attributed history.
 
-### Potential Partners
-- Telehealth providers (Hims, Ro, Calibrate)
-- Meal delivery services
-- Fitness apps
-- Health tracking devices
+## Operating the pilot
 
-## Revenue Projections
+Run `npm run build` then `npm run verify:pilot`. Visually check the review and both incoming paths at desktop and mobile sizes. Follow one QA-coded HopLink to confirm seller and checkout attribution after any offer change. Do not submit payment.
 
-### Year 1 (Conservative)
-| Month | Traffic | ClickBank | Display | Total |
-|-------|---------|-----------|---------|-------|
-| 1-3 | 1K/mo | $0 | $0 | $0 |
-| 4-6 | 5K/mo | $200 | $0 | $200 |
-| 7-9 | 15K/mo | $800 | $300 | $1,100 |
-| 10-12 | 30K/mo | $2,000 | $750 | $2,750 |
+After the release is live, record its date and compare equal date windows. In the account's Reporting / Analytics area, filter the seller PLANTBC and group by TID. Record hops, initial sales, gross/net commissions, refunds and chargebacks; exclude QA traffic. Check the two source URLs and the review separately in Bing and GSC.
 
-### Year 2 (Growth)
-- Traffic: 100K+ sessions/month
-- Display ads (Mediavine): $3,000-5,000/mo
-- ClickBank: $5,000-10,000/mo
-- Email: $1,000-2,000/mo
-- **Total**: $9,000-17,000/month
+Review weekly manually. No new scheduled automation is configured. Start by checking that genuine hops arrive. If there are few hops, improve relevant content and the transition to the review before replacing the product. If hops arrive without sales, inspect audience fit, price and checkout. Do not declare a winner from a handful of events. Track later refunds before treating commissions as durable revenue.
 
-## Ethics & Compliance
-
-### Medical Integrity
-- Never promote unsafe products
-- Clear disclaimers on all affiliate content
-- Medical review of product-related content
-- No false claims or guarantees
-
-### FTC Compliance
-- Clear affiliate disclosures
-- "#ad" or "Affiliate Link" labels
-- About page disclosure
-- Editorial policy transparency
-
-### FDA Considerations
-- No claims about curing disease
-- No specific weight loss guarantees
-- Emphasize "may help" language
-- Consult doctor disclaimer
-
-## Testing & Optimization
-
-### A/B Tests
-- CTA button copy and color
-- Lead magnet offers
-- Email subject lines
-- Product recommendations
-
-### Key Metrics
-- Click-through rate (CTR)
-- Conversion rate
-- Earnings per click (EPC)
-- Revenue per visitor (RPV)
-- Email open/click rates
-
-### Quarterly Reviews
-- Top performing content
-- Best converting products
-- Seasonal trends
-- Competitor analysis
+The next three editorial slots prioritize beginner meal planning, free vs paid resources and meal plans vs supplements, as listed in `CONTENT_RULES.md`. Research them independently and preserve the existing one-article-per-day workflow.

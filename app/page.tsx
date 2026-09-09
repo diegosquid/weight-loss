@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { getAllArticles } from "@/lib/content";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { TrustSection } from "@/components/sections/TrustSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <HeroSection />
+      <HeroSection articleCount={getAllArticles().length} />
 
       {/* Categories */}
       <section className="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

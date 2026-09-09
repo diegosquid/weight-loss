@@ -1,5 +1,7 @@
 # 📚 Documentação do Projeto Metabolic Science
 
+> Estado do piloto de setembro de 2026: consultar [MONETIZATION.md](MONETIZATION.md). Metas e selecoes antigas abaixo sao planejamento historico, nao resultados comprovados.
+
 **Domínio:** metabolicscience.org  
 **Nicho:** Emagrecimento, GLP-1, Metabolismo  
 **Mercado:** EUA  
@@ -82,7 +84,7 @@ docs/
 | Ritmo de publicação | 1 artigo/dia | Escalar rápido com qualidade |
 | Foco inicial | GLP-1 | Maior volume de busca + monetização |
 | Domínio | .org | Autoridade médica/institucional |
-| Revisão médica | Subagentes | Escala sem perder E-E-A-T |
+| Atribuicao editorial | Metabolic Science Editorial, com IA | Sem alegar revisao medica independente |
 | Monetização principal | ClickBank | Comissões altas, produtos testados |
 
 ---

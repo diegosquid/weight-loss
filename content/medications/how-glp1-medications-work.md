@@ -3,8 +3,7 @@ title: "How GLP-1 Medications Work: The Science Behind Weight Loss Drugs"
 description: "Understand the mechanisms of GLP-1 receptor agonists like semaglutide and tirzepatide. Learn how these medications promote weight loss through appetite suppression, delayed gastric emptying, and metabolic effects."
 publishedAt: "2026-02-23"
 updatedAt: "2026-02-23"
-author: "sarah-mitchell"
-medicalReviewer: "james-chen"
+author: "editorial-team"
 category: "Medications"
 tags: ["GLP-1", "semaglutide", "tirzepatide", "weight loss mechanism", "appetite suppression", "gastric emptying"]
 featured: false
@@ -172,7 +171,6 @@ Understanding how they work helps set realistic expectations. These are powerful
 ---
 
 *Last updated: February 23, 2026*  
-*Medical review: Dr. James Chen, MD, PhD, FACE*
 
 ---
 

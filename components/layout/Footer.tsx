@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 
 const footerLinks = {
@@ -13,7 +13,7 @@ const footerLinks = {
   company: [
     { label: "About Us",               href: "/about" },
     { label: "Editorial Policy",       href: "/editorial-policy" },
-    { label: "Medical Review Process", href: "/editorial-policy" },
+    { label: "How We Evaluate Products", href: "/editorial-policy/#product-evaluation" },
     { label: "Privacy Policy",         href: "/privacy" },
   ],
   popular: [
@@ -24,10 +24,10 @@ const footerLinks = {
 };
 
 const trustSignals = [
-  "Medically Reviewed Content",
-  "Peer-Reviewed Sources",
-  "Evidence-Based Guidance",
-  "Updated Regularly",
+  "Research Explainers",
+  "Linked Sources",
+  "Educational Content",
+  "Publication Dates Shown",
 ];
 
 export function Footer() {
@@ -58,12 +58,9 @@ export function Footer() {
               <Logo dark />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-5">
-              Evidence-based information on weight loss, metabolism, and GLP-1 medications — medically reviewed for accuracy and safety.
+              Educational information on weight loss, metabolism, and GLP-1 medications, prepared with AI assistance and linked sources.
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-700/50 bg-emerald-900/30 text-xs font-semibold text-emerald-400">
-              <Shield className="w-3.5 h-3.5" />
-              HONcode Certified
-            </div>
+
           </div>
 
           {/* Resources */}
@@ -115,7 +112,7 @@ export function Footer() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-3">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
             <p className="text-xs text-gray-500">
-              © {new Date().getFullYear()} Metabolic Health Authority. All rights reserved.
+              © {new Date().getFullYear()} Metabolic Science. All rights reserved.
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-500">
               <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>

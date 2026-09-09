@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Metabolic Science",
   },
   description:
-    "Expert-reviewed information on weight loss medications, metabolism science, and GLP-1 therapies. Medically accurate, evidence-based health guidance.",
+    "Research explainers on weight loss medications, metabolism science, and GLP-1 therapies. Educational health information with linked sources.",
   keywords: [
     "weight loss",
     "semaglutide",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: "Metabolic Science",
     title: "Metabolic Science | Evidence-Based Weight Loss & Health",
     description:
-      "Expert-reviewed information on weight loss medications, metabolism, and GLP-1 therapies.",
+      "Research explainers on weight loss medications, metabolism, and GLP-1 therapies.",
     images: [
       {
         url: "/og-image.jpg",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Metabolic Science | Evidence-Based Weight Loss & Health",
     description:
-      "Expert-reviewed information on weight loss medications, metabolism, and GLP-1 therapies.",
+      "Research explainers on weight loss medications, metabolism, and GLP-1 therapies.",
     images: ["/og-image.jpg"],
     creator: "@metabolicscience",
   },

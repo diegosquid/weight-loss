@@ -3,8 +3,7 @@ title: "Mounjaro vs Ozempic: A Complete Head-to-Head Comparison"
 description: "Compare Mounjaro (tirzepatide) vs Ozempic (semaglutide) for weight loss. Evidence-based analysis of efficacy, side effects, dosing, and cost based on clinical trials."
 publishedAt: "2026-02-27"
 updatedAt: "2026-02-27"
-author: "sarah-mitchell"
-medicalReviewer: "james-chen"
+author: "editorial-team"
 category: "Medications"
 tags: ["tirzepatide", "semaglutide", "Mounjaro", "Ozempic", "weight loss comparison", "GLP-1", "GIP"]
 featured: false
@@ -225,7 +224,6 @@ Discuss with your healthcare provider which option aligns with your health goals
 ---
 
 *Last updated: February 27, 2026*  
-*Medical review: Dr. James Chen, MD, PhD, FACE*
 
 ---
 

@@ -14,6 +14,7 @@ export interface Article {
   image?: string;
   readingTime: number;
   faqs?: FAQ[];
+  affiliateOffer?: "plantbc";
 }
 
 export interface FAQ {
@@ -22,6 +23,7 @@ export interface FAQ {
 }
 
 export interface Author {
+  schemaType?: "Person" | "Organization";
   name: string;
   slug: string;
   title: string;

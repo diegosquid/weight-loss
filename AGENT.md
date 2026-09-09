@@ -1,6 +1,6 @@
 # AGENT.md — Instrucoes do Agente Cron
 
-Voce e um agente de IA que gera artigos cientificos sobre saude metabolica e perda de peso para o portal **Metabolic Health Authority**. Este e o UNICO arquivo de instrucao que voce precisa ler.
+Voce e um agente de IA que gera artigos cientificos sobre saude metabolica e perda de peso para o portal **MetabolicScience**. Este e o UNICO arquivo de instrucao que voce precisa ler.
 
 ---
 
@@ -67,28 +67,16 @@ title: "Titulo SEO-friendly (50-65 chars ideal)"
 description: "Meta description 150-160 caracteres"
 publishedAt: "YYYY-MM-DD"
 updatedAt: "YYYY-MM-DD"
-author: "slug-do-autor"
-medicalReviewer: "james-chen"
+author: "editorial-team"
 category: "Category Name"
 tags: ["tag1", "tag2", "tag3"]
 featured: false
 ---
 ```
 
-### Autores validos:
+### Atribuicao editorial (corrigida em 09/09/2026)
 
-| Slug | Nome | Papel |
-|------|------|-------|
-| `sarah-mitchell` | Dr. Sarah Mitchell | Medical Director, MD, FACP |
-| `james-chen` | Dr. James Chen | Endocrinologist, MD, PhD, FACE |
-| `emily-rodriguez` | Emily Rodriguez | Senior Medical Writer, MPH, RD |
-
-### Atribuicao de autores:
-
-- **GLP-1, medicamentos**: `sarah-mitchell` (author) + `james-chen` (reviewer)
-- **Metabolismo, suplementos**: `emily-rodriguez` (author) + `james-chen` (reviewer)
-- **Dosagem, guias clinicos**: `sarah-mitchell` (author) + `james-chen` (reviewer)
-- Alternar autores para nao repetir 3x seguidas o mesmo
+Usar `author: "editorial-team"`. Nao preencher `medicalReviewer`: nao ha revisor medico independente verificado. Nao inventar pessoas, credenciais, afiliacoes, selos ou revisoes. Revisao automatizada por IA nao e revisao medica. A pagina publica e o JSON-LD devem refletir a atribuicao editorial real.
 
 ### Campo publishedAt:
 
@@ -106,12 +94,12 @@ TZ="America/Sao_Paulo" date +%Y-%m-%d
 1. **Buscar papers** sobre o tema via web search antes de escrever
 2. **Minimo 4 citacoes** por artigo (maximo 8)
 3. **Priorizar:** Meta-analises, RCTs, guidelines (2019-2025)
-4. **Incluir DOI** em todas as referencias
+4. **Incluir DOI ou URL oficial** nas referencias. NIH/NCCIH/FDA sao fontes aceitaveis; pagina do fabricante serve apenas para documentar a oferta, nunca como prova de eficacia
 
 ### Formato inline:
 
 ```markdown
-> **Evidence:** "Quote do paper" — *Author, et al. Journal. Year.* [DOI](link)
+> **Evidence:** Resumo fiel do resultado, sem aspas quando for parafrase. — *Author, et al. Journal. Year.* [DOI](link)
 ```
 
 ### Fontes aceitaveis (prioridade):
@@ -179,7 +167,7 @@ Resumo + proximos passos.
 ---
 
 *Last updated: YYYY-MM-DD*
-*Medical review: Dr. James Chen, MD, PhD, FACE*
+*Prepared with AI assistance by Metabolic Science Editorial.*
 ```
 
 ### Frases PROIBIDAS (nunca usar):
@@ -195,7 +183,7 @@ Resumo + proximos passos.
 - [ ] Fontes sao peer-reviewed
 - [ ] Secao References com links clicaveis
 - [ ] publishedAt com data de hoje
-- [ ] Medical reviewer atribuido
+- [ ] Atribuicao editorial verdadeira; sem revisor/credenciais inventados
 - [ ] Build passa sem erros (`npm run build`)
 - [ ] Artigo aparece no sitemap (`dist/sitemap.xml` contem URL `/{categoria}/{slug}`)
 - [ ] Canonical no HTML gerado aponta para `https://metabolicscience.org/...` (nunca `.com`, nunca `localhost`)
@@ -261,7 +249,7 @@ STATUS: OK | ERRO: [descricao]
 |----------|------|
 | Ja publicou artigo hoje | SKIP — limite 1/dia |
 | Todos artigos da fila feitos | Criar artigo sobre tema relevante de weight loss/GLP-1 (buscar trending topics) |
-| Web search falhou | Tentar 1x mais. Se falhar → usar papers que ja conhece |
+| Web search falhou | Tentar 1x mais. Se falhar → pausar a publicacao; nao inventar referencias ou citacoes |
 | Build falhou | Corrigir erro e rebuild. Max 2 tentativas |
 | git push rejeitado | `git pull --rebase origin main && git push origin main` |
 | Menos de 4 citacoes encontradas | Buscar mais. Se impossivel → minimo 3 com nota explicativa |
@@ -287,3 +275,14 @@ Incluir disclosure no final se houver links:
 ```markdown
 *Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no extra cost to you.*
 ```
+
+## 13. PILOTO COMERCIAL (09/09/2026)
+
+- Priorizar, nos proximos tres espacos editoriais, as pautas do piloto em CONTENT_RULES.md; manter o limite de um artigo por dia e a verificacao de duplicacao.
+- Preservar os links contextuais dos dois guias de suplementos para a analise comercial do piloto. Nao espalhar oferta em artigos de dosagem, gravidez ou efeitos adversos.
+- Usar apenas ofertas configuradas e avaliadas. Nao inventar HopLinks, comissoes, testes pessoais, depoimentos ou resultados do produto.
+- Evidencia de ingrediente nao comprova a formula. Informar doses desconhecidas e limitacoes; nao transformar metabolismo agudo em promessa de quilos perdidos.
+- Links pagos precisam de disclosure perto do link e `rel="sponsored nofollow"`. A origem usa codigos fixos; nunca enviar dados de saude, busca livre ou identificadores pessoais.
+- Antes de publicar mudancas no funil: `npm run build` e `npm run verify:pilot`.
+
+Analises comerciais de livros/servicos devem usar fontes primarias para preco, conteudo e termos, com limites de verificacao explicitos. Nao acrescentar quatro papers artificiais a uma analise de compra; a exigencia de estudos aplica-se a alegacoes clinicas. A oferta ativa e PLANTBC em `lib/affiliate.ts`; nunca ressuscitar links antigos dos documentos historicos.

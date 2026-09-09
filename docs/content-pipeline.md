@@ -1,3 +1,5 @@
+> Historical workflow. For current attribution and commercial rules, use `AGENT.md` and `docs/MONETIZATION.md`. Unverified doctor identities or medical reviews in older examples must not be reused.
+
 # Sistema de Revisão Multi-Camadas para Artigos Médicos
 ## Pipeline de Humanização de Conteúdo GLP-1/Emagrecimento
 

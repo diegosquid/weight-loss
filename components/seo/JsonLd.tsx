@@ -21,15 +21,11 @@ export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Metabolic Health Authority",
+    name: "Metabolic Science",
     url: "https://metabolicscience.org",
-    logo: "https://metabolicscience.org/logo.png",
+    logo: "https://metabolicscience.org/icon.svg",
     description:
       "Evidence-based medical information on weight loss, metabolism, and GLP-1 medications.",
-    sameAs: [
-      "https://twitter.com/metabolichealth",
-      "https://facebook.com/metabolicscience",
-    ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Medical Information",
@@ -93,7 +89,7 @@ export function generateArticleSchema({
   image?: string;
   publishedAt: string;
   updatedAt?: string;
-  author: { name: string; url?: string };
+  author: { name: string; url?: string; type?: "Person" | "Organization" };
   medicalReviewer?: { name: string; credentials: string };
 }) {
   const schema: any = {
@@ -105,16 +101,16 @@ export function generateArticleSchema({
     image: image || "https://metabolicscience.org/og-image.jpg",
     datePublished: publishedAt,
     author: {
-      "@type": "Person",
+      "@type": author.type || "Person",
       name: author.name,
       url: author.url,
     },
     publisher: {
       "@type": "Organization",
-      name: "Metabolic Health Authority",
+      name: "Metabolic Science",
       logo: {
         "@type": "ImageObject",
-        url: "https://metabolicscience.org/logo.png",
+        url: "https://metabolicscience.org/icon.svg",
       },
     },
   };
