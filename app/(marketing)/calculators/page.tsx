@@ -1,41 +1,35 @@
+import { pageMetadata } from "@/lib/seo";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Calculator, ArrowRight } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Health Calculators",
-  description:
-    "Free health calculators including BMI, calorie needs, macronutrients, and body fat percentage.",
-  alternates: {
-    canonical: "https://metabolicscience.org/calculators",
-  },
-};
+export const metadata: Metadata = pageMetadata("Health Calculators", "Free health calculators including BMI, calorie needs, macronutrients, and body fat percentage.", "/calculators/");
 
 const calculators = [
   {
     title: "BMI Calculator",
     description: "Calculate your Body Mass Index and understand your weight category.",
-    href: "/calculators/bmi",
+    href: "/calculators/bmi/",
     icon: "📊",
   },
   {
     title: "Calorie Calculator",
     description: "Determine your daily calorie needs based on your goals and activity level.",
-    href: "/calculators/calorie",
+    href: "/calculators/calorie/",
     icon: "🔥",
   },
   {
     title: "Macro Calculator",
     description: "Calculate optimal protein, carb, and fat intake for your goals.",
-    href: "/calculators/macro",
+    href: "/calculators/macro/",
     icon: "🥩",
   },
   {
     title: "Body Fat Calculator",
     description: "Estimate your body fat percentage using the US Navy method.",
-    href: "/calculators/body-fat",
+    href: "/calculators/body-fat/",
     icon: "📏",
   },
 ];

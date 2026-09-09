@@ -1,14 +1,10 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Metadata } from "next";
 import { getArticlesByCategory } from "@/lib/content";
 import { ArrowRight, Clock, CheckCircle, Syringe } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Weight Loss Medications",
-  description:
-    "Evidence-based guides on prescription weight loss medications — dosing, comparisons, insurance coverage, injection technique, and what to expect.",
-  alternates: { canonical: "https://metabolicscience.org/medications" },
-};
+export const metadata: Metadata = pageMetadata("Weight Loss Medications", "Evidence-based guides on prescription weight loss medications \u2014 dosing, comparisons, insurance coverage, injection technique, and what to expect.", "/medications/");
 
 export default function MedicationsPage() {
   const articles = getArticlesByCategory("medications");

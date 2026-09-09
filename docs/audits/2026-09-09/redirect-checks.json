@@ -1,0 +1,68 @@
+[
+  {
+    "url": "https://metabolicscience.org/medications/mounjaro-vs-ozempic/",
+    "status": 200,
+    "final": "https://metabolicscience.org/medications/mounjaro-vs-ozempic/",
+    "redirects": []
+  },
+  {
+    "url": "https://metabolicscience.org/glp-1/what-is-semaglutide",
+    "status": 200,
+    "final": "https://metabolicscience.org/glp-1/what-is-semaglutide/",
+    "redirects": [
+      {
+        "status": 301,
+        "from": "https://metabolicscience.org/glp-1/what-is-semaglutide",
+        "to": "https://metabolicscience.org/glp-1/what-is-semaglutide/"
+      }
+    ]
+  },
+  {
+    "url": "https://metabolicscience.org/medications",
+    "status": 200,
+    "final": "https://metabolicscience.org/medications/",
+    "redirects": [
+      {
+        "status": 301,
+        "from": "https://metabolicscience.org/medications",
+        "to": "https://metabolicscience.org/medications/"
+      }
+    ]
+  },
+  {
+    "url": "https://metabolicscience.org/glp-1/glp1-side-effects",
+    "status": 200,
+    "final": "https://metabolicscience.org/glp-1/glp1-side-effects/",
+    "redirects": [
+      {
+        "status": 301,
+        "from": "https://metabolicscience.org/glp-1/glp1-side-effects",
+        "to": "https://metabolicscience.org/glp-1/glp1-side-effects/"
+      }
+    ]
+  },
+  {
+    "url": "http://metabolicscience.org/",
+    "status": 200,
+    "final": "https://metabolicscience.org/",
+    "redirects": [
+      {
+        "status": 301,
+        "from": "http://metabolicscience.org/",
+        "to": "https://metabolicscience.org/"
+      }
+    ]
+  },
+  {
+    "url": "https://www.metabolicscience.org/",
+    "status": 200,
+    "final": "https://metabolicscience.org/",
+    "redirects": [
+      {
+        "status": 301,
+        "from": "https://www.metabolicscience.org/",
+        "to": "https://metabolicscience.org/"
+      }
+    ]
+  }
+]

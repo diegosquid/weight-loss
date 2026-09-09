@@ -11,6 +11,7 @@ const STATIC_PAGES: Array<{
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
 }> = [
   { path: "",                    priority: 1.0, changeFrequency: "weekly" },
+  { path: "resources", priority: 0.8, changeFrequency: "monthly" },
   { path: "articles",            priority: 0.8, changeFrequency: "weekly" },
   { path: "glp-1",               priority: 0.8, changeFrequency: "weekly" },
   { path: "metabolism",          priority: 0.8, changeFrequency: "weekly" },
@@ -28,13 +29,11 @@ const STATIC_PAGES: Array<{
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const articles = getAllArticles();
   const categories = getAllCategories();
 
   const staticEntries: MetadataRoute.Sitemap = STATIC_PAGES.map((page) => ({
-    url: page.path ? `${BASE_URL}/${page.path}` : `${BASE_URL}/`,
-    lastModified: now,
+    url: page.path ? `${BASE_URL}/${page.path}/` : `${BASE_URL}/`,
     changeFrequency: page.changeFrequency,
     priority: page.priority,
   }));
@@ -43,14 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const extraCategoryEntries: MetadataRoute.Sitemap = categories
     .filter((slug) => !knownStatic.has(slug))
     .map((slug) => ({
-      url: `${BASE_URL}/${slug}`,
-      lastModified: now,
+      url: `${BASE_URL}/${slug}/`,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     }));
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((article) => ({
-    url: `${BASE_URL}/${article.categorySlug}/${article.slug}`,
+    url: `${BASE_URL}/${article.categorySlug}/${article.slug}/`,
     lastModified: new Date(article.updatedAt || article.publishedAt),
     changeFrequency: "monthly" as const,
     priority: 0.7,

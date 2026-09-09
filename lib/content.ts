@@ -1,10 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { marked } from "marked";
+import { Marked } from "marked";
+import markedFootnote from "marked-footnote";
 import { Article, Author, FAQ } from "@/types";
 import { authors, editorialAuthor } from "@/lib/authors";
 import { isAffiliateOffer } from "@/lib/affiliate";
+
+const markdown = new Marked().use(markedFootnote());
 
 export { authors };
 
@@ -27,7 +30,7 @@ function parseArticleFile(categorySlug: string, slug: string): Article | undefin
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
 
-  const htmlContent = marked(content) as string;
+  const htmlContent = markdown.parse(content) as string;
 
   const author = authors[data.author as string] ?? editorialAuthor;
   const medicalReviewer = data.medicalReviewer
@@ -66,7 +69,9 @@ function parseArticleFile(categorySlug: string, slug: string): Article | undefin
   };
 }
 
+let productionArticles: Article[] | undefined;
 export function getAllArticles(): Article[] {
+  if (process.env.NODE_ENV === "production" && productionArticles) return productionArticles;
   if (!fs.existsSync(ARTICLES_DIR)) return [];
 
   const categories = fs.readdirSync(ARTICLES_DIR).filter((name) => {
@@ -88,9 +93,9 @@ export function getAllArticles(): Article[] {
     }
   }
 
-  return articles.sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-  );
+  const sorted = articles.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  if (process.env.NODE_ENV === "production") productionArticles = sorted;
+  return sorted;
 }
 
 export function getArticleBySlug(categorySlug: string, slug: string): Article | undefined {
@@ -143,24 +148,28 @@ export function getNavItems(): NavItem[] {
     const articles = getArticlesByCategory(cat);
     const children: NavChild[] = articles.slice(0, NAV_MAX_CHILDREN).map((a) => ({
       label: a.title,
-      href: `/${a.categorySlug}/${a.slug}`,
+      href: `/${a.categorySlug}/${a.slug}/`,
       description: a.description.length > 60 ? a.description.slice(0, 57) + "..." : a.description,
     }));
 
-    items.push({ label: meta.label, href: `/${cat}`, key: meta.key, children, totalArticles: articles.length });
+    items.push({ label: meta.label, href: `/${cat}/`, key: meta.key, children, totalArticles: articles.length });
   }
+
+  items.push({ label: "Resources", href: "/resources/", key: "resources", totalArticles: 2, children: [
+    { label: "Product assessments", href: "/resources/", description: "Costs, limitations and free alternatives" },
+  ] });
 
   // Static: Tools
   items.push({
     label: "Tools",
-    href: "/tools",
+    href: "/tools/",
     key: "tools",
     totalArticles: 4,
     children: [
-      { label: "BMI Calculator",     href: "/calculators/bmi",      description: "Body Mass Index" },
-      { label: "Calorie Calculator",  href: "/calculators/calorie",  description: "Daily calorie needs" },
-      { label: "Macro Calculator",    href: "/calculators/macro",    description: "Macronutrient targets" },
-      { label: "Body Fat %",          href: "/calculators/body-fat", description: "Estimate body composition" },
+      { label: "BMI Calculator",     href: "/calculators/bmi/",      description: "Body Mass Index" },
+      { label: "Calorie Calculator",  href: "/calculators/calorie/",  description: "Daily calorie needs" },
+      { label: "Macro Calculator",    href: "/calculators/macro/",    description: "Macronutrient targets" },
+      { label: "Body Fat %",          href: "/calculators/body-fat/", description: "Estimate body composition" },
     ],
   });
 
@@ -197,4 +206,21 @@ export function getSearchIndex(): SearchIndexEntry[] {
     category: a.category,
     tags: a.tags,
   }));
+}
+
+/** A same-category reading sequence plus tag matches; excludes paid assessments from clinical recommendations. */
+export function getRelatedArticles(article: Article): Article[] {
+  const all = getAllArticles();
+  if (article.affiliateOffer) {
+    const slugs = article.affiliateOffer === "plantbc" ? ["supplements-for-weight-loss", "natural-thermogenics"] : ["muscle-and-metabolism", "boosting-metabolism"];
+    return slugs.map(slug => all.find(a => a.slug === slug)).filter((a): a is Article => !!a);
+  }
+  const peers = all.filter(a => a.categorySlug === article.categorySlug && !a.affiliateOffer);
+  const index = peers.findIndex(a => a.slug === article.slug);
+  const next = index >= 0 && peers.length > 1 ? peers[(index + 1) % peers.length] : undefined;
+  const tags = new Set(article.tags.map(t => t.toLowerCase()));
+  const ranked = peers.filter(a => a.slug !== article.slug && a.slug !== next?.slug)
+    .map(a => ({ article: a, score: a.tags.filter(t => tags.has(t.toLowerCase())).length }))
+    .sort((a, b) => b.score - a.score).slice(0, next ? 2 : 3).map(a => a.article);
+  return next ? [next, ...ranked] : ranked;
 }

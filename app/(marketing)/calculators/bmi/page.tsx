@@ -1,14 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
 import { Metadata } from "next";
 import { BMICalculator } from "@/components/calculators/BMICalculator";
 
-export const metadata: Metadata = {
-  title: "BMI Calculator",
-  description:
-    "Calculate your Body Mass Index (BMI) to understand your weight category and health risks.",
-  alternates: {
-    canonical: "https://metabolicscience.org/calculators/bmi",
-  },
-};
+export const metadata: Metadata = pageMetadata("BMI Calculator", "Calculate your Body Mass Index (BMI) to understand your weight category and health risks.", "/calculators/bmi/");
 
 export default function BMICalculatorPage() {
   return (

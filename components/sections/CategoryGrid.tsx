@@ -13,7 +13,7 @@ const categories = [
     articleCount: 18,
     gradient: "from-blue-500 to-indigo-600",
     bgGradient: "from-blue-50 to-indigo-50",
-    href: "/glp-1",
+    href: "/glp-1/",
   },
   {
     id: "metabolism",
@@ -23,7 +23,7 @@ const categories = [
     articleCount: 15,
     gradient: "from-orange-500 to-red-500",
     bgGradient: "from-orange-50 to-red-50",
-    href: "/metabolism",
+    href: "/metabolism/",
   },
   {
     id: "supplements",
@@ -33,7 +33,7 @@ const categories = [
     articleCount: 12,
     gradient: "from-emerald-500 to-teal-600",
     bgGradient: "from-emerald-50 to-teal-50",
-    href: "/supplements",
+    href: "/supplements/",
   },
   {
     id: "tools",
@@ -43,7 +43,7 @@ const categories = [
     articleCount: 8,
     gradient: "from-violet-500 to-purple-600",
     bgGradient: "from-violet-50 to-purple-50",
-    href: "/tools",
+    href: "/tools/",
   },
 ];
 

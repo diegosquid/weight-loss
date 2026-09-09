@@ -1,14 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
 import { Metadata } from "next";
 import { MacroCalculator } from "@/components/calculators/MacroCalculator";
 
-export const metadata: Metadata = {
-  title: "Macro Calculator",
-  description:
-    "Calculate your optimal macronutrient intake for weight loss, maintenance, or muscle gain.",
-  alternates: {
-    canonical: "https://metabolicscience.org/calculators/macro",
-  },
-};
+export const metadata: Metadata = pageMetadata("Macro Calculator", "Calculate your optimal macronutrient intake for weight loss, maintenance, or muscle gain.", "/calculators/macro/");
 
 export default function MacroCalculatorPage() {
   return (

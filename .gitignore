@@ -40,3 +40,7 @@ coverage
 
 # Misc
 *.log
+
+# Generated deployment identity and private operational records
+public/release.json
+.editorial-state/

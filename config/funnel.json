@@ -1,0 +1,17 @@
+{
+  "pages": {
+    "/": "home",
+    "/resources/": "resources",
+    "/supplements/supplements-for-weight-loss/": "sg",
+    "/supplements/natural-thermogenics/": "nt",
+    "/metabolism/muscle-and-metabolism/": "mm",
+    "/metabolism/boosting-metabolism/": "bm",
+    "/metabolism/plant-based-cookbook-review/": "pb_review",
+    "/metabolism/fitin56-review/": "f56_review"
+  },
+  "offers": {
+    "plantbc": { "page": "pb_review", "path": "/metabolism/plant-based-cookbook-review/", "sources": ["sg", "nt", "home", "resources", "direct"] },
+    "fitin56": { "page": "f56_review", "path": "/metabolism/fitin56-review/", "sources": ["mm", "bm", "home", "resources", "direct"] }
+  },
+  "placements": ["context", "summary", "end", "home", "resources"]
+}

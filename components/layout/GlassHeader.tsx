@@ -80,7 +80,7 @@ export function GlassHeader({ showSearch = true, navItems, searchIndex = [] }: G
   return (
     <>
       <motion.header
-        initial={{ y: -100 }}
+        initial={false}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -92,7 +92,7 @@ export function GlassHeader({ showSearch = true, navItems, searchIndex = [] }: G
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <motion.div variants={logoVariants} initial="initial" animate="animate">
+            <motion.div variants={logoVariants} initial={false} animate="animate">
               <Link href="/" className="flex items-center gap-2 group">
                 <Logo />
               </Link>
@@ -101,9 +101,9 @@ export function GlassHeader({ showSearch = true, navItems, searchIndex = [] }: G
             {/* Desktop Navigation */}
             <motion.nav
               variants={navVariants}
-              initial="initial"
+              initial={false}
               animate="animate"
-              className="hidden lg:flex items-center gap-1"
+              className="hidden xl:flex items-center gap-1"
             >
               <Navigation navItems={navItems} />
             </motion.nav>
@@ -111,7 +111,7 @@ export function GlassHeader({ showSearch = true, navItems, searchIndex = [] }: G
             {/* Search & Actions */}
             <motion.div
               variants={searchVariants}
-              initial="initial"
+              initial={false}
               animate="animate"
               className="flex items-center gap-2 lg:gap-4"
             >
@@ -139,7 +139,7 @@ export function GlassHeader({ showSearch = true, navItems, searchIndex = [] }: G
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                className="xl:hidden w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
               >
@@ -182,7 +182,7 @@ export function GlassHeader({ showSearch = true, navItems, searchIndex = [] }: G
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 xl:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
@@ -192,7 +192,7 @@ export function GlassHeader({ showSearch = true, navItems, searchIndex = [] }: G
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed top-0 right-0 bottom-0 w-[280px] bg-white dark:bg-gray-900 z-50 lg:hidden shadow-2xl"
+              className="fixed top-0 right-0 bottom-0 w-[280px] bg-white dark:bg-gray-900 z-50 xl:hidden shadow-2xl"
             >
               <div className="flex flex-col h-full pt-20 pb-6 px-6">
                 {/* Mobile Search */}

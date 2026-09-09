@@ -1,14 +1,10 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Metadata } from "next";
 import { getArticlesByCategory } from "@/lib/content";
 import { ArrowRight, Clock, CheckCircle, Pill } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "GLP-1 Medications",
-  description:
-    "Evidence-based guides on semaglutide, tirzepatide, liraglutide, and other GLP-1 receptor agonists for weight loss and diabetes management.",
-  alternates: { canonical: "https://metabolicscience.org/glp-1" },
-};
+export const metadata: Metadata = pageMetadata("GLP-1 Medications", "Evidence-based guides on semaglutide, tirzepatide, liraglutide, and other GLP-1 receptor agonists for weight loss and diabetes management.", "/glp-1/");
 
 export default function GLP1Page() {
   const articles = getArticlesByCategory("glp-1");

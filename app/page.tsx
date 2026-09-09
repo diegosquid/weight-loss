@@ -1,3 +1,4 @@
+import { ResourceCards } from "@/components/affiliate/ResourceCards";
 import Link from "next/link";
 import { getAllArticles } from "@/lib/content";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -13,10 +14,10 @@ export default function Home() {
         <h2 className="text-3xl font-serif font-bold text-gray-900 text-center mb-12">Explore Topics</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { title: "GLP-1 Medications", desc: "Semaglutide, tirzepatide, and more", href: "/glp-1" },
-            { title: "Metabolism Science", desc: "How your body burns energy", href: "/metabolism" },
-            { title: "Supplements", desc: "Evidence-based recommendations", href: "/supplements" },
-            { title: "Health Tools", desc: "Calculators and assessments", href: "/tools" },
+            { title: "GLP-1 Medications", desc: "Semaglutide, tirzepatide, and more", href: "/glp-1/" },
+            { title: "Metabolism Science", desc: "How your body burns energy", href: "/metabolism/" },
+            { title: "Supplements", desc: "Evidence-based recommendations", href: "/supplements/" },
+            { title: "Health Tools", desc: "Free calculators and practical guidance", href: "/tools/" },
           ].map((cat) => (
             <Link 
               key={cat.title}
@@ -30,6 +31,12 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Practical guides &amp; product assessments</h2>
+        <p className="max-w-3xl text-gray-600 leading-relaxed mb-7">Explore optional cooking and exercise resources, with costs, limitations and free alternatives. These assessments contain disclosed affiliate links.</p>
+        <ResourceCards source="home" />
+        <Link href="/resources/" className="mt-6 inline-block font-semibold text-blue-800 underline">Browse practical resources →</Link>
+      </section>
       <TrustSection />
     </div>
   );

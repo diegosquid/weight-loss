@@ -27,18 +27,18 @@ interface NavigationProps {
 
 // Fallback if no navItems passed (shouldn't happen, but safe default)
 const defaultNavItems: NavItem[] = [
-  { label: "GLP-1", href: "/glp-1", key: "glp-1", children: [] },
-  { label: "Metabolism", href: "/metabolism", key: "metabolism", children: [] },
-  { label: "Supplements", href: "/supplements", key: "supplements", children: [] },
+  { label: "GLP-1", href: "/glp-1/", key: "glp-1", children: [] },
+  { label: "Metabolism", href: "/metabolism/", key: "metabolism", children: [] },
+  { label: "Supplements", href: "/supplements/", key: "supplements", children: [] },
   {
     label: "Tools",
-    href: "/tools",
+    href: "/tools/",
     key: "tools",
     children: [
-      { label: "BMI Calculator", href: "/calculators/bmi", description: "Body Mass Index" },
-      { label: "Calorie Calculator", href: "/calculators/calorie", description: "Daily calorie needs" },
-      { label: "Macro Calculator", href: "/calculators/macro", description: "Macronutrient targets" },
-      { label: "Body Fat %", href: "/calculators/body-fat", description: "Estimate body composition" },
+      { label: "BMI Calculator", href: "/calculators/bmi/", description: "Body Mass Index" },
+      { label: "Calorie Calculator", href: "/calculators/calorie/", description: "Daily calorie needs" },
+      { label: "Macro Calculator", href: "/calculators/macro/", description: "Macronutrient targets" },
+      { label: "Body Fat %", href: "/calculators/body-fat/", description: "Estimate body composition" },
     ],
   },
 ];

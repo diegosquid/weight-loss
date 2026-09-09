@@ -11,7 +11,7 @@ const tools = [
     description: "Calculate your Body Mass Index and understand what it means for your health.",
     icon: Scale,
     color: "blue",
-    href: "/tools/bmi-calculator",
+    href: "/tools/bmi-calculator/",
     featured: true,
   },
   {
@@ -20,7 +20,7 @@ const tools = [
     description: "Find your daily calorie needs based on your goals.",
     icon: Activity,
     color: "orange",
-    href: "/tools/calorie-calculator",
+    href: "/tools/calorie-calculator/",
     featured: false,
   },
   {
@@ -29,7 +29,7 @@ const tools = [
     description: "Optimize your protein, carb, and fat intake.",
     icon: Sparkles,
     color: "emerald",
-    href: "/tools/macro-calculator",
+    href: "/tools/macro-calculator/",
     featured: false,
   },
   {
@@ -38,7 +38,7 @@ const tools = [
     description: "Quick assessment of your metabolic health markers.",
     icon: Heart,
     color: "rose",
-    href: "/tools/health-assessment",
+    href: "/tools/health-assessment/",
     featured: false,
   },
 ];
@@ -255,7 +255,7 @@ export function ToolsSection() {
 
             {/* View All Link */}
             <motion.div variants={cardVariants}>
-              <Link href="/tools">
+              <Link href="/tools/">
                 <div className="flex items-center justify-center gap-2 p-5 rounded-2xl border-2 border-dashed border-slate-300 text-slate-500 hover:border-blue-400 hover:text-blue-600 transition-colors">
                   <span className="font-medium">View All Tools</span>
                   <ArrowRight className="w-5 h-5" />

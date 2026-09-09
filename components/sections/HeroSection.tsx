@@ -1,31 +1,6 @@
-"use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight, Activity } from "lucide-react";
 import Link from "next/link";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
-    },
-  },
-};
 
 export function HeroSection({ articleCount }: { articleCount: number }) {
   return (
@@ -39,43 +14,36 @@ export function HeroSection({ articleCount }: { articleCount: number }) {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Content */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+          <div
             className="text-center lg:text-left"
           >
-            <motion.div
-              variants={itemVariants}
+            <div
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100/50 text-blue-700 text-xs font-semibold uppercase tracking-wide mb-8"
             >
               <Activity className="w-3.5 h-3.5" />
               <span>Research Explained</span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              variants={itemVariants}
+            <h1
               className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight"
             >
               Evidence-Based <br className="hidden lg:block" />
               <span className="text-blue-700">Weight Loss Science</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              variants={itemVariants}
+            <p
               className="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
               We translate complex metabolic research into clear, actionable health guidance.
               Reliable information on GLP-1 therapies, nutrition, and metabolic health.
-            </motion.p>
+            </p>
 
             {/* CTAs */}
-            <motion.div
-              variants={itemVariants}
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
             >
               <Link
-                href="/articles"
+                href="/articles/"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition-all shadow-sm hover:shadow-md"
               >
                 Start Reading
@@ -87,11 +55,10 @@ export function HeroSection({ articleCount }: { articleCount: number }) {
               >
                 Health Tools
               </Link>
-            </motion.div>
+            </div>
 
             {/* Trust Badges */}
-            <motion.div
-              variants={itemVariants}
+            <div
               className="flex flex-wrap items-center justify-center lg:justify-start gap-8 border-t border-slate-100 pt-8"
             >
               <div>
@@ -108,14 +75,11 @@ export function HeroSection({ articleCount }: { articleCount: number }) {
                 <div className="text-2xl font-bold text-slate-900">Free</div>
                 <div className="text-xs text-slate-500 font-medium uppercase tracking-wide mt-1">Health Calculators</div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Content - Modern/Clean Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+          <div
             className="relative hidden lg:block"
           >
              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-white">
@@ -155,7 +119,7 @@ export function HeroSection({ articleCount }: { articleCount: number }) {
                     </div>
                 </div>
              </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

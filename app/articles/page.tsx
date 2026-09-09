@@ -1,16 +1,10 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Metadata } from "next";
 import { getAllArticles } from "@/lib/content";
 import { ArrowRight, Clock, CheckCircle } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Articles | Metabolic Health Authority",
-  description:
-    "Research articles on weight loss medications, GLP-1 therapies, metabolism, and metabolic health.",
-  alternates: {
-    canonical: "https://metabolicscience.org/articles",
-  },
-};
+export const metadata: Metadata = pageMetadata("Articles", "Research articles on weight loss medications, GLP-1 therapies, metabolism, and metabolic health.", "/articles/");
 
 export default function ArticlesPage() {
   const articles = getAllArticles();

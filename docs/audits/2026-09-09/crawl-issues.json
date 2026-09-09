@@ -1,0 +1,539 @@
+{
+  "pages": 165,
+  "status": {
+    "200": 165
+  },
+  "bad_canonical": [
+    {
+      "url": "https://metabolicscience.org/tools",
+      "final": "https://metabolicscience.org/tools/",
+      "canonical": [
+        "https://metabolicscience.org/"
+      ]
+    }
+  ],
+  "h1_issues": [
+    "https://metabolicscience.org/glp-1/tirzepatide",
+    "https://metabolicscience.org/glp-1/what-is-semaglutide"
+  ],
+  "no_description": [],
+  "long_titles": [
+    {
+      "url": "https://metabolicscience.org/glp-1/hrs-7535-kai-7535-oral-glp1-pill",
+      "length": 81
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-fatigue",
+      "length": 84
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/ubt251-triple-agonist-novo-nordisk",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/medications/generic-semaglutide-2026",
+      "length": 84
+    },
+    {
+      "url": "https://metabolicscience.org/metabolism/leptin-resistance",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-taste-changes",
+      "length": 82
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/met-097i-pfizer-monthly-glp1",
+      "length": 77
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-birth-control-contraception",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-inflammatory-bowel-disease",
+      "length": 82
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-intermittent-fasting",
+      "length": 85
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-menstrual-cycle",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-older-adults-sarcopenia",
+      "length": 82
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-hidradenitis-suppurativa",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/ct-388-roche-glp1-gip-dual-agonist",
+      "length": 81
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-psoriasis",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-infection-risk-immune-system",
+      "length": 81
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/efpeglenatide-weekly-glp1-cardio-renal",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-testosterone",
+      "length": 79
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-dizziness-vertigo",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-hypoglycemia",
+      "length": 86
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-acid-reflux-gerd",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-prediabetes-diabetes-prevention",
+      "length": 88
+    },
+    {
+      "url": "https://metabolicscience.org/medications/glp1-nutrient-deficiencies",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-diarrhea",
+      "length": 87
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/wegovy-hd-semaglutide-7-2-mg",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-nausea-management",
+      "length": 85
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-constipation",
+      "length": 91
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-atrial-fibrillation",
+      "length": 86
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-smoking-cessation",
+      "length": 84
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/ecnoglutide-biased-glp1-weight-loss",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/ozempic-face",
+      "length": 81
+    },
+    {
+      "url": "https://metabolicscience.org/medications/setmelanotide-imcivree-genetic-obesity",
+      "length": 79
+    },
+    {
+      "url": "https://metabolicscience.org/medications/microdosing-glp1",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-metabolic-syndrome",
+      "length": 85
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/pemvidutide-altimmune-glp1-glucagon-dual-agonist",
+      "length": 87
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-peripheral-artery-disease",
+      "length": 92
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/vk2735-viking-therapeutics-glp1-gip-dual-agonist",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/amycretin-glp1-amylin-agonist",
+      "length": 86
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-binge-eating-disorder",
+      "length": 88
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/tirzepatide-vs-retatrutide",
+      "length": 84
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-pregnancy",
+      "length": 79
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-sexual-function",
+      "length": 82
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/bariatric-surgery-vs-glp1-medications",
+      "length": 79
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-alzheimers-disease",
+      "length": 86
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/mazdutide-china-glp1-glucagon-dual-agonist",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-heart-failure-hfpef",
+      "length": 88
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-gastroparesis-stomach-paralysis",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-parkinsons-disease",
+      "length": 86
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-pancreatitis-research",
+      "length": 79
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-adolescents-teens",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-eye-health-vision-risks",
+      "length": 90
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-resistance-genetic-causes",
+      "length": 81
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-gallbladder-disease-research",
+      "length": 86
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/maritide-amgen-monthly-glp1-gip-antagonist",
+      "length": 89
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-surgery-anesthesia-perioperative-safety",
+      "length": 77
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/survodutide-glucagon-glp1-dual-agonist",
+      "length": 87
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-menopause-midlife-weight-loss",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-cancer-risk-research",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-weight-loss-plateau",
+      "length": 81
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-joint-pain-arthritis",
+      "length": 77
+    },
+    {
+      "url": "https://metabolicscience.org/medications/compounded-semaglutide",
+      "length": 83
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-cholesterol-lipid-profile",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-addiction-research",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-insulin-resistance",
+      "length": 85
+    },
+    {
+      "url": "https://metabolicscience.org/medications/mounjaro-dosage-chart",
+      "length": 85
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-fertility-reproductive-health",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-inflammation-research",
+      "length": 79
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-blood-pressure",
+      "length": 81
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-thyroid-health",
+      "length": 81
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-skin-health",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-mental-health",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-gut-health",
+      "length": 77
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-hair-loss",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-brain-health-cognitive-function",
+      "length": 79
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-bone-health",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-kidney-health",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-fatty-liver-masld",
+      "length": 86
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-muscle-loss-prevention",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-food-noise-science",
+      "length": 77
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-sleep-apnea",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/tirzepatide-vs-semaglutide",
+      "length": 88
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-cardiovascular-benefits",
+      "length": 98
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/diet-vs-medication",
+      "length": 79
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/weight-regain-after-glp1",
+      "length": 87
+    },
+    {
+      "url": "https://metabolicscience.org/medications/plenity",
+      "length": 82
+    },
+    {
+      "url": "https://metabolicscience.org/medications/contrave-review",
+      "length": 87
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/phentermine-vs-glp1",
+      "length": 77
+    },
+    {
+      "url": "https://metabolicscience.org/medications/injection-techniques-glp1",
+      "length": 76
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/rybelsus",
+      "length": 80
+    },
+    {
+      "url": "https://metabolicscience.org/medications/glp1-storage-handling",
+      "length": 77
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/semaglutide-dosage-guide",
+      "length": 82
+    },
+    {
+      "url": "https://metabolicscience.org/medications/insurance-coverage-weight-loss-drugs",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/mounjaro-vs-ozempic",
+      "length": 83
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/tirzepatide",
+      "length": 78
+    },
+    {
+      "url": "https://metabolicscience.org/supplements/protein-powder",
+      "length": 92
+    },
+    {
+      "url": "https://metabolicscience.org/medications/how-glp1-medications-work",
+      "length": 84
+    },
+    {
+      "url": "https://metabolicscience.org/supplements/natural-thermogenics",
+      "length": 89
+    },
+    {
+      "url": "https://metabolicscience.org/supplements/fiber-supplements",
+      "length": 84
+    },
+    {
+      "url": "https://metabolicscience.org/supplements/probiotics",
+      "length": 87
+    },
+    {
+      "url": "https://metabolicscience.org/supplements/berberine",
+      "length": 90
+    },
+    {
+      "url": "https://metabolicscience.org/metabolism/boosting-metabolism",
+      "length": 94
+    },
+    {
+      "url": "https://metabolicscience.org/metabolism/muscle-and-metabolism",
+      "length": 92
+    },
+    {
+      "url": "https://metabolicscience.org/metabolism/metabolic-adaptation",
+      "length": 98
+    },
+    {
+      "url": "https://metabolicscience.org/metabolism/how-metabolism-works",
+      "length": 98
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/what-is-semaglutide",
+      "length": 102
+    }
+  ],
+  "literal_footnotes": [
+    {
+      "url": "https://metabolicscience.org/supplements/protein-powder",
+      "count": 12
+    },
+    {
+      "url": "https://metabolicscience.org/supplements/natural-thermogenics",
+      "count": 13
+    },
+    {
+      "url": "https://metabolicscience.org/supplements/fiber-supplements",
+      "count": 8
+    },
+    {
+      "url": "https://metabolicscience.org/supplements/berberine",
+      "count": 13
+    },
+    {
+      "url": "https://metabolicscience.org/metabolism/muscle-and-metabolism",
+      "count": 10
+    },
+    {
+      "url": "https://metabolicscience.org/metabolism/metabolic-adaptation",
+      "count": 2
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/liraglutide",
+      "count": 18
+    },
+    {
+      "url": "https://metabolicscience.org/metabolism/how-metabolism-works",
+      "count": 13
+    }
+  ],
+  "bad_extra": [
+    {
+      "url": "https://metabolicscience.org/glp-1/glp1-storage-handling",
+      "status": 404,
+      "error": null
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/how-glp1-medications-work",
+      "status": 404,
+      "error": null
+    },
+    {
+      "url": "https://metabolicscience.org/medications/what-is-semaglutide",
+      "status": 404,
+      "error": null
+    },
+    {
+      "url": "https://metabolicscience.org/glp-1/injection-techniques-glp1",
+      "status": 404,
+      "error": null
+    },
+    {
+      "url": "https://metabolicscience.org/og-image.jpg",
+      "status": 404,
+      "error": null
+    }
+  ],
+  "duplicate_titles": [
+    {
+      "value": "Metabolic Science | Evidence-Based Weight Loss & Health",
+      "urls": [
+        "https://metabolicscience.org/",
+        "https://metabolicscience.org/tools"
+      ]
+    }
+  ],
+  "duplicate_descriptions": [
+    {
+      "value": "['Research explainers on weight loss medications, metabolism science, and GLP-1 therapies. Educational health information with linked sources.']",
+      "urls": [
+        "https://metabolicscience.org/",
+        "https://metabolicscience.org/tools"
+      ]
+    }
+  ],
+  "missing_from_sitemap_internal": [
+    "https://metabolicscience.org/glp-1/glp1-storage-handling",
+    "https://metabolicscience.org/glp-1/how-glp1-medications-work",
+    "https://metabolicscience.org/medications/what-is-semaglutide",
+    "https://metabolicscience.org/glp-1/injection-techniques-glp1"
+  ],
+  "expected_404_probe": {
+    "url": "https://metabolicscience.org/a-page-that-does-not-exist-seo-audit/",
+    "status": 404,
+    "error": null
+  },
+  "notes": [
+    "165 sitemap URLs including 150 articles; slashless sitemap addresses follow redirects to final URLs.",
+    "long_titles is a descriptive observation above 75 characters, not a hard Google limit.",
+    "schema_in_serialized_html is not proof of a direct JSON-LD script in the original HTML. Runtime DOM verified on boosting-metabolism.",
+    "8 pages have literal footnote markers. This audit does not certify clinical accuracy of the archive.",
+    "All articles receive links from navigation/indexes. 52 do not receive an in-article link from another article."
+  ]
+}

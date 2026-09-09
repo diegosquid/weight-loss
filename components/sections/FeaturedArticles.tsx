@@ -107,7 +107,7 @@ export function FeaturedArticles() {
             </p>
           </div>
           <Link
-            href="/articles"
+            href="/articles/"
             className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors group"
           >
             View all articles

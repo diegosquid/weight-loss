@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/seo";
+import { FunnelTracker } from "@/components/affiliate/FunnelTracker";
 import type { Metadata } from "next";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
@@ -20,66 +22,12 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
+  ...pageMetadata("Metabolic Science | Weight Loss Research & Practical Guides", "Research explainers on weight loss medications, metabolism and nutrition, with linked sources, free calculators and disclosed product assessments.", "/"),
   metadataBase: new URL("https://metabolicscience.org"),
-  title: {
-    default: "Metabolic Science | Evidence-Based Weight Loss & Health",
-    template: "%s | Metabolic Science",
-  },
-  description:
-    "Research explainers on weight loss medications, metabolism science, and GLP-1 therapies. Educational health information with linked sources.",
-  keywords: [
-    "weight loss",
-    "semaglutide",
-    "ozempic",
-    "wegovy",
-    "GLP-1",
-    "metabolism",
-    "medical weight loss",
-    "tirzepatide",
-    "mounjaro",
-  ],
-  authors: [{ name: "Metabolic Science" }],
-  creator: "Metabolic Science",
+  title: { default: "Metabolic Science | Weight Loss Research & Practical Guides", template: "%s | Metabolic Science" },
+  authors: [{ name: "Metabolic Science Editorial Team" }],
   publisher: "Metabolic Science",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://metabolicscience.org",
-    siteName: "Metabolic Science",
-    title: "Metabolic Science | Evidence-Based Weight Loss & Health",
-    description:
-      "Research explainers on weight loss medications, metabolism, and GLP-1 therapies.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Metabolic Science",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Metabolic Science | Evidence-Based Weight Loss & Health",
-    description:
-      "Research explainers on weight loss medications, metabolism, and GLP-1 therapies.",
-    images: ["/og-image.jpg"],
-    creator: "@metabolicscience",
-  },
-  alternates: {
-    canonical: "https://metabolicscience.org",
-  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
 };
 
 export default function RootLayout({
@@ -119,6 +67,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <FunnelTracker />
         <ThemeProvider>
           <GlassHeader navItems={navItems} searchIndex={searchIndex} />
           <main className="flex-1 pt-16 lg:pt-20">

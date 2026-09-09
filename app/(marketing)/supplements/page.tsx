@@ -1,14 +1,10 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Metadata } from "next";
 import { getArticlesByCategory } from "@/lib/content";
 import { ArrowRight, Clock, CheckCircle, Beaker } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Supplements",
-  description:
-    "Science-backed information on supplements for weight loss, metabolic health, and overall wellness.",
-  alternates: { canonical: "https://metabolicscience.org/supplements" },
-};
+export const metadata: Metadata = pageMetadata("Supplements", "Science-backed information on supplements for weight loss, metabolic health, and overall wellness.", "/supplements/");
 
 export default function SupplementsPage() {
   const articles = getArticlesByCategory("supplements");

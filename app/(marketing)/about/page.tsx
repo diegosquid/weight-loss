@@ -1,13 +1,10 @@
+import { pageMetadata } from "@/lib/seo";
 import { Metadata } from "next";
 import Link from "next/link";
 import { AuthorBio } from "@/components/eeat/AuthorBio";
 import { editorialAuthor } from "@/lib/authors";
 
-export const metadata: Metadata = {
-  title: "About Us",
-  description: "Who publishes Metabolic Science, how AI assists our work, and how our educational content is funded.",
-  alternates: { canonical: "https://metabolicscience.org/about/" },
-};
+export const metadata: Metadata = pageMetadata("About Us", "Who publishes Metabolic Science, how AI assists our work, and how our educational content is funded.", "/about/");
 
 export default function AboutPage() {
   return (

@@ -1,0 +1,169 @@
+{
+  "timezone": "America/Sao_Paulo",
+  "hour": "10:00",
+  "startDate": "2026-09-14",
+  "endDate": "2026-10-09",
+  "cadence": {
+    "MO": "new nutrition guide",
+    "TU": "existing article review",
+    "WE": "new exercise guide",
+    "TH": "existing article review",
+    "FR": "new comparison and weekly funnel report"
+  },
+  "tasks": [
+    {
+      "date": "2026-09-14",
+      "kind": "new",
+      "path": "content/metabolism/plant-based-meal-planning-beginners.mdx",
+      "workingTitle": "Plant-Based Meal Planning for Beginners: A Practical Grocery List",
+      "optionalOffer": "plantbc",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "kind": "new",
+      "path": "content/metabolism/choosing-beginner-home-workout.mdx",
+      "workingTitle": "Choosing a Beginner Home Workout Program: Equipment, Time and Progression",
+      "optionalOffer": "fitin56",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "kind": "new",
+      "path": "content/metabolism/free-recipes-vs-paid-meal-plans.mdx",
+      "workingTitle": "Free Recipes vs Paid Meal Plans: What Is Worth Paying For?",
+      "optionalOffer": "plantbc",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "kind": "new",
+      "path": "content/metabolism/weekly-grocery-list-from-recipes.mdx",
+      "workingTitle": "How to Build a Weekly Grocery List from Recipes You Already Like",
+      "optionalOffer": "plantbc",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "kind": "new",
+      "path": "content/metabolism/home-workout-subscriptions-cancellation.mdx",
+      "workingTitle": "How to Compare Home Workout Subscriptions and Cancellation Terms",
+      "optionalOffer": "fitin56",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "kind": "new",
+      "path": "content/metabolism/free-workout-videos-vs-paid-programs.mdx",
+      "workingTitle": "Free Workout Videos vs Paid Programs: What Does Structure Add?",
+      "optionalOffer": "fitin56",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "new",
+      "path": "content/metabolism/plant-based-meal-prep-budget.mdx",
+      "workingTitle": "Plant-Based Meal Prep on a Budget: Planning Portions and Shopping",
+      "optionalOffer": "plantbc",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "new",
+      "path": "content/metabolism/small-space-home-workout-setup.mdx",
+      "workingTitle": "Small-Space Home Workouts: Choosing a Realistic Setup",
+      "optionalOffer": "fitin56",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "kind": "new",
+      "path": "content/metabolism/digital-cookbook-vs-meal-planning-service.mdx",
+      "workingTitle": "Digital Cookbook vs Meal-Planning Service: Contents, Costs and Limits",
+      "optionalOffer": "plantbc",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "kind": "new",
+      "path": "content/metabolism/evaluate-recipe-nutrition-information.mdx",
+      "workingTitle": "How to Evaluate Recipe Nutrition Information Before Buying a Cookbook",
+      "optionalOffer": "plantbc",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "kind": "new",
+      "path": "content/metabolism/online-fitness-program-checklist.mdx",
+      "workingTitle": "What to Check Before Paying for an Online Fitness Program",
+      "optionalOffer": "fitin56",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "kind": "new",
+      "path": "content/metabolism/meal-planning-vs-weight-loss-supplements.mdx",
+      "workingTitle": "Meal-Planning Resources vs Weight-Loss Supplements: Different Purchases, Different Evidence",
+      "optionalOffer": "plantbc",
+      "distribution": [
+        "resources hub",
+        "one relevant existing article",
+        "one relevant earlier guide if available"
+      ]
+    }
+  ],
+  "reviewQueue": [
+    "content/medications/mounjaro-dosage-chart.mdx",
+    "content/medications/glp1-storage-handling.mdx",
+    "content/supplements/supplements-for-weight-loss.mdx",
+    "content/metabolism/muscle-and-metabolism.mdx",
+    "content/supplements/natural-thermogenics.mdx",
+    "content/metabolism/boosting-metabolism.mdx",
+    "content/glp-1/glp1-gastroparesis-stomach-paralysis.mdx",
+    "content/glp-1/what-is-semaglutide.mdx"
+  ]
+}

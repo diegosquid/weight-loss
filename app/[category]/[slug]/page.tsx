@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import { MedicalReviewBadge } from "@/components/eeat/MedicalReviewBadge";
 import { AuthorBio } from "@/components/eeat/AuthorBio";
 import { JsonLd, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/components/seo/JsonLd";
-import { getArticleBySlug, getAllArticles } from "@/lib/content";
+import { getArticleBySlug, getAllArticles, getRelatedArticles } from "@/lib/content";
 import { formatDate } from "@/lib/utils";
 import { Clock, Calendar, RefreshCw, ArrowLeft, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { AffiliateOffer } from "@/components/affiliate/AffiliateOffer";
 import { affiliateOffers } from "@/lib/affiliate";
+import { pageMetadata, canonicalUrl } from "@/lib/seo";
 
 interface ArticlePageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -26,13 +27,11 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   const article = getArticleBySlug(category, slug);
   if (!article) return { title: "Article Not Found" };
 
+  const base = pageMetadata(article.title, article.description, `/${category}/${slug}/`);
   return {
-    title: article.title,
-    description: article.description,
-    alternates: {
-      canonical: `https://metabolicscience.org/${category}/${slug}`,
-    },
+    ...base,
     openGraph: {
+      ...base.openGraph,
       title: article.title,
       description: article.description,
       type: "article",
@@ -81,11 +80,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <div className="border-b border-gray-200 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <nav className="flex items-center gap-2 text-sm text-gray-500">
-              <Link href="/" className="hover:text-blue-700 transition-colors">Home</Link>
+                <Link href="/" className="hover:text-blue-700 transition-colors">Home</Link>
               <span>/</span>
-              <span className="hover:text-blue-700 transition-colors capitalize">
+              <Link href={`/${category}/`} className="hover:text-blue-700 transition-colors capitalize">
                 {category.replace(/-/g, " ")}
-              </span>
+              </Link>
               <span>/</span>
               <span className="text-gray-700 font-medium line-clamp-1">{article.title}</span>
             </nav>
@@ -162,7 +161,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 {affiliateOffers[article.affiliateOffer].limitation}
               </p>
             )}
-            <div
+            {article.content.split("<!-- offer-summary -->").map((part, index, parts) => (
+              <section key={index}>
+                <div
               className="prose prose-lg max-w-none
                 prose-headings:font-serif prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight
                 prose-p:text-gray-700 prose-p:leading-relaxed
@@ -174,8 +175,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 prose-ul:text-gray-700 prose-ol:text-gray-700
                 prose-li:my-1
                 prose-hr:border-gray-200"
-              dangerouslySetInnerHTML={{ __html: article.content }}
+              dangerouslySetInnerHTML={{ __html: part }}
             />
+                {article.affiliateOffer && index < parts.length - 1 && <AffiliateOffer offer={article.affiliateOffer} placement="summary" />}
+              </section>
+            ))}
 
             {/* FAQ */}
             {article.faqs && article.faqs.length > 0 && (
@@ -225,6 +229,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </div>
             )}
 
+            <section className="mt-10 border-t border-gray-200 pt-8" aria-labelledby="related-heading">
+              <h2 id="related-heading" className="mb-4 text-2xl font-serif font-bold text-gray-900">{article.affiliateOffer ? "Related guides" : `More in ${article.category}`}</h2>
+              <ul className="space-y-3">{getRelatedArticles(article).map(related => <li key={related.slug}><Link className="text-blue-800 underline underline-offset-4" href={`/${related.categorySlug}/${related.slug}/`}>{related.title}</Link></li>)}</ul>
+            </section>
             {/* Author */}
             <div className="mt-10 pt-8 border-t border-gray-200">
               <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-4">Written By</p>
@@ -247,7 +255,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   <p className="text-sm font-semibold text-gray-900 mb-1">Editorial Standards</p>
                   <p className="text-xs text-gray-600 leading-relaxed">
                     This article follows our{" "}
-                    <Link href="/editorial-policy" className="text-blue-700 hover:underline font-medium">
+                    <Link href="/editorial-policy/" className="text-blue-700 hover:underline font-medium">
                       strict editorial guidelines
                     </Link>
                     . Content is prepared with AI assistance and includes source links. No independent medical review is claimed.

@@ -1,14 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
 import { Metadata } from "next";
 import { BodyFatCalculator } from "@/components/calculators/BodyFatCalculator";
 
-export const metadata: Metadata = {
-  title: "Body Fat Calculator",
-  description:
-    "Estimate your body fat percentage using the US Navy method. Includes lean mass and fat mass calculations.",
-  alternates: {
-    canonical: "https://metabolicscience.org/calculators/body-fat",
-  },
-};
+export const metadata: Metadata = pageMetadata("Body Fat Calculator", "Estimate your body fat percentage using the US Navy method. Includes lean mass and fat mass calculations.", "/calculators/body-fat/");
 
 export default function BodyFatCalculatorPage() {
   return (

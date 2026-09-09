@@ -2,10 +2,10 @@ import Link from "next/link";
 import { BookOpen, Calculator, Users, Shield, ChevronDown } from "lucide-react";
 
 const navLinks = [
-  { href: "/glp-1", label: "GLP-1" },
-  { href: "/metabolism", label: "Metabolism" },
-  { href: "/supplements", label: "Supplements" },
-  { href: "/calculators", label: "Calculators" },
+  { href: "/glp-1/", label: "GLP-1" },
+  { href: "/metabolism/", label: "Metabolism" },
+  { href: "/supplements/", label: "Supplements" },
+  { href: "/calculators/", label: "Calculators" },
 ];
 
 export function Header() {
@@ -49,7 +49,7 @@ export function Header() {
             {/* Right side */}
             <div className="flex items-center gap-3">
               <Link
-                href="/glp-1"
+                href="/glp-1/"
                 className="hidden sm:inline-flex items-center justify-center gap-1.5 rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800 transition-colors shadow-sm"
               >
                 <BookOpen className="w-3.5 h-3.5" />

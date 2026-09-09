@@ -1,10 +1,7 @@
+import { pageMetadata } from "@/lib/seo";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "How Metabolic Science handles calculator inputs, preferences and affiliate links.",
-  alternates: { canonical: "https://metabolicscience.org/privacy/" },
-};
+export const metadata: Metadata = pageMetadata("Privacy Policy", "How Metabolic Science handles calculator inputs, preferences and affiliate links.", "/privacy/");
 
 export default function PrivacyPage() {
   return (
@@ -21,7 +18,8 @@ export default function PrivacyPage() {
         <h2>Affiliate links and measurement</h2>
         <p>When you choose a ClickBank affiliate link, you leave our website. ClickBank and the seller handle that visit under their own privacy policies and may use cookies to attribute a purchase to an affiliate.</p>
         <p>Our affiliate URLs contain fixed campaign codes that distinguish links reached through our supplement guides from links reached directly through a product analysis. We do not add names, email addresses, calculator inputs, health profiles or free-text searches to those codes. A code describes a link’s context, not a diagnosis or profile of its reader.</p>
-        <p>The current site code does not install Google Analytics or an advertising pixel. ClickBank referral reporting and search engine webmaster reports are separate from on-site visitor analytics.</p>
+        <p>We count page loads and link clicks on a small set of cooking, exercise and product-assessment pages, including the home and resources pages. Our own endpoint receives only fixed page, product and link-position codes. It does not receive calculator values, search text, full page URLs, referrers, names or visitor identifiers. It uses no analytics cookies or cross-site tracking pixel and respects browser Do Not Track and Global Privacy Control signals.</p>
+        <p>Anonymous event records are stored with our hosting provider for approximately 90 days, with a daily deletion job. Reports are private. The hosting provider can still process connection information to serve and secure requests. These counts are not unique-person counts and cannot show who purchased; ClickBank sales reporting is separate.</p>
         <h2>Purchases and third-party websites</h2>
         <p>We do not collect payment details or process orders. Review the seller’s terms and ClickBank’s privacy information before submitting personal or payment information. Their practices are governed by their own policies.</p>
         <h2>Affiliate disclosure</h2>

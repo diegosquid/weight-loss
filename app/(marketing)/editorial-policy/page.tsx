@@ -1,10 +1,7 @@
+import { pageMetadata } from "@/lib/seo";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Editorial Policy",
-  description: "Our sourcing standards, use of AI, product evaluation method and affiliate disclosures.",
-  alternates: { canonical: "https://metabolicscience.org/editorial-policy/" },
-};
+export const metadata: Metadata = pageMetadata("Editorial Policy", "Our sourcing standards, use of AI, product evaluation method and affiliate disclosures.", "/editorial-policy/");
 
 export default function EditorialPolicyPage() {
   return (

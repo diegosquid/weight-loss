@@ -1,4 +1,4 @@
-import Script from "next/script";
+import { canonicalUrl, SOCIAL_IMAGE } from "@/lib/seo";
 
 interface JsonLdProps {
   data: Record<string, any> | Record<string, any>[];
@@ -6,11 +6,10 @@ interface JsonLdProps {
 
 export function JsonLd({ data }: JsonLdProps) {
   return (
-    <Script
-      id="json-ld"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data),
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
       }}
     />
   );
@@ -97,8 +96,8 @@ export function generateArticleSchema({
     "@type": "Article",
     headline: title,
     description,
-    url,
-    image: image || "https://metabolicscience.org/og-image.jpg",
+    url: canonicalUrl(url),
+    image: image || SOCIAL_IMAGE,
     datePublished: publishedAt,
     author: {
       "@type": author.type || "Person",
@@ -157,7 +156,7 @@ export function generateBreadcrumbSchema(
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item: canonicalUrl(item.url),
     })),
   };
 }

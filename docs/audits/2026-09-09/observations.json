@@ -1,0 +1,69 @@
+{
+  "observed": "2026-09-09",
+  "bing": {
+    "window": "2026-08-09 to 2026-09-07",
+    "all_web_and_chat_clicks": 985,
+    "impressions_displayed": "41.7K",
+    "ctr_displayed": "2.36%",
+    "web_pages_rows": 77,
+    "web_pages_clicks_sum": 829,
+    "known_offer_entry_clicks": {
+      "supplements-for-weight-loss": 52,
+      "natural-thermogenics": 9,
+      "muscle-and-metabolism": 2
+    },
+    "boosting-metabolism": "not present among 77 listed URLs; do not infer all-source zero traffic"
+  },
+  "gsc": {
+    "window": "2026-08-10 to 2026-09-06",
+    "clicks": 45,
+    "impressions_displayed": "19.9K",
+    "ctr_displayed": "0.2%",
+    "position": 42.8,
+    "indexing_update_displayed": "2026-09-03",
+    "indexed_urls": 106,
+    "not_indexed_urls": 113,
+    "reasons": {
+      "crawled_not_indexed": 56,
+      "page_with_redirect": 45,
+      "duplicate_without_user_selected_canonical": 8,
+      "redirect_error": 3,
+      "not_found": 1
+    },
+    "field_vitals": "Insufficient usage data in last 90 days, mobile and desktop"
+  },
+  "schedule": {
+    "local_crontab_active_entries": 0,
+    "codex_automation_files_examined": 6,
+    "matching_project_automations": 0,
+    "matching_launch_plists": 0,
+    "last_publishing_log": "logs/cron-2026-08-08-1103.log",
+    "last_pre_pilot_article_date": "2026-08-08",
+    "external_schedulers": "not independently inspected"
+  },
+  "performance": {
+    "method": "PageSpeed Insights mobile; single initial load, Moto G Power emulation, Slow 4G, Lighthouse 13.4.1",
+    "home": {
+      "score": 87,
+      "accessibility": 96,
+      "seo_basic": 100,
+      "fcp_seconds": 0.9,
+      "lcp_seconds": 2.9,
+      "tbt_ms": 0,
+      "cls": 0,
+      "speed_index_seconds": 8.7,
+      "url": "https://pagespeed.web.dev/analysis/https-metabolicscience-org/q64o0qe4lp?utm_source=search_console&form_factor=mobile&hl=en"
+    },
+    "cookbook": {
+      "score": 94,
+      "accessibility": 94,
+      "seo_basic": 100,
+      "fcp_seconds": 1.4,
+      "lcp_seconds": 2.7,
+      "tbt_ms": 0,
+      "cls": 0,
+      "speed_index_seconds": 4.1,
+      "url": "https://pagespeed.web.dev/analysis/https-metabolicscience-org-metabolism-plant-based-cookbook-review/z5jlkdjbnr?hl=en&form_factor=mobile"
+    }
+  }
+}

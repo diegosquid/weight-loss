@@ -2,6 +2,22 @@
 
 Decision and account verification: 2026-09-09. This replaces the earlier speculative monetization plan. No revenue forecast is implied.
 
+## Distribution and measurement — implementation of September 9, 2026
+
+The two existing assessments are accessible through `/resources/`, home cards, navigation, footer and the four contextual articles. Internal entry paragraphs were moved earlier where relevant; both assessments include a pricing-adjacent CTA and an end-of-review CTA. Shared category recommendations strengthen circulation through the archive. No generic affiliate banner or paid link was added to calculator results or clinical articles.
+
+The first-party `/api/funnel/` collector stores fixed-code page loads, review clicks and offer clicks in Netlify Blobs. There are no visitor IDs, cookies, search strings, full URLs or calculator values. DNT/GPC opt out. Each event uses a separate storage key to avoid lost counter updates; records expire through a daily retention function after approximately 90 days. Counts can include bots/repeats and omit blocked requests, so they are not unique visitor counts.
+
+`npm run report:funnel -- --days=7` reads a private, signed report. The local private key is outside the repository at `~/.config/metabolic-science/funnel-report-key.pem`; only its public verification key is deployed. Reports are unavailable without a valid short-lived signature. Never expose or upload the private key.
+
+`?qa=1` marks test events in a separate bucket and uses `ms_pb_qa_review` / `ms_f56_qa_review` in outgoing ClickBank links. This flag follows internal test navigation. QA records are excluded from normal reports and expire after roughly seven days. Do not use QA sessions to infer commercial activity.
+
+Normal source codes: cookbook `sg`, `nt`, `home`, `resources`, `direct`; FITin56 `mm`, `bm`, `home`, `resources`, `direct`. The fixed `ms_*_<source>_review` TID identifies the immediate entry context, not a search engine or person. New guide sources must be added to both config/funnel.json and lib/affiliate.ts; tests enforce agreement.
+
+The four-week queue runs September 14–October 9: three new practical guides/comparisons and two archive revisions per week. Friday joins on-site counts with available ClickBank hops, net commissions, refunds and recurring payments; unavailable account data remains unavailable. No minimum click count or projected revenue is claimed as a statistically validated threshold.
+
+Deployment verification and automation identity are recorded in `docs/IMPLEMENTATION-2026-09-09.md`. The Marketplace snapshot below remains the dated selection evidence, not live performance.
+
 ## Selected offer
 
 **The Complete Plant-Based Cookbook (PLANTBC)**, a digital cooking resource. The decision is based on a lower entry price and a public sales page focused on recipes and convenience. It is not a proven weight-loss treatment. We did not purchase the book or test the recipes, delivery or refunds.

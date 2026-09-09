@@ -1,14 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
 import { Metadata } from "next";
 import { CalorieCalculator } from "@/components/calculators/CalorieCalculator";
 
-export const metadata: Metadata = {
-  title: "Calorie Calculator",
-  description:
-    "Calculate your daily calorie needs using the Mifflin-St Jeor equation. Includes BMR and TDEE calculations.",
-  alternates: {
-    canonical: "https://metabolicscience.org/calculators/calorie",
-  },
-};
+export const metadata: Metadata = pageMetadata("Calorie Calculator", "Calculate your daily calorie needs using the Mifflin-St Jeor equation. Includes BMR and TDEE calculations.", "/calculators/calorie/");
 
 export default function CalorieCalculatorPage() {
   return (

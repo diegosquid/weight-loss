@@ -1,14 +1,10 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Metadata } from "next";
 import { getArticlesByCategory } from "@/lib/content";
 import { ArrowRight, Clock, CheckCircle, Flame } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Metabolism Science",
-  description:
-    "Learn how your body burns energy, adapts to calorie changes, and what you can do to optimize your metabolic health.",
-  alternates: { canonical: "https://metabolicscience.org/metabolism" },
-};
+export const metadata: Metadata = pageMetadata("Metabolism Science", "Learn how your body burns energy, adapts to calorie changes, and what you can do to optimize your metabolic health.", "/metabolism/");
 
 export default function MetabolismPage() {
   const articles = getArticlesByCategory("metabolism");
