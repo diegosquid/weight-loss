@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import { Article, Author, FAQ } from "@/types";
 import { authors, editorialAuthor } from "@/lib/authors";
+import { isAffiliateOffer } from "@/lib/affiliate";
 
 export { authors };
 
@@ -61,7 +62,7 @@ function parseArticleFile(categorySlug: string, slug: string): Article | undefin
     featured: (data.featured as boolean) ?? false,
     readingTime,
     faqs: faqs && faqs.length > 0 ? faqs : undefined,
-    affiliateOffer: data.affiliateOffer === "plantbc" ? "plantbc" : undefined,
+    affiliateOffer: isAffiliateOffer(data.affiliateOffer) ? data.affiliateOffer : undefined,
   };
 }
 

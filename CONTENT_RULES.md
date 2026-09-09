@@ -2,6 +2,8 @@
 
 ## Piloto comercial — prioridade a partir de 09/09/2026
 
+Publicacoes comerciais manuais autorizadas em 09/09/2026: Plant-Based Cookbook Review e FITin56 Review. FITin56 tem links contextuais em `muscle-and-metabolism` e `boosting-metabolism`; PLANTBC continua nos dois guias de suplementos. Usar somente os IDs de oferta configurados em `lib/affiliate.ts`. Esta expansao manual nao altera o limite diario do cron nem a fila abaixo.
+
 Antes de retomar a fila clinica, usar os proximos tres espacos editoriais nestas pautas, com pesquisa atual e verificacao de duplicacao:
 
 - [ ] Plant-Based Meal Planning for Beginners: Build a Grocery List

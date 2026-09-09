@@ -8,6 +8,7 @@ import { formatDate } from "@/lib/utils";
 import { Clock, Calendar, RefreshCw, ArrowLeft, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { AffiliateOffer } from "@/components/affiliate/AffiliateOffer";
+import { affiliateOffers } from "@/lib/affiliate";
 
 interface ArticlePageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -157,8 +158,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             {article.affiliateOffer && (
               <p className="mb-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-relaxed text-gray-700">
                 <strong>Affiliate disclosure:</strong> This article includes a paid referral link.
-                We may earn a commission if you buy. This is a review of published information;
-                we have not purchased the cookbook or tested its recipes.
+                We may earn a commission if you buy.{" "}
+                {affiliateOffers[article.affiliateOffer].limitation}
               </p>
             )}
             <div
@@ -207,7 +208,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             )}
 
             {/* Tags */}
-            {article.affiliateOffer === "plantbc" && <AffiliateOffer />}
+            {article.affiliateOffer && <AffiliateOffer offer={article.affiliateOffer} />}
             {article.tags && article.tags.length > 0 && (
               <div className="mt-10 pt-8 border-t border-gray-200">
                 <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-3">Tags</p>

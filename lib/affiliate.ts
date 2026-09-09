@@ -1,19 +1,38 @@
-// Generated in ClickBank on 2026-09-09: affiliate diegodiasm, seller plantbc.
-// The seller redirect and checkout affiliate/TID were verified without a purchase.
-const COOKBOOK_HOPLINK = "https://f751e-kaqes3dg09q3zji27o36.hop.clickbank.net/";
+// Generated in ClickBank on 2026-09-09 for affiliate diegodiasm.
+// Each seller and checkout affiliate/TID were verified without purchasing.
+export const affiliateOffers = {
+  plantbc: {
+    hopLink: "https://f751e-kaqes3dg09q3zji27o36.hop.clickbank.net/",
+    tidPrefix: "ms_pb",
+    sources: ["sg", "nt", "direct"],
+    limitation: "This is a review of published information; we have not purchased the cookbook or tested its recipes.",
+    summary: "This cookbook is an optional cooking resource; buying it does not guarantee weight loss.",
+    purchaseNote: "Compare the basic cookbook and bundle, check the final total, and review any optional extras before paying.",
+    cta: "See the cookbook and current pricing",
+  },
+  fitin56: {
+    hopLink: "https://f3ef6zycj9ffmox0xpya6rauem.hop.clickbank.net/",
+    tidPrefix: "ms_f56",
+    sources: ["mm", "bm", "direct"],
+    limitation: "This is a review of the public offer and checkout; we have not purchased FITin56 or tested its workouts, member access or support.",
+    summary: "FITin56 is an optional exercise resource, not personalized medical care or a guarantee of weight loss.",
+    purchaseNote: "The quarterly plan renews automatically. Compare it with the fixed-term passes, and check the total, billing schedule and cancellation terms before paying.",
+    cta: "See FITin56 plans and current pricing",
+  },
+} as const;
 
-export const affiliateSources = ["sg", "nt", "direct"] as const;
-export type AffiliateSource = (typeof affiliateSources)[number];
+export type AffiliateOfferId = keyof typeof affiliateOffers;
 
-export function normalizeAffiliateSource(value: string | null): AffiliateSource {
-  return affiliateSources.includes(value as AffiliateSource)
-    ? (value as AffiliateSource)
-    : "direct";
+export function isAffiliateOffer(value: unknown): value is AffiliateOfferId {
+  return value === "plantbc" || value === "fitin56";
 }
 
-export function cookbookHopLink(source: AffiliateSource): string {
-  const url = new URL(COOKBOOK_HOPLINK);
-  // Fixed codes only: never pass search strings, health inputs or identifiers.
-  url.searchParams.set("tid", `ms_pb_${normalizeAffiliateSource(source)}_review`);
+export function affiliateHopLink(offer: AffiliateOfferId, source: string | null): string {
+  const config = affiliateOffers[offer];
+  const accepted: readonly string[] = config.sources;
+  const safeSource = source && accepted.includes(source) ? source : "direct";
+  const url = new URL(config.hopLink);
+  // Fixed codes only. Never forward free text, health inputs or identifiers.
+  url.searchParams.set("tid", `${config.tidPrefix}_${safeSource}_review`);
   return url.toString();
 }

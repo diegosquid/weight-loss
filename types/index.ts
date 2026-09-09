@@ -14,7 +14,7 @@ export interface Article {
   image?: string;
   readingTime: number;
   faqs?: FAQ[];
-  affiliateOffer?: "plantbc";
+  affiliateOffer?: "plantbc" | "fitin56";
 }
 
 export interface FAQ {

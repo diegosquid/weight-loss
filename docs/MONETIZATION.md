@@ -75,3 +75,25 @@ After the release is live, record its date and compare equal date windows. In th
 Review weekly manually. No new scheduled automation is configured. Start by checking that genuine hops arrive. If there are few hops, improve relevant content and the transition to the review before replacing the product. If hops arrive without sales, inspect audience fit, price and checkout. Do not declare a winner from a handful of events. Track later refunds before treating commissions as durable revenue.
 
 The next three editorial slots prioritize beginner meal planning, free vs paid resources and meal plans vs supplements, as listed in `CONTENT_RULES.md`. Research them independently and preserve the existing one-article-per-day workflow.
+
+## Second offer: FITin56 (manual expansion, September 9, 2026)
+
+The user authorized evaluating and adding suitable offers. Selected FITIN56 for a small, separate home-workout test, keeping PLANTBC active. This is a public-offer assessment, not hands-on certification: no access, workouts, coaching, nutrition plans, support, refunds or cancellation were tested. No product-specific efficacy is claimed.
+
+The 7 Minute Ageless Body Secret was reconsidered after reading its complete sales page: it discourages seeking medical advice and makes sweeping metabolism and anti-aging claims. It was not added. Java Burn's absolute safety/effectiveness claims were also unsuitable. Cacao Bliss publishes restrictive traffic/approval conditions. Old School New Body had weak current conversion indicators. No contact messages or affiliate applications were sent.
+
+FITIN56 Marketplace snapshot: average net commission $42.13, CVR 0.00%, EPC $0.00, gravity 0.1, rank 955. There is little recent platform performance evidence; this is an audience-fit hypothesis, not a proven revenue winner. The affiliate page advertises 50% initial / 25% recurring commission; actual commissions depend on account terms, transaction mix, refunds and retention.
+
+Primary sources: [sales page](https://get.fitin56.com/), [affiliate terms](https://www.fitin56.com/affiliates), [consumer terms](https://www.fitin56.com/terms-of-use). The sales page lists $57 quarterly recurring, $85 six-month access and $114 annual access, with the latter two advertised as one-time charges. The affiliate page describes a separate $7 trial / $27 monthly offer; that trial checkout was not verified. The consumer review explains that alternative instead of calling every option a one-time purchase.
+
+ClickBank generated `https://f3ef6zycj9ffmox0xpya6rauem.hop.clickbank.net/` for affiliate `diegodiasm`, seller `fitin56`, default landing page. Manual QA used `tid=ms_f56_qa_review`: the redirect reached `get.fitin56.com`; both six-month and quarterly checkouts displayed the matching encrypted Affiliate ID and QA TID. Six-month checkout showed FITin56 6 Months Access, localized R$469.79 and a 60-day notice. Quarterly checkout showed R$315.04 today and every three months, with the next payment on December 9, 2026. No payment data was entered and no order was submitted. These localized amounts are inspection evidence, not advertised prices on our review.
+
+Incoming paths:
+
+- `/metabolism/muscle-and-metabolism/` → `/metabolism/fitin56-review/?source=mm` → `ms_f56_mm_review`.
+- `/metabolism/boosting-metabolism/` → `/metabolism/fitin56-review/?source=bm` → `ms_f56_bm_review`.
+- Other/no-JavaScript entries → `ms_f56_direct_review`.
+
+The review is included in the Metabolism index, article search/index and sitemap. No general banners or clinical dosage/pregnancy/adverse-effect placements were added. Existing publication dates are preserved. Incoming links are commercial-resource pointers, not a clinical reassessment of the archive. The per-offer source allowlists prevent cookbook codes, QA codes, arbitrary queries or health information from entering the FITIN56 production TID.
+
+Continue measuring PLANTBC and FITIN56 separately in ClickBank, excluding `qa`. No first-party analytics or new recurring automation was added. Build and `verify:pilot` validate both offers, the four incoming paths, source isolation, disclosures, canonical URLs, preserved historical routes and no paid links in clinical articles.
