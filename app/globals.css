@@ -202,4 +202,5 @@
 .prose .resource-callout { margin: 1.75rem 0; border-left: 4px solid #2563eb; background: #eff6ff; padding: 0.75rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; font-size: 1rem; }
 .prose table { display: block; overflow-x: auto; max-width: 100%; }
 .prose :is(a, p, td, th) { overflow-wrap: anywhere; }
+.prose table :is(td, th) { min-width: 10rem; overflow-wrap: normal; }
 .prose .footnotes { font-size: 0.9rem; }
