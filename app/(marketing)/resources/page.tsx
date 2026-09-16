@@ -13,6 +13,10 @@ export default function ResourcesPage() {
         <h3 className="text-xl font-semibold"><Link href="/metabolism/plant-based-meal-planning-beginners/" className="text-blue-800 underline underline-offset-4">Plant-based meal planning for beginners</Link></h3>
         <p className="mt-3 max-w-3xl leading-relaxed text-slate-700">Start with two meals and a grocery list for four dinners. See how to reuse ingredients, plan storage and decide whether a recipe collection would help.</p>
       </article>
+      <article className="mt-5 rounded-2xl border border-slate-200 p-6">
+        <h3 className="text-xl font-semibold"><Link href="/metabolism/choosing-beginner-home-workout/" className="text-blue-800 underline underline-offset-4">How to choose a beginner home workout program</Link></h3>
+        <p className="mt-3 max-w-3xl leading-relaxed text-slate-700">Compare equipment, session length, exercise adaptations and progression. Use free demonstrations and a practical checklist before deciding whether to pay.</p>
+      </article>
     </section>
     <section className="mt-12" aria-labelledby="assessments"><h2 id="assessments" className="mb-5 text-2xl font-serif font-bold text-slate-900">Product assessments</h2>
       <p className="mb-6 text-sm leading-relaxed text-slate-600">These reviews assess public offers and checkout terms. We have not purchased or tested these products. They contain disclosed affiliate links: we may earn a commission if you buy. Neither product is a treatment or a requirement for weight loss.</p>
