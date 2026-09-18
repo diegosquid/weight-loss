@@ -4,7 +4,7 @@ export const affiliateOffers = {
   plantbc: {
     hopLink: "https://f751e-kaqes3dg09q3zji27o36.hop.clickbank.net/",
     tidPrefix: "ms_pb",
-    sources: ["sg", "nt", "mp", "home", "resources", "direct"],
+    sources: ["sg", "nt", "mp", "fp", "home", "resources", "direct"],
     limitation: "This is a review of published information; we have not purchased the cookbook or tested its recipes.",
     summary: "This cookbook is an optional cooking resource; buying it does not guarantee weight loss.",
     purchaseNote: "Compare the basic cookbook and bundle, check the final total, and review any optional extras before paying.",
