@@ -13,7 +13,7 @@ export const affiliateOffers = {
   fitin56: {
     hopLink: "https://f3ef6zycj9ffmox0xpya6rauem.hop.clickbank.net/",
     tidPrefix: "ms_f56",
-    sources: ["mm", "bm", "hw", "home", "resources", "direct"],
+    sources: ["mm", "bm", "hw", "wc", "home", "resources", "direct"],
     limitation: "This is a review of the public offer and checkout; we have not purchased FITin56 or tested its workouts, member access or support.",
     summary: "FITin56 is an optional exercise resource, not personalized medical care or a guarantee of weight loss.",
     purchaseNote: "The quarterly plan renews automatically. Compare it with the fixed-term passes, and check the total, billing schedule and cancellation terms before paying.",

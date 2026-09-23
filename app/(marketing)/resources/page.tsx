@@ -25,6 +25,10 @@ export default function ResourcesPage() {
         <h3 className="text-xl font-semibold"><Link href="/metabolism/weekly-grocery-list-from-recipes/" className="text-blue-800 underline underline-offset-4">Build a grocery list from recipes you already like</Link></h3>
         <p className="mt-3 max-w-3xl leading-relaxed text-slate-700">Work through serving adjustments, combined ingredients, supplies at home and package sizes, with a practical shopping example.</p>
       </article>
+      <article className="mt-5 rounded-2xl border border-slate-200 p-6">
+        <h3 className="text-xl font-semibold"><Link href="/metabolism/home-workout-subscriptions-cancellation/" className="text-blue-800 underline underline-offset-4">Home workout subscriptions: costs, renewals and cancellation</Link></h3>
+        <p className="mt-3 max-w-3xl leading-relaxed text-slate-700">Compare upfront payments with monthly equivalents, identify who bills you and separate cancellation, refunds and access dates.</p>
+      </article>
     </section>
     <section className="mt-12" aria-labelledby="assessments"><h2 id="assessments" className="mb-5 text-2xl font-serif font-bold text-slate-900">Product assessments</h2>
       <p className="mb-6 text-sm leading-relaxed text-slate-600">These reviews assess public offers and checkout terms. We have not purchased or tested these products. They contain disclosed affiliate links: we may earn a commission if you buy. Neither product is a treatment or a requirement for weight loss.</p>
