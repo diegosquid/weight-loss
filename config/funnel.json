@@ -11,12 +11,13 @@
     "/metabolism/free-recipes-vs-paid-meal-plans/": "fp",
     "/metabolism/weekly-grocery-list-from-recipes/": "gl",
     "/metabolism/home-workout-subscriptions-cancellation/": "wc",
+    "/metabolism/free-workout-videos-vs-paid-programs/": "fv",
     "/metabolism/plant-based-cookbook-review/": "pb_review",
     "/metabolism/fitin56-review/": "f56_review"
   },
   "offers": {
     "plantbc": { "page": "pb_review", "path": "/metabolism/plant-based-cookbook-review/", "sources": ["sg", "nt", "mp", "fp", "gl", "home", "resources", "direct"] },
-    "fitin56": { "page": "f56_review", "path": "/metabolism/fitin56-review/", "sources": ["mm", "bm", "hw", "wc", "home", "resources", "direct"] }
+    "fitin56": { "page": "f56_review", "path": "/metabolism/fitin56-review/", "sources": ["mm", "bm", "hw", "wc", "fv", "home", "resources", "direct"] }
   },
   "placements": ["context", "summary", "end", "home", "resources"]
 }
