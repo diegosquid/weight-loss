@@ -204,3 +204,5 @@
 .prose :is(a, p, td, th) { overflow-wrap: anywhere; }
 .prose table :is(td, th) { min-width: 10rem; overflow-wrap: normal; }
 .prose .footnotes { font-size: 0.9rem; }
+/* Keep reference targets and return links below the sticky header. */
+.prose [id^="footnote-"] { scroll-margin-top: 6rem; }
