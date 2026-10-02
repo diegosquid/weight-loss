@@ -14,11 +14,12 @@
     "/metabolism/free-workout-videos-vs-paid-programs/": "fv",
     "/metabolism/plant-based-meal-prep-budget/": "bp",
     "/metabolism/small-space-home-workout-setup/": "ss",
+    "/metabolism/digital-cookbook-vs-meal-planning-service/": "dc",
     "/metabolism/plant-based-cookbook-review/": "pb_review",
     "/metabolism/fitin56-review/": "f56_review"
   },
   "offers": {
-    "plantbc": { "page": "pb_review", "path": "/metabolism/plant-based-cookbook-review/", "sources": ["sg", "nt", "mp", "fp", "gl", "bp", "home", "resources", "direct"] },
+    "plantbc": { "page": "pb_review", "path": "/metabolism/plant-based-cookbook-review/", "sources": ["sg", "nt", "mp", "fp", "gl", "bp", "dc", "home", "resources", "direct"] },
     "fitin56": { "page": "f56_review", "path": "/metabolism/fitin56-review/", "sources": ["mm", "bm", "hw", "wc", "fv", "ss", "home", "resources", "direct"] }
   },
   "placements": ["context", "summary", "end", "home", "resources"]

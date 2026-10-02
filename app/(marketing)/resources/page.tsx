@@ -41,6 +41,10 @@ export default function ResourcesPage() {
         <h3 className="text-xl font-semibold"><Link href="/metabolism/small-space-home-workout-setup/" className="text-blue-800 underline underline-offset-4">Small-space home workouts: set up before you buy</Link></h3>
         <p className="mt-3 max-w-3xl leading-relaxed text-slate-700">Check movement clearance, noise, storage and screen access. Compare simple setups and free resources before spending on equipment or a program.</p>
       </article>
+      <article className="mt-5 rounded-2xl border border-slate-200 p-6">
+        <h3 className="text-xl font-semibold"><Link href="/metabolism/digital-cookbook-vs-meal-planning-service/" className="text-blue-800 underline underline-offset-4">Digital cookbook vs meal-planning service: what to buy</Link></h3>
+        <p className="mt-3 max-w-3xl leading-relaxed text-slate-700">Compare recipe files, fixed menus and planning tools. Check a sample, total costs and access after cancellation before committing.</p>
+      </article>
     </section>
     <section className="mt-12" aria-labelledby="assessments"><h2 id="assessments" className="mb-5 text-2xl font-serif font-bold text-slate-900">Product assessments</h2>
       <p className="mb-6 text-sm leading-relaxed text-slate-600">These reviews assess public offers and checkout terms. We have not purchased or tested these products. They contain disclosed affiliate links: we may earn a commission if you buy. Neither product is a treatment or a requirement for weight loss.</p>
